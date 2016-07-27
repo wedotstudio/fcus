@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.Text;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -19,6 +21,9 @@ namespace Fcus
 {
     public sealed partial class MainPage : Page
     {
+        private List<ITextRange> _foundKeys = new List<ITextRange>();
+        private Color _highLihgtColor = Color.FromArgb(255, 150, 190, 255);
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -38,15 +43,27 @@ namespace Fcus
             splitView.IsPaneOpen = !splitView.IsPaneOpen;
         }
 
-        private void txt_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        private void txt_TextChanged(object sender, RoutedEventArgs e)
         {
-            Windows.UI.Text.ITextSelection selectedText = txt.Document.
-            if (selectedText != null)
+                 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string docText, _oldQuery;
+            string Boldpattern = @"\*{2}[^\s\*][^\*]+[^\s\*]\*{2}";
+            txt.Document.GetText(Windows.UI.Text.TextGetOptions.None, out docText);
+            
+            MatchCollection matches = Regex.Matches(docText, Boldpattern, RegexOptions.IgnoreCase);
+            foreach (Match match in matches)
             {
-                Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                charFormatting.Bold = Windows.UI.Text.FormatEffect.Toggle;
-                selectedText.CharacterFormat = charFormatting;
-            }
+                var start = txt.Document.Selection.EndPosition;
+                var end = docText.Length;
+                var range = txt.Document.GetRange(start, end);
+                int result = range.FindText(match.ToString(), end - start, FindOptions.None);
+                var xrange = txt.Document.GetRange(range.);
+                _foundKeys.Add(xrange);
+            }            
         }
     }
 }

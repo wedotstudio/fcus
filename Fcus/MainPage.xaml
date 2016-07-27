@@ -22,11 +22,28 @@
             <SplitView.Pane >
                 <StackPanel Opacity="0.5">
                     <TextBlock Text="sth"/>
+                    <Button Content="Bold" Click="Button_Click"/>
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
-                    <RichEditBox x:Name="txt" Background="Transparent" BorderThickness="0" DataContextChanged="txt_DataContextChanged"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <RichEditBox x:Name="txt" Background="Transparent" BorderThickness="0" TextChanged="txt_TextChanged"/>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Background="Transparent" BorderThickness="0" Margin="5,0">
+                            <Button.Content>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;" Foreground="Gray"/>
+                            </Button.Content>
+                        </Button>
+                        <TextBlock Text="0 Characters"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </Grid>
                 </Grid>
             </SplitView.Content>
         </SplitView>

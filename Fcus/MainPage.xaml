@@ -32,17 +32,17 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <RichEditBox x:Name="txt" Background="Transparent" BorderThickness="0" TextChanged="txt_TextChanged"/>
-                    <Grid Grid.Row="1">
+                    <Grid Grid.Row="1"  Margin="5,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <Button Background="Transparent" BorderThickness="0" Margin="5,0">
+                        <Button Background="Transparent" BorderThickness="0">
                             <Button.Content>
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;" Foreground="Gray"/>
                             </Button.Content>
                         </Button>
-                        <TextBlock Text="0 Characters"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ccount" Text="0 Word(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     </Grid>
                 </Grid>
             </SplitView.Content>

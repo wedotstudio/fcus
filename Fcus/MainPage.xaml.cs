@@ -31,9 +31,9 @@ namespace Fcus
             var applicationView = ApplicationView.GetForCurrentView();
             var titleBar = applicationView.TitleBar;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-            titleBar.ButtonInactiveForegroundColor = Colors.Black;
+            titleBar.ButtonInactiveForegroundColor = Colors.Gray;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
-            titleBar.ButtonForegroundColor = Colors.Black;
+            titleBar.ButtonForegroundColor = Colors.Gray;
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
         }
@@ -45,14 +45,16 @@ namespace Fcus
 
         private void txt_TextChanged(object sender, RoutedEventArgs e)
         {
-                 
+            string docText;
+            txt.Document.GetText(TextGetOptions.None, out docText);
+            ccount.Text = (docText.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Length-1) + " Word(s)";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string docText, _oldQuery;
             string Boldpattern = @"\*{2}[^\s\*][^\*]+[^\s\*]\*{2}";
-            txt.Document.GetText(Windows.UI.Text.TextGetOptions.None, out docText);
+            txt.Document.GetText(TextGetOptions.None, out docText);
             
             MatchCollection matches = Regex.Matches(docText, Boldpattern, RegexOptions.IgnoreCase);
             foreach (Match match in matches)
@@ -61,7 +63,7 @@ namespace Fcus
                 var end = docText.Length;
                 var range = txt.Document.GetRange(start, end);
                 int result = range.FindText(match.ToString(), end - start, FindOptions.None);
-                var xrange = txt.Document.GetRange(range.);
+                var xrange = txt.Document.GetRange(start,end);
                 _foundKeys.Add(xrange);
             }            
         }

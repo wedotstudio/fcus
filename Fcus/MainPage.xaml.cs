@@ -23,6 +23,7 @@ namespace Fcus
     {
         private List<ITextRange> _foundKeys = new List<ITextRange>();
         private Color _highLihgtColor = Color.FromArgb(255, 150, 190, 255);
+        private int oldp,p;
 
         public MainPage()
         {
@@ -45,15 +46,29 @@ namespace Fcus
 
         private void txt_TextChanged(object sender, RoutedEventArgs e)
         {
-            //Get document
-            string docText;
-            txt.Document.GetText(TextGetOptions.None, out docText);
+            
+            //Remember Censor Position
+            txt.Focus(FocusState.Pointer);
+            p = txt.Document.Selection.StartPosition;
 
-            //Count Characters
-            ccount.Text = (docText.Replace(" ", "").Length-1) + " Character(s)";
+            if(oldp != p)
+            {
+                //Get document
+                string docText;
+                txt.Document.GetText(TextGetOptions.None, out docText);
 
-            //Modify Styles
-            Boldify(docText);
+                //Count Characters
+                ccount.Text = (docText.Replace(" ", "").Length - 1) + " Character(s)";
+
+                //Modify Styles
+                Boldify(docText);
+
+                //Recover Position
+                txt.Focus(FocusState.Pointer);
+                txt.Document.Selection.StartPosition = p;
+
+                oldp = p;
+            }    
         }
       
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,33 +77,29 @@ namespace Fcus
         }
         private void Boldify(string docText)
         {
-            //Remember Censor Position
-
-            string Boldpattern = @"\*{2}[^\s\*]+\*{2}";
-            MatchCollection matches = Regex.Matches(docText, Boldpattern, RegexOptions.IgnoreCase);
-            foreach (Match match in matches)
-            { 
-                string query = match.ToString();
-                txt.Document.GetText(Windows.UI.Text.TextGetOptions.None, out docText);
-                var start = txt.Document.Selection.EndPosition;
-                var end = docText.Length;
-                var range = txt.Document.GetRange(start, end);
-                int result = range.FindText(query, end - start, Windows.UI.Text.FindOptions.None);
-                _foundKeys.Add(range);
-
-                if (result == 0)
+                txt.Document.GetText(TextGetOptions.None, out docText);
+                string Boldpattern = @"\*{2}[^\s\*]+\*{2}";
+                MatchCollection matches = Regex.Matches(docText, Boldpattern, RegexOptions.IgnoreCase);
+                foreach (Match match in matches)
                 {
-                    txt.Document.Selection.SetRange(0, 0);
+                    string query = match.ToString();
+                    var range = txt.Document.GetRange(0, docText.Length - 1);
+                    int result = range.FindText(query, docText.Length - 1, Windows.UI.Text.FindOptions.None);
+
+                    if (result == 0)
+                    {
+                        txt.Document.Selection.SetRange(0, 0);
+                    }
+                    else
+                    {
+                        txt.Document.Selection.SetRange(range.StartPosition, range.EndPosition);
+                        range.CharacterFormat.Bold = FormatEffect.On;
+                        //range.ScrollIntoView(Windows.UI.Text.PointOptions.None);
+                    }
                 }
-                else
-                {
-                    txt.Document.Selection.SetRange(range.StartPosition, range.EndPosition);
-                    range.CharacterFormat.Bold = FormatEffect.On;
-                    range.ScrollIntoView(Windows.UI.Text.PointOptions.None);
-                } 
-            }
-            //Recover Position
-            //txt.Document.Selection.StartPosition = p;
+            txt.Focus(FocusState.Pointer);
+            txt.Document.Selection.StartPosition = p;
+            txt.Document.GetDefaultCharacterFormat();
         }
     }
 }

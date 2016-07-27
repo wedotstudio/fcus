@@ -45,27 +45,50 @@ namespace Fcus
 
         private void txt_TextChanged(object sender, RoutedEventArgs e)
         {
+            //Get document
             string docText;
             txt.Document.GetText(TextGetOptions.None, out docText);
-            ccount.Text = (docText.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Length-1) + " Word(s)";
-        }
 
+            //Count Characters
+            ccount.Text = (docText.Replace(" ", "").Length-1) + " Character(s)";
+
+            //Modify Styles
+            Boldify(docText);
+        }
+      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string docText, _oldQuery;
-            string Boldpattern = @"\*{2}[^\s\*][^\*]+[^\s\*]\*{2}";
-            txt.Document.GetText(TextGetOptions.None, out docText);
-            
+                    
+        }
+        private void Boldify(string docText)
+        {
+            //Remember Censor Position
+
+            string Boldpattern = @"\*{2}[^\s\*]+\*{2}";
             MatchCollection matches = Regex.Matches(docText, Boldpattern, RegexOptions.IgnoreCase);
             foreach (Match match in matches)
-            {
+            { 
+                string query = match.ToString();
+                txt.Document.GetText(Windows.UI.Text.TextGetOptions.None, out docText);
                 var start = txt.Document.Selection.EndPosition;
                 var end = docText.Length;
                 var range = txt.Document.GetRange(start, end);
-                int result = range.FindText(match.ToString(), end - start, FindOptions.None);
-                var xrange = txt.Document.GetRange(start,end);
-                _foundKeys.Add(xrange);
-            }            
+                int result = range.FindText(query, end - start, Windows.UI.Text.FindOptions.None);
+                _foundKeys.Add(range);
+
+                if (result == 0)
+                {
+                    txt.Document.Selection.SetRange(0, 0);
+                }
+                else
+                {
+                    txt.Document.Selection.SetRange(range.StartPosition, range.EndPosition);
+                    range.CharacterFormat.Bold = FormatEffect.On;
+                    range.ScrollIntoView(Windows.UI.Text.PointOptions.None);
+                } 
+            }
+            //Recover Position
+            //txt.Document.Selection.StartPosition = p;
         }
     }
 }

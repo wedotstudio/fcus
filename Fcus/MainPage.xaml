@@ -42,7 +42,7 @@
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;" Foreground="Gray"/>
                             </Button.Content>
                         </Button>
-                        <TextBlock x:Name="ccount" Text="0 Word(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ccount" Text="0 Character(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     </Grid>
                 </Grid>
             </SplitView.Content>

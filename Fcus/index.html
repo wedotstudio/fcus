@@ -386,16 +386,16 @@ the inspiration to this, and some handy implementation hints, came.
       reader.readAsText(e.dataTransfer.files[0]);
     }, false);
 
-
-
-
-
-    function saveAsMarkdown(){
-      save(editor.getValue(), "untitled.md");
+    var setContent = function (content) {
+        editor.doc.setValue(content)
     }
 
-    function saveAsHtml() {
-      save(document.getElementById('out').innerHTML, "untitled.html");
+    var getmd = function saveAsMarkdown() {
+        return editor.getValue();
+    }
+
+    var gethtml = function saveAsHtml() {
+        return document.getElementById('out').innerHTML;
     }
 
     document.getElementById('saveas-markdown').addEventListener('click', function() {

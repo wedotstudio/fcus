@@ -34,7 +34,7 @@
                         <RowDefinition/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <RichEditBox x:Name="txt" Background="Transparent" BorderThickness="0" TextChanged="txt_TextChanged"/>
+                    <WebView Source="ms-appx-web:///index.html"/>
                     <Grid Grid.Row="1"  Margin="5,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -45,7 +45,7 @@
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;" Foreground="Gray"/>
                             </Button.Content>
                         </Button>
-                        <TextBlock x:Name="ccount" Text="0 Character(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <!--<TextBlock x:Name="ccount" Text="0 Character(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>-->
                     </Grid>
                 </Grid>
             </SplitView.Content>

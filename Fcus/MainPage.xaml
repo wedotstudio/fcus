@@ -21,8 +21,11 @@
               CompactPaneLength="50" OpenPaneLength="150" Background="White">
             <SplitView.Pane >
                 <StackPanel Opacity="0.5">
-                    <TextBlock Text="sth"/>
-                    <Button Content="Bold" Click="Button_Click"/>
+                    <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
+                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
+                    <AppBarButton Icon="Save" Click="SaveButton_Click" 
+                   ToolTipService.ToolTip="Save file" 
+                   RelativePanel.RightOf="openFileButton"/>
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>

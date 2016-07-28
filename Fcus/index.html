@@ -2,10 +2,10 @@
 <html>
 <head>
   <title>Markdown Editor</title>
-  <script src="markdown-it.js"></script>
-  <script src="markdown-it-footnote.js"></script>
-  <script src="highlight.pack.js"></script>
-  <script src="emojify.js"></script>
+  <script src="scripts/markdown-it.js"></script>
+  <script src="scripts/markdown-it-footnote.js"></script>
+  <script src="scripts/highlight.pack.js"></script>
+  <script src="scripts/emojify.js"></script>
   <script src="codemirror/lib/codemirror.js"></script>
   <script src="codemirror/overlay.js"></script>
   <script src="codemirror/xml/xml.js"></script>
@@ -15,11 +15,11 @@
   <script src="codemirror/css/css.js"></script>
   <script src="codemirror/htmlmixed/htmlmixed.js"></script>
   <script src="codemirror/lib/util/continuelist.js"></script>
-  <script src="rawinflate.js"></script>
-  <script src="rawdeflate.js"></script>
-  <link rel="stylesheet" href="base16-light.css">
+  <script src="scripts/rawinflate.js"></script>
+  <script src="scripts/rawdeflate.js"></script>
+  <link rel="stylesheet" href="css/base16-light.css">
   <link rel="stylesheet" href="codemirror/lib/codemirror.css">
-  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="css/default.css">
   <style>
     body {margin: 0;}
 
@@ -203,31 +203,58 @@
   </style>
 </head>
 <body>
-  <div id="in"><form><textarea id="code"># (GitHub-Flavored) Markdown Editor
+  <div id="in"><form><textarea id="code">
+This is a paragraph, it's surrounded by whitespace. Next up are some headers, they're heavily influenced by GitHub's markdown style.
+# Header 1
 
-Basic useful feature list:
+ ## Header 2
 
- * Ctrl+S / Cmd+S to save the file
- * Ctrl+Shift+S / Cmd+Shift+S to choose to save as Markdown or HTML
- * Drag and drop a file into here to load it
- * File contents are saved in the URL so you can share files
+### Header 3
 
+#### Header 4
 
-I'm no good at writing sample / filler text, so go write something yourself.
+##### Header 5
 
-Look, a list!
+###### Header 4
 
- * foo
- * bar
- * baz
+A link to [WE. Studio](http://www.westudio.ml). A big ass literal link <http://www.westudio.ml>
 
-And here's some code! :+1:
+An image, located within /images
 
-```javascript
-$(function(){
-  $('div').html('I am a div.');
-});
-```
+![an image alt text](https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg "an image title(doge)")
+
+* A bulletted list
+- alternative syntax 1
++ alternative syntax 2
+  - an indented list item
+
+1. An
+2. ordered
+3. list
+
+Inline markup styles:
+
+- _italics_
+- **bold**
+- `code()`
+
+> Blockquote
+>> Nested Blockquote
+
+Syntax highlighting can be used with triple backticks, like so:
+
+ ```javascript
+ /* Some pointless Javascript */
+ var rawr = ["r", "a", "w", "r"];
+ ```
+
+ Use two trailing spaces  
+to create linebreak tags  
+
+Finally, horizontal lines
+
+----
+****
 
 This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've b0rked it somewhere.
 

@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fcus-Icon.png" />
-    <Content Include="base16-light.css" />
+    <Content Include="css\base16-light.css" />
     <Content Include="codemirror\css\css.js" />
     <Content Include="codemirror\gfm\gfm.js" />
     <Content Include="codemirror\gfm\index.html" />
@@ -142,8 +142,8 @@
     <Content Include="codemirror\overlay.js" />
     <Content Include="codemirror\xml\index.html" />
     <Content Include="codemirror\xml\xml.js" />
-    <Content Include="default.css" />
-    <Content Include="emojify.js" />
+    <Content Include="css\default.css" />
+    <Content Include="scripts\emojify.js" />
     <Content Include="emoji\+1.png" />
     <Content Include="emoji\-1.png" />
     <Content Include="emoji\100.png" />
@@ -1019,10 +1019,10 @@
     <Content Include="emoji\zap.png" />
     <Content Include="emoji\zero.png" />
     <Content Include="emoji\zzz.png" />
-    <Content Include="highlight.pack.js" />
+    <Content Include="scripts\highlight.pack.js" />
     <Content Include="index.html" />
-    <Content Include="markdown-it-footnote.js" />
-    <Content Include="markdown-it.js" />
+    <Content Include="scripts\markdown-it-footnote.js" />
+    <Content Include="scripts\markdown-it.js" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -1031,8 +1031,8 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="rawdeflate.js" />
-    <Content Include="rawinflate.js" />
+    <Content Include="scripts\rawdeflate.js" />
+    <Content Include="scripts\rawinflate.js" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

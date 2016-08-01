@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid Background="White">
+    <Grid Background="#f5f5f5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
@@ -29,28 +29,9 @@
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <WebView Source="ms-appx-web:///index.html"/>
-                    <Grid Grid.Row="1"  Margin="5,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Background="Transparent" BorderThickness="0">
-                            <Button.Content>
-                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;" Foreground="Gray"/>
-                            </Button.Content>
-                        </Button>
-                        <!--<TextBlock x:Name="ccount" Text="0 Character(s)"  Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Center"/>-->
-                    </Grid>
-                </Grid>
+                <WebView x:Name="editor" Source="ms-appx-web:///index.html"/>
             </SplitView.Content>
         </SplitView>
-        
     </Grid>
     
 </Page>

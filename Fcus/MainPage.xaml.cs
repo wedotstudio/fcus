@@ -1,11 +1,15 @@
-﻿using System;
+﻿using SimpleHelpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI;
 using Windows.UI.Text;
 using Windows.UI.ViewManagement;
@@ -21,6 +25,9 @@ namespace Fcus
 {
     public sealed partial class MainPage : Page
     {
+        public string content;
+        public StorageFile documentFile = null;
+        public string documentTitle = "untitled";
 
         public MainPage()
         {
@@ -34,6 +41,10 @@ namespace Fcus
             titleBar.ButtonForegroundColor = Colors.Gray;
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+
+            content = "";
+            documentTitle = "untitled";
+            documentFile = null;
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -45,10 +56,10 @@ namespace Fcus
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
         {
             // Open a text file.
-            Windows.Storage.Pickers.FileOpenPicker open =
-                new Windows.Storage.Pickers.FileOpenPicker();
+            FileOpenPicker open =
+                new FileOpenPicker();
             open.SuggestedStartLocation =
-                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+                PickerLocationId.DocumentsLibrary;
             open.FileTypeFilter.Add(".md");
             open.FileTypeFilter.Add(".markdown");
             open.FileTypeFilter.Add(".text");
@@ -56,24 +67,45 @@ namespace Fcus
             open.FileTypeFilter.Add(".mmd");
             open.FileTypeFilter.Add(".mdown");
 
-            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+            StorageFile file = await open.PickSingleFileAsync();
+            var buffer = await FileIO.ReadBufferAsync(file);
+            Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
+            var reader = new StreamReader(buffer.AsStream(), FileEncoding);
+
+             content = reader.ReadToEnd().Replace("\r\n", "\n");
+            documentFile = file;
+            documentTitle = file.Name;
+            await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            Windows.Storage.Pickers.FileSavePicker savePicker = new Windows.Storage.Pickers.FileSavePicker();
-            savePicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
-
-            // Dropdown of file types the user can save the file as
-            savePicker.FileTypeChoices.Add("Markdown File", new List<string>() { ".md", ".markdown", ".mmd", ".mdown" });
-            savePicker.FileTypeChoices.Add("Text Document", new List<string>() { ".text", ".txt" });
-
-            // Default file name if the user does not type one in or select a file to replace
-            savePicker.SuggestedFileName = "New Markdown Document";
-
-            Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
+            if(documentFile == null)
+            {
+                var picker = new FileSavePicker();
+                picker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+                picker.FileTypeChoices.Add("Markdown File", new List<string>() { ".md", ".markdown", ".mmd", ".mdown" });
+                picker.FileTypeChoices.Add("Text Document", new List<string>() { ".text", ".txt" }); picker.SuggestedFileName = documentTitle;
+                StorageFile file = await picker.PickSaveFileAsync();
+                if (file != null)
+                {
+                    SaveDoc2File(file);
+                    documentFile = file;
+                    documentTitle = file.Name;
+                }
+            }
+            else
+            {
+                SaveDoc2File(documentFile);
+            }
             
         }
-       
+        private async void SaveDoc2File(StorageFile file)
+        {
+            //await FileIO.WriteTextAsync(file, Content);
+
+            var bytes = Encoding.UTF8.GetBytes(content);
+            await FileIO.WriteBytesAsync(file, bytes);
+        }
     }
 }

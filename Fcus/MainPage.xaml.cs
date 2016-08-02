@@ -11,6 +11,7 @@ using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Text;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -52,6 +53,22 @@ namespace Fcus
             splitView.IsPaneOpen = !splitView.IsPaneOpen;
         }
 
+        private async void ScriptNotify(object sender, NotifyEventArgs e)
+        {
+            if (e.Value == "change")
+            {
+                OnCodeContentChanged();
+            }
+            else
+            {
+                await new MessageDialog(e.Value).ShowAsync();
+            }
+        }
+
+        private void OnCodeContentChanged()
+        {
+            throw new NotImplementedException();
+        }
 
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
         {
@@ -105,6 +122,11 @@ namespace Fcus
             await editor.InvokeScriptAsync("getContent",null);
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
+        }
+
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -330,6 +330,7 @@ the inspiration to this, and some handy implementation hints, came.
 
     function update(e){
       setOutput(e.getValue());
+      window.external.notify("change");
 
       clearTimeout(hashto);
       hashto = setTimeout(updateHash, 1000);
@@ -369,10 +370,6 @@ the inspiration to this, and some handy implementation hints, came.
     });
 
     editor.on('change', update);
-
-
-
-
 
     document.addEventListener('drop', function(e){
       e.preventDefault();

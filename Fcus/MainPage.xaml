@@ -11,27 +11,22 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="HamburgerButton"
-                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click">
-            <Button.Content>
-                <Image Source="Assets/Fcus-icon.png"/>
-            </Button.Content>
-        </Button>
-        <SplitView Grid.Row="1" x:Name="splitView" DisplayMode="Overlay"  IsPaneOpen="False" 
-              CompactPaneLength="50" OpenPaneLength="150" Background="White">
-            <SplitView.Pane >
-                <StackPanel Opacity="0.5">
-                    <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
-                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
-                    <AppBarButton Icon="Save" Click="SaveButton_Click" 
-                   ToolTipService.ToolTip="Save file" 
-                   RelativePanel.RightOf="openFileButton"/>
-                </StackPanel>
-            </SplitView.Pane>
-            <SplitView.Content>
-                <WebView x:Name="editor" Source="ms-appx-web:///index.html"/>
-            </SplitView.Content>
-        </SplitView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Assets/Fcus-icon.png" Width="40" Height="40" Tapped="Image_Tapped" Margin="10"/>
+            <TextBlock x:Name="mdtitle" Text="untitled" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+
+            <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
+                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file" Visibility="Collapsed"/>
+            <AppBarButton Icon="Save" Click="SaveButton_Click" 
+                   ToolTipService.ToolTip="Save file" Visibility="Collapsed"/>
+        </Grid>
+        
+
+        <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>
     </Grid>
     
 </Page>

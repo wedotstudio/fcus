@@ -48,11 +48,6 @@ namespace Fcus
             documentFile = null;
         }
 
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-            splitView.IsPaneOpen = !splitView.IsPaneOpen;
-        }
-
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
             if (e.Value == "change")

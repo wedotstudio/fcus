@@ -204,6 +204,8 @@
 </head>
 <body>
   <div id="in"><form><textarea id="code">
+# What We Support...
+
 This is a paragraph, it's surrounded by whitespace. Next up are some headers, they're heavily influenced by GitHub's markdown style.
 
 # Header 1
@@ -222,11 +224,17 @@ A link to [WE. Studio](http://www.westudio.ml). A big ass literal link <http://w
 
 An image, located within /images
 
-
+![an image alt text](https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg "an image title(doge)")
 
 Some Emojify Emoji! :sweat_smile: :+1: :smile:
 
-![an image alt text](https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg "an image title(doge)")
+Also supports Table!
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
 * A bulletted list
 - alternative syntax 1
@@ -261,19 +269,6 @@ Finally, horizontal lines
 
 ----
 ****
-
-This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've b0rked it somewhere.
-
-
-Props to Mr. Doob and his [code editor](http://mrdoob.com/projects/code-editor/), from which
-the inspiration to this, and some handy implementation hints, came.
-
-### Stuff used to make this:
-
- * [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
- * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
- * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs
 </textarea></form></div>
   <div id="out"></div>
   <div id="menu">

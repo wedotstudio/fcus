@@ -102,8 +102,7 @@ namespace Fcus
         }
         private async void SaveDoc2File(StorageFile file)
         {
-            //await FileIO.WriteTextAsync(file, Content);
-
+            await editor.InvokeScriptAsync("getContent",null);
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
         }

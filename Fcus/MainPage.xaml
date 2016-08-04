@@ -18,15 +18,22 @@
             </Grid.ColumnDefinitions>
             <Image Source="Assets/Fcus-icon.png" Width="40" Height="40" Tapped="Image_Tapped" Margin="10"/>
             <TextBlock x:Name="mdtitle" Text="untitled" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
-
-            <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
-                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file" Visibility="Collapsed"/>
-            <AppBarButton Icon="Save" Click="SaveButton_Click" 
-                   ToolTipService.ToolTip="Save file" Visibility="Collapsed"/>
         </Grid>
-        
-
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>
+        <Popup x:Name="amenu" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="200" Height="200" HorizontalOffset="0" VerticalOffset="0">
+            <Border BorderBrush="Gray" Background="White" Opacity="0.7" BorderThickness="1" Width="200" Height="200">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
+                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file" Width="auto"/>
+                    <AppBarButton Icon="Save" Click="SaveButton_Click" 
+                   ToolTipService.ToolTip="Save file" Width="auto" Grid.Column="1"/>
+                </Grid>
+            </Border>
+        </Popup>
     </Grid>
     
 </Page>

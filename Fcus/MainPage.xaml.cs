@@ -60,9 +60,9 @@ namespace Fcus
             }
         }
 
-        private void OnCodeContentChanged()
+        private async void OnCodeContentChanged()
         {
-            throw new NotImplementedException();
+            content = await editor.InvokeScriptAsync("getContent", null);
         }
 
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
@@ -121,7 +121,7 @@ namespace Fcus
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            amenu.IsOpen = !amenu.IsOpen;
         }
     }
 }

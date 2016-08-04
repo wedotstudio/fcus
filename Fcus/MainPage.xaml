@@ -16,7 +16,12 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="Assets/Fcus-icon.png" Width="40" Height="40" Tapped="Image_Tapped" Margin="10"/>
+            <Button Width="35" Height="30" Background="Transparent" BorderThickness="0" Click="Button_Click">
+                <Button.Content>
+                    <Image Source="Assets/Fcus-icon.png" Width="15" Height="15"/>
+                </Button.Content>
+            </Button>
+            
             <TextBlock x:Name="mdtitle" Text="untitled" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
         </Grid>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>

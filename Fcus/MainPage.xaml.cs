@@ -119,7 +119,7 @@ namespace Fcus
             await FileIO.WriteBytesAsync(file, bytes);
         }
 
-        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             amenu.IsOpen = !amenu.IsOpen;
         }

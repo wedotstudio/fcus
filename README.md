@@ -1,10 +1,10 @@
 # Fcus v1.0
 
-This is a minimal Markdown editor made based on [Live (GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/).
+This is a minimal Markdown UWP editor made based on [Live (GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/).
 
 ### License:
 
-This Project is under the unlicense 
+This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blob/master/LICENSE).Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
 ### Credit:
 

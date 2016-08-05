@@ -50,6 +50,7 @@ namespace Fcus
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
             AboutRender();
+
             content = "";
             documentTitle = "untitled";
             documentFile = null;
@@ -82,6 +83,15 @@ namespace Fcus
         {
             content = await editor.InvokeScriptAsync("getmd", null);
         }
+        public void NewFile()
+        {
+            content = "";
+            documentTitle = "untitled";
+            documentFile = null;
+            mdtitle.Text = documentTitle;
+            await editor.InvokeScriptAsync("setContent", new string[] { content });
+        }
+
         private async void OpenFile()
         {
             // Open a text file.
@@ -143,7 +153,7 @@ namespace Fcus
             {
                 switch (e.Key)
                 {
-                    case VirtualKey.N:  break;
+                    case VirtualKey.N:NewFile();  break;
                     case VirtualKey.O: OpenFile(); break;
                     case VirtualKey.S: SaveFile(); break;
                     case VirtualKey.A:OpenAbout(); break;

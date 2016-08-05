@@ -83,7 +83,7 @@ namespace Fcus
         {
             content = await editor.InvokeScriptAsync("getmd", null);
         }
-        public void NewFile()
+        public async void NewFile()
         {
             content = "";
             documentTitle = "untitled";

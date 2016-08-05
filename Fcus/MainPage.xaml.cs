@@ -80,7 +80,7 @@ namespace Fcus
 
         private async void OnCodeContentChanged()
         {
-            content = await editor.InvokeScriptAsync("getContent", null);
+            content = await editor.InvokeScriptAsync("getmd", null);
         }
         private async void OpenFile()
         {
@@ -132,7 +132,7 @@ namespace Fcus
 
         private async void SaveDoc2File(StorageFile file)
         {
-            await editor.InvokeScriptAsync("getContent",null);
+            content = await editor.InvokeScriptAsync("getmd", null);
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
         }

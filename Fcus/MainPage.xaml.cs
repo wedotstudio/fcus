@@ -87,6 +87,7 @@ namespace Fcus
              content = reader.ReadToEnd().Replace("\r\n", "\n");
             documentFile = file;
             documentTitle = file.Name;
+            mdtitle.Text = documentTitle;
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 

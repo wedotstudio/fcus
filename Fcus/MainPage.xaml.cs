@@ -64,8 +64,7 @@ namespace Fcus
         {
             content = await editor.InvokeScriptAsync("getContent", null);
         }
-
-        private async void OpenButton_Click(object sender, RoutedEventArgs e)
+        private async void OpenFile()
         {
             // Open a text file.
             FileOpenPicker open =
@@ -84,16 +83,16 @@ namespace Fcus
             Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
             var reader = new StreamReader(buffer.AsStream(), FileEncoding);
 
-             content = reader.ReadToEnd().Replace("\r\n", "\n");
+            content = reader.ReadToEnd().Replace("\r\n", "\n");
             documentFile = file;
             documentTitle = file.Name;
             mdtitle.Text = documentTitle;
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 
-        private async void SaveButton_Click(object sender, RoutedEventArgs e)
+        private async void SaveFile()
         {
-            if(documentFile == null)
+            if (documentFile == null)
             {
                 var picker = new FileSavePicker();
                 picker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
@@ -111,8 +110,8 @@ namespace Fcus
             {
                 SaveDoc2File(documentFile);
             }
-            
         }
+
         private async void SaveDoc2File(StorageFile file)
         {
             await editor.InvokeScriptAsync("getContent",null);

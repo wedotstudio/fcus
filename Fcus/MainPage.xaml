@@ -26,10 +26,15 @@
         </Grid>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>
         <Grid Grid.Row="1">
-            <Rectangle Fill="#f5f5f5" Opacity="0.7" />
-            <Border Margin="20,20,20,0" Background="White">
-                <WebView x:Name="about" local:HTMLProperties.HtmlString="{Binding CurrentHtmlString}" Grid.Row="1"/>
-                </Border>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="#f5f5f5" Opacity="0.7" Grid.ColumnSpan="3"/>
+            <Border BorderBrush="#f5f5f5" BorderThickness="1"  Margin="0,50,0,0" Grid.Column="1" CornerRadius="10">
+                <WebView local:HTMLProperties.HtmlString="{Binding CurrentHtmlString}"/>
+            </Border>
         </Grid>
     </Grid>
 </Page>

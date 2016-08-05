@@ -1,4 +1,6 @@
-﻿using SimpleHelpers;
+﻿using Octokit;
+using Octokit.Internal;
+using SimpleHelpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,11 +26,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Fcus
 {
-    public sealed partial class MainPage : Page
+    public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
         public string content;
         public StorageFile documentFile = null;
         public string documentTitle = "untitled";
+        static InMemoryCredentialStore credentials = new InMemoryCredentialStore(new Credentials("3dfc7ffacf6e47daa83acb235570ac510f417a85"));
+        static GitHubClient github = new GitHubClient(new ProductHeaderValue("Fcus-About"), credentials);
 
         public MainPage()
         {
@@ -43,9 +47,19 @@ namespace Fcus
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
+            AboutRender();
             content = "";
             documentTitle = "untitled";
             documentFile = null;
+        }
+
+        private async void AboutRender()
+        {
+            var aboutcontent = new AboutModel();
+            var aboutmd = await github.Gist.Get("bbf6e5254c9c3eec451b3596351bc2d4");
+            var html = await github.Miscellaneous.RenderRawMarkdown(aboutmd.Files["Fcus_about.md"].Content);
+            aboutcontent.CurrentHtmlString = html;
+            this.DataContext = aboutcontent;
         }
 
         private async void ScriptNotify(object sender, NotifyEventArgs e)
@@ -121,7 +135,12 @@ namespace Fcus
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            amenu.IsOpen = !amenu.IsOpen;
+            
         }
+    }
+
+    class AboutModel
+    {
+        public string CurrentHtmlString { get; set; }
     }
 }

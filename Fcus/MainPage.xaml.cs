@@ -12,6 +12,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
+using Windows.System;
 using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Text;
@@ -28,6 +29,7 @@ namespace Fcus
 {
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
+        private bool isControlKeyPressed;
         public string content;
         public StorageFile documentFile = null;
         public string documentTitle = "untitled";
@@ -51,6 +53,8 @@ namespace Fcus
             content = "";
             documentTitle = "untitled";
             documentFile = null;
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
 
         private async void AboutRender()
@@ -132,10 +136,29 @@ namespace Fcus
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
         }
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Control) isControlKeyPressed = true;
+            else if (isControlKeyPressed)
+            {
+                switch (e.Key)
+                {
+                    case VirtualKey.N:  break;
+                    case VirtualKey.O: OpenFile(); break;
+                    case VirtualKey.S: SaveFile(); break;
+                    case VirtualKey.A:OpenAbout(); break;
 
+                }
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            OpenAbout();
+        }
+
+        private void OpenAbout()
+        {
+            about.Visibility = (about.Visibility == Visibility.Visible) ? Visibility.Collapsed : Visibility.Visible;
         }
     }
 

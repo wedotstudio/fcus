@@ -154,16 +154,7 @@ namespace Fcus
                     case VirtualKey.S: SaveFile(); break;
                 }
             }
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenAbout();
-        }
-
-        private void OpenAbout()
-        {
-            about.Visibility = (about.Visibility == Visibility.Visible) ? Visibility.Collapsed : Visibility.Visible;
-        }
+        } 
     }
 
     class AboutModel

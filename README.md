@@ -1,4 +1,4 @@
- # Fcus
+# Fcus
 
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
 

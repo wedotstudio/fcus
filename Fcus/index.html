@@ -15,8 +15,6 @@
   <script src="codemirror/css/css.js"></script>
   <script src="codemirror/htmlmixed/htmlmixed.js"></script>
   <script src="codemirror/lib/util/continuelist.js"></script>
-  <script src="scripts/rawinflate.js"></script>
-  <script src="scripts/rawdeflate.js"></script>
   <link rel="stylesheet" href="css/base16-light.css">
   <link rel="stylesheet" href="codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="css/default.css">
@@ -315,38 +313,8 @@ Finally, horizontal lines
         return document.getElementById('out').innerHTML;
     }
 
-    function updateHash(){
-      window.location.hash = btoa( // base64 so url-safe
-        RawDeflate.deflate( // gzip
-          unescape(encodeURIComponent( // convert to utf8
-            editor.getValue()
-          ))
-        )
-      );
-    }
-
-    if(window.location.hash){
-      var h = window.location.hash.replace(/^#/, '');
-      if(h.slice(0,5) == 'view:'){
-        setOutput(decodeURIComponent(escape(RawDeflate.inflate(atob(h.slice(5))))));
-        document.body.className = 'view';
-      }else{
-        editor.setValue(
-          decodeURIComponent(escape(
-            RawDeflate.inflate(
-              atob(
-                h
-              )
-            )
-          ))
-        );
-        update(editor);
-        editor.focus();
-      }
-    }else{
       update(editor);
       editor.focus();
-    }
   </script>
 </body>
 </html>

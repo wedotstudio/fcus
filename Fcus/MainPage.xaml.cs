@@ -24,6 +24,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Core;
 
 namespace Fcus
 {
@@ -32,9 +33,9 @@ namespace Fcus
         private bool isControlKeyPressed;
         public string content;
         public StorageFile documentFile = null;
-        public string documentTitle = "untitled";
-        static InMemoryCredentialStore credentials = new InMemoryCredentialStore(new Credentials("3dfc7ffacf6e47daa83acb235570ac510f417a85"));
-        static GitHubClient github = new GitHubClient(new ProductHeaderValue("Fcus-About"), credentials);
+        public string documentTitle = "Welcome to Fcus!";
+
+        static GitHubClient github = new GitHubClient(new ProductHeaderValue("Fcus"));
 
         public MainPage()
         {
@@ -54,9 +55,14 @@ namespace Fcus
             content = "";
             documentTitle = "untitled";
             documentFile = null;
+        }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Set the input focus to ensure that keyboard events are raised.
             this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
+
 
         private async void AboutRender()
         {
@@ -146,6 +152,10 @@ namespace Fcus
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
         }
+        private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Control) isControlKeyPressed = false;
+        }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.Control) isControlKeyPressed = true;
@@ -153,11 +163,10 @@ namespace Fcus
             {
                 switch (e.Key)
                 {
-                    case VirtualKey.N:NewFile();  break;
+                    case VirtualKey.N: NewFile(); break;
                     case VirtualKey.O: OpenFile(); break;
                     case VirtualKey.S: SaveFile(); break;
-                    case VirtualKey.A:OpenAbout(); break;
-
+                    case VirtualKey.A: OpenAbout(); break;
                 }
             }
         }

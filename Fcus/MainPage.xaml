@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid Background="#f5f5f5" KeyDown="Grid_KeyDown">
+    <Grid Background="#f5f5f5" KeyDown="Grid_KeyDown" KeyUp="Grid_KeyUp">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
@@ -16,13 +16,13 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Width="35" Height="30" Background="Transparent" BorderThickness="0" Click="Button_Click">
+            <Button Width="40" Height="40" Background="Transparent" BorderThickness="0" Click="Button_Click" Margin="5">
                 <Button.Content>
                     <Image Source="Assets/Fcus-icon.png" Width="15" Height="15"/>
                 </Button.Content>
             </Button>
 
-            <TextBlock x:Name="mdtitle" Text="untitled" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+            <TextBlock x:Name="mdtitle" Text="Welcome to Fcus!" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>
         <Grid Grid.Row="1" x:Name="about" Visibility="Collapsed">

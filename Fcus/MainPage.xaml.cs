@@ -18,8 +18,7 @@ namespace Fcus
 {
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
-        private bool isControlKeyPressed;
-        public string content;
+        public string content = "";
         public StorageFile documentFile = null;
         public string documentTitle = "Welcome to Fcus!";
 
@@ -39,17 +38,38 @@ namespace Fcus
             content = "";
             documentTitle = "untitled";
             documentFile = null;
+
+            editor.NavigationCompleted += Editor_NavigationCompleted;
         }
 
+        private void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            NewWindowSetter();
+        }
+        private async void NewWindowSetter()
+        {
+            await editor.InvokeScriptAsync("eval", new[]
+           {
+                @"(function()
+                {
+                    var hyperlinks = document.getElementsByTagName('a');
+                    for(var i = 0; i < hyperlinks.length; i++)
+                    {
+                        hyperlinks[i].setAttribute('target', '_blank');
+                    }
+                })()"
+            });
+        }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "change") OnCodeContentChanged();
+            if (e.Value == "change") { OnCodeContentChanged(); NewWindowSetter(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
         private async void OnCodeContentChanged()
         {
             content = await editor.InvokeScriptAsync("getmd", null);
+            
         }
         public async void NewFile()
         {

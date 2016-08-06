@@ -190,15 +190,8 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     })
       .use(markdownitFootnote);
 
-
-    var hashto;
-
     function update(e){
       setOutput(e.getValue());
-      window.external.notify("change");
-
-      clearTimeout(hashto);
-      hashto = setTimeout(updateHash, 1000);
     }
 
     function setOutput(val){
@@ -249,7 +242,7 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     }, false);
 
     var setContent = function (content) {
-        editor.doc.setValue(content)
+        editor.doc.setValue(content);
     }
 
     var getmd = function saveAsMarkdown() {

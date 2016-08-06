@@ -156,9 +156,4 @@ namespace Fcus
             }
         } 
     }
-
-    class AboutModel
-    {
-        public string CurrentHtmlString { get; set; }
-    }
 }

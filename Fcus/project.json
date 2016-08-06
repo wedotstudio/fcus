@@ -1,7 +1,6 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Octokit": "0.21.1",
     "UDE.CSharp.UWP": "1.0.1"
   },
   "frameworks": {

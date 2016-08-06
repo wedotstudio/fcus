@@ -35,8 +35,6 @@ namespace Fcus
         public StorageFile documentFile = null;
         public string documentTitle = "Welcome to Fcus!";
 
-        static GitHubClient github = new GitHubClient(new ProductHeaderValue("Fcus"));
-
         public MainPage()
         {
             this.InitializeComponent();

@@ -16,24 +16,10 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Width="40" Height="40" Background="Transparent" BorderThickness="0" Click="Button_Click" Margin="5">
-                <Button.Content>
-                    <Image Source="Assets/Fcus-icon.png" Width="15" Height="15"/>
-                </Button.Content>
-            </Button>
-
+            <Image Source="Assets/Fcus-icon.png" Width="30" Margin="10"/>
             <TextBlock x:Name="mdtitle" Text="Welcome to Fcus!" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="1"/>
-        <Grid Grid.Row="1" x:Name="about" Visibility="Collapsed">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Border BorderBrush="#f5f5f5" BorderThickness="1"  Margin="0,50,0,0" Grid.Column="1" CornerRadius="10">
-                <WebView local:HTMLProperties.HtmlString="{Binding CurrentHtmlString}"/>
-            </Border>
-        </Grid>
+       
     </Grid>
 </Page>

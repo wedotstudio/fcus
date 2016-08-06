@@ -152,7 +152,6 @@ namespace Fcus
                     case VirtualKey.N: NewFile(); break;
                     case VirtualKey.O: OpenFile(); break;
                     case VirtualKey.S: SaveFile(); break;
-                    case VirtualKey.A: OpenAbout(); break;
                 }
             }
         }

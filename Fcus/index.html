@@ -265,19 +265,6 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     var gethtml = function saveAsHtml() {
         return document.getElementById('out').innerHTML;
     }
-    document.addEventListener('keyup', function (e) {
-        //Ctrl+S
-        if (e.keyCode == 83 && e.ctrlKey) {
-            window.external.notify("savefile");
-        }
-        //Ctrl+O
-        if (e.keyCode == 79 && e.ctrlKey) {
-            window.external.notify("openfile");
-        }//Ctrl+N
-        if (e.keyCode == 78 && e.ctrlKey) {
-            window.external.notify("newfile");
-        }
-    },false);
       update(editor);
       editor.focus();
   </script>

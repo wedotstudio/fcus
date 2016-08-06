@@ -139,6 +139,21 @@ namespace Fcus
                     case VirtualKey.S: SaveFile(); break;
                 }
             }
-        } 
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFile();
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFile();
+        }
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            NewFile();
+        }
     }
 }

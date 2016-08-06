@@ -1,6 +1,6 @@
  # Fcus
 
-This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
+This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
 
 ### Usage:
 
@@ -18,8 +18,6 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
 
 ### Credit:
 
-+ [octokit.net](https://github.com/octokit/octokit.net) For About Page
-+ [Markdown Editor](https://github.com/jbt/markdown-editor) for app core, under the license of [WTFPL](http://www.wtfpl.net/txt/copying/)
 + [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
 + [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
 + [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks

@@ -41,18 +41,9 @@ namespace Fcus
             documentFile = null;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            // Set the input focus to ensure that keyboard events are raised.
-            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
-        }
-
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
             if (e.Value == "change") OnCodeContentChanged();
-            else if (e.Value == "openfile") OpenFile();
-            else if (e.Value == "newfile") NewFile();
-            else if (e.Value == "savefile") SaveFile();
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
@@ -122,23 +113,6 @@ namespace Fcus
             content = await editor.InvokeScriptAsync("getmd", null);
             var bytes = Encoding.UTF8.GetBytes(content);
             await FileIO.WriteBytesAsync(file, bytes);
-        }
-        private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Control) isControlKeyPressed = false;
-        }
-        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Control) isControlKeyPressed = true;
-            else if (isControlKeyPressed)
-            {
-                switch (e.Key)
-                {
-                    case VirtualKey.N: NewFile(); break;
-                    case VirtualKey.O: OpenFile(); break;
-                    case VirtualKey.S: SaveFile(); break;
-                }
-            }
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)

@@ -50,8 +50,6 @@ namespace Fcus
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
-            AboutRender();
-
             content = "";
             documentTitle = "untitled";
             documentFile = null;
@@ -61,16 +59,6 @@ namespace Fcus
         {
             // Set the input focus to ensure that keyboard events are raised.
             this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
-        }
-
-
-        private async void AboutRender()
-        {
-            var aboutcontent = new AboutModel();
-            var aboutmd = await github.Gist.Get("bbf6e5254c9c3eec451b3596351bc2d4");
-            var html = await github.Miscellaneous.RenderRawMarkdown(aboutmd.Files["Fcus_about.md"].Content);
-            aboutcontent.CurrentHtmlString = html;
-            this.DataContext = aboutcontent;
         }
 
         private async void ScriptNotify(object sender, NotifyEventArgs e)

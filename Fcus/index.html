@@ -148,71 +148,32 @@
 </head>
 <body>
   <div id="in"><form><textarea id="code">
-# What We Support...
+ # Fcus
 
-This is a paragraph, it's surrounded by whitespace. Next up are some headers, they're heavily influenced by GitHub's markdown style.
+This is a minimal Markdown UWP editor made based on [Live (GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/).
 
-# Header 1
+### Usage:
 
-## Header 2
+- Ctrl-O: Open Exist File
+- Ctrl-N: Open New File
+- Ctrl-S: Save File
+ - Ctrl-A: About
 
-### Header 3
+### Contribute:
 
-#### Header 4
+**Feel free to contribute in this project!** Make sure to leave issues if the app is not working properly.
 
-##### Header 5
+### License:
 
-###### Header 4
+This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blob/master/LICENSE). Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
-A link to [WE. Studio](http://www.westudio.ml). A big ass literal link <http://www.westudio.ml>
+### Credit:
 
-An image, located within /images
-
-![an image alt text](https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg "an image title(doge)")
-
-Some Emojify Emoji! :sweat_smile: :+1: :smile:
-
-Also supports Table!
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-* A bulletted list
-- alternative syntax 1
-+ alternative syntax 2
-  - an indented list item
-
-1. An
-2. ordered
-3. list
-
-Inline markup styles:
-
-- _italics_
-- **bold**
-- `code()`
-
-> Blockquote
->> Nested Blockquote
-
-Syntax highlighting can be used with triple backticks, like so:
-
- ```javascript
- /* Some pointless Javascript */
- var rawr = ["r", "a", "w", "r"];
- ```
-
-Use two trailing spaces  
-to the right  
-to create linebreak tags  
-
-Finally, horizontal lines
-
-----
-****
++ [octokit.net](https://github.com/octokit/octokit.net) For About Page
++ [Markdown Editor](https://github.com/jbt/markdown-editor) for app core, under the license of [WTFPL](http://www.wtfpl.net/txt/copying/)
++ [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
++ [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
++ [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
 </textarea></form></div>
   <div id="out"></div>
 
@@ -312,7 +273,21 @@ Finally, horizontal lines
     var gethtml = function saveAsHtml() {
         return document.getElementById('out').innerHTML;
     }
+    document.addEventListener('keydown', function (e) {
+        if (e.keyCode == 83 && e.ctrlKey) {
+            
 
+            e.preventDefault();
+            return false;
+        }
+
+        if (e.keyCode === 27 && e.ctrlKey) {
+            hideMenu();
+
+            e.preventDefault();
+            return false;
+        }
+    });
       update(editor);
       editor.focus();
   </script>

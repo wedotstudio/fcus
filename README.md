@@ -2,12 +2,6 @@
 
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
 
-### Usage:
-
-- Ctrl-O: Open Exist File
-- Ctrl-N: Open New File
-- Ctrl-S: Save File
-
 ### Contribute:
 
 **Feel free to contribute in this project!** Make sure to leave issues if the app is not working properly.

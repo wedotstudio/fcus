@@ -49,14 +49,11 @@ namespace Fcus
 
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "change")
-            {
-                OnCodeContentChanged();
-            }
-            else
-            {
-                await new MessageDialog(e.Value).ShowAsync();
-            }
+            if (e.Value == "change") OnCodeContentChanged();
+            else if (e.Value == "openfile") OpenFile();
+            else if (e.Value == "newfile") NewFile();
+            else if (e.Value == "savefile") SaveFile();
+            else await new MessageDialog(e.Value).ShowAsync();
         }
 
         private async void OnCodeContentChanged()

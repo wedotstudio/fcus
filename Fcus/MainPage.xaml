@@ -22,17 +22,17 @@
             <TextBlock x:Name="mdtitle" Text="Welcome to Fcus!" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Background="Transparent" Width="40" Click="New_Click">
+            <Button Background="Transparent" Width="40" Click="New_Click" BorderThickness="0">
                 <Button.Content>
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="LightGray"/>
                 </Button.Content>
             </Button>
-            <Button Background="Transparent" Width="40" Click="Open_Click">
+            <Button Background="Transparent" Width="40" Click="Open_Click" BorderThickness="0">
                 <Button.Content>
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE197;" Foreground="LightGray"/>
                 </Button.Content>
             </Button>
-            <Button Background="Transparent" Width="40" Height="30" Click="Save_Click">
+            <Button Background="Transparent" Width="40" Height="30" Click="Save_Click" BorderThickness="0">
                 <Button.Content>
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="LightGray"/>
                 </Button.Content>

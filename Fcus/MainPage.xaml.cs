@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using Windows.Foundation.Metadata;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.System;
@@ -25,7 +26,17 @@ namespace Fcus
         public MainPage()
         {
             this.InitializeComponent();
+            _initUI();
 
+            content = "";
+            documentTitle = "untitled";
+            documentFile = null;
+
+            editor.NavigationCompleted += Editor_NavigationCompleted;
+        }
+
+        private async void _initUI()
+        {
             var applicationView = ApplicationView.GetForCurrentView();
             var titleBar = applicationView.TitleBar;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
@@ -35,11 +46,11 @@ namespace Fcus
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
-            content = "";
-            documentTitle = "untitled";
-            documentFile = null;
-
-            editor.NavigationCompleted += Editor_NavigationCompleted;
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+            {
+                var statusbar = StatusBar.GetForCurrentView();
+                await statusbar.ShowAsync();
+            }
         }
 
         private void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)

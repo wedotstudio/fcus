@@ -49,7 +49,7 @@ namespace Fcus
             if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
                 var statusbar = StatusBar.GetForCurrentView();
-                await statusbar.ShowAsync();
+                await statusbar.HideAsync();
             }
         }
 

@@ -1,1 +1,1 @@
-P:\Application\Fcus\Fcus\AppPackages\Fcus_1.1.0.0\Fcus_1.1.0.0_x86_x64_arm.appxbundle
+P:\Application\Fcus\Fcus\AppPackages\Fcus_1.2.0.0\Fcus_1.2.0.0_x86_x64_arm.appxbundle

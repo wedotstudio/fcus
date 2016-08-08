@@ -18,7 +18,7 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>Fcus_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>AE2468B97205BB48128EB9D4DA803DF7BECBFE73</PackageCertificateThumbprint>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
@@ -149,43 +149,115 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="css\base16-light.css" />
-    <Content Include="codemirror\css\css.js" />
-    <Content Include="codemirror\gfm\gfm.js" />
-    <Content Include="codemirror\gfm\index.html" />
-    <Content Include="codemirror\htmlmixed\htmlmixed.js" />
-    <Content Include="codemirror\javascript\index.html" />
-    <Content Include="codemirror\javascript\javascript.js" />
-    <Content Include="codemirror\lib\codemirror.css" />
-    <Content Include="codemirror\lib\codemirror.js" />
-    <Content Include="codemirror\lib\util\closetag.js" />
-    <Content Include="codemirror\lib\util\continuelist.js" />
-    <Content Include="codemirror\lib\util\dialog.css" />
-    <Content Include="codemirror\lib\util\dialog.js" />
-    <Content Include="codemirror\lib\util\foldcode.js" />
-    <Content Include="codemirror\lib\util\formatting.js" />
-    <Content Include="codemirror\lib\util\javascript-hint.js" />
-    <Content Include="codemirror\lib\util\loadmode.js" />
-    <Content Include="codemirror\lib\util\match-highlighter.js" />
-    <Content Include="codemirror\lib\util\multiplex.js" />
-    <Content Include="codemirror\lib\util\overlay.js" />
-    <Content Include="codemirror\lib\util\pig-hint.js" />
-    <Content Include="codemirror\lib\util\runmode-standalone.js" />
-    <Content Include="codemirror\lib\util\runmode.js" />
-    <Content Include="codemirror\lib\util\search.js" />
-    <Content Include="codemirror\lib\util\searchcursor.js" />
-    <Content Include="codemirror\lib\util\simple-hint.css" />
-    <Content Include="codemirror\lib\util\simple-hint.js" />
-    <Content Include="codemirror\lib\util\xml-hint.js" />
-    <Content Include="codemirror\markdown\index.html" />
-    <Content Include="codemirror\markdown\markdown.js" />
-    <Content Include="codemirror\markdown\test.js" />
-    <Content Include="codemirror\overlay.js" />
-    <Content Include="codemirror\xml\index.html" />
-    <Content Include="codemirror\xml\xml.js" />
-    <Content Include="css\default.css" />
+    <Content Include="css\base16-light.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\css\css.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\gfm\gfm.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\gfm\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\htmlmixed\htmlmixed.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\javascript\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\javascript\javascript.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\codemirror.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\codemirror.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\closetag.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\continuelist.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\dialog.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\dialog.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\foldcode.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\formatting.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\javascript-hint.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\loadmode.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\match-highlighter.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\multiplex.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\overlay.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\pig-hint.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\runmode-standalone.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\runmode.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\search.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\searchcursor.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\simple-hint.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\simple-hint.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\lib\util\xml-hint.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\markdown\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\markdown\markdown.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\markdown\test.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\overlay.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\xml\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="codemirror\xml\xml.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\default.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Package.StoreAssociation.xml" />
-    <Content Include="scripts\emojify.js" />
+    <Content Include="scripts\emojify.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="emoji\+1.png" />
     <Content Include="emoji\-1.png" />
     <Content Include="emoji\100.png" />
@@ -1061,10 +1133,16 @@
     <Content Include="emoji\zap.png" />
     <Content Include="emoji\zero.png" />
     <Content Include="emoji\zzz.png" />
-    <Content Include="scripts\highlight.pack.js" />
+    <Content Include="scripts\highlight.pack.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="index.html" />
-    <Content Include="scripts\markdown-it-footnote.js" />
-    <Content Include="scripts\markdown-it.js" />
+    <Content Include="scripts\markdown-it-footnote.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\markdown-it.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

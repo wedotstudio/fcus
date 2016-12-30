@@ -20,7 +20,7 @@ namespace Fcus
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
         public string content = "";
-        public StorageFile documentFile = null;
+        public IStorageFile documentFile = null;
         public string documentTitle = "Welcome to Fcus!";
 
         public MainPage()
@@ -33,6 +33,18 @@ namespace Fcus
             documentFile = null;
 
             editor.NavigationCompleted += Editor_NavigationCompleted;
+        }
+        IStorageFile actfile;
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            var file = e.Parameter as IStorageFile;
+            if(file!=null)
+            {
+                //await openfileasync(file);
+                actfile = file;
+            }
         }
 
         private async void _initUI()
@@ -53,9 +65,18 @@ namespace Fcus
             }
         }
 
-        private void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        private async void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
             NewWindowSetter();
+
+
+
+            //加载通过资源管理器打开的makedown文件
+            if(actfile!=null)
+            {
+                await openfileasync(actfile);
+                actfile = null;
+            }
         }
         private async void NewWindowSetter()
         {
@@ -105,7 +126,12 @@ namespace Fcus
             open.FileTypeFilter.Add(".mmd");
             open.FileTypeFilter.Add(".mdown");
 
-            StorageFile file = await open.PickSingleFileAsync();
+            await openfileasync(await open.PickSingleFileAsync());
+        }
+
+
+        private async System.Threading.Tasks.Task openfileasync(IStorageFile file)
+        {
             var buffer = await FileIO.ReadBufferAsync(file);
             Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
             var reader = new StreamReader(buffer.AsStream(), FileEncoding);
@@ -139,7 +165,7 @@ namespace Fcus
             }
         }
 
-        private async void SaveDoc2File(StorageFile file)
+        private async void SaveDoc2File(IStorageFile file)
         {
             content = await editor.InvokeScriptAsync("getmd", null);
             var bytes = Encoding.UTF8.GetBytes(content);

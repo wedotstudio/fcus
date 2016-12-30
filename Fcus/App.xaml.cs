@@ -65,8 +65,7 @@ namespace Fcus
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-
-        protected override void OnActivated(IActivatedEventArgs args)
+        protected async override void OnActivated(IActivatedEventArgs args)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -74,6 +73,43 @@ namespace Fcus
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
+
+
+            var prelaunchActivated = false;
+
+
+            var launcharg = args as LaunchActivatedEventArgs;
+            if (launcharg != null)
+            {
+                prelaunchActivated = launcharg.PrelaunchActivated;
+            }
+
+            var vspro = args as IViewSwitcherProvider;
+            if (vspro.ViewSwitcher == null)
+            {
+                Windows.UI.ViewManagement.ApplicationViewSwitcher.DisableSystemViewActivationPolicy();
+
+                // Initialize rootFrame normally.
+                CreateRootFrame(args, prelaunchActivated);
+
+            }
+            else
+            {
+                // Create new view, use launcharg.ViewSwitcher.ShowAsStandaloneAsync(int) to display.
+                var view = Windows.ApplicationModel.Core.CoreApplication.CreateNewView();
+                await view.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+                {
+                    CreateRootFrame(args, prelaunchActivated);
+                    var id = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().Id;
+                    await vspro.ViewSwitcher.ShowAsStandaloneAsync(id);
+                });
+
+                return;
+            }
+
+        }
+        private void CreateRootFrame(IActivatedEventArgs args, bool prelaunchActivated)
+        {
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -93,13 +129,11 @@ namespace Fcus
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
-            var prelaunchActivated = false;
 
 
-            var launcharg = args as LaunchActivatedEventArgs;
-            if (launcharg != null)
-                prelaunchActivated = launcharg.PrelaunchActivated;
-            if(!prelaunchActivated)
+            var currentView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            currentView.Consolidated += CurrentView_Consolidated;
+            if (!prelaunchActivated)
             {
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
@@ -112,8 +146,13 @@ namespace Fcus
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-
         }
+
+        private void CurrentView_Consolidated(Windows.UI.ViewManagement.ApplicationView sender, Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs args)
+        {
+            Window.Current.Content = null;
+        }
+
         protected override void OnFileActivated(FileActivatedEventArgs args)
         {
             OnActivated(args);

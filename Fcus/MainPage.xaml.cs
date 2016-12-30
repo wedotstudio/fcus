@@ -107,9 +107,15 @@ namespace Fcus
         {
             content = "";
             documentTitle = "untitled";
+            settitle();
             documentFile = null;
             mdtitle.Text = documentTitle;
             await editor.InvokeScriptAsync("setContent", new string[] { content });
+        }
+
+        private void settitle()
+        {
+            ApplicationView.GetForCurrentView().Title = documentTitle + " - Fcus";
         }
 
         private async void OpenFile()
@@ -139,6 +145,7 @@ namespace Fcus
             content = reader.ReadToEnd().Replace("\r\n", "\n");
             documentFile = file;
             documentTitle = file.Name;
+            settitle();
             mdtitle.Text = documentTitle;
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
@@ -156,6 +163,7 @@ namespace Fcus
                 {
                     SaveDoc2File(file);
                     documentFile = file;
+                    settitle();
                     documentTitle = file.Name;
                 }
             }

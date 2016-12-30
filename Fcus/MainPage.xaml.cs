@@ -71,8 +71,8 @@ namespace Fcus
 
 
 
-            //加载通过资源管理器打开的makedown文件
-            if(actfile!=null)
+            //加载通过资源管理器打开的Markdown文件
+            if (actfile!=null)
             {
                 await openfileasync(actfile);
                 actfile = null;

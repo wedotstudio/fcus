@@ -28,7 +28,7 @@
       </uap:VisualElements>
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
-          <uap:FileTypeAssociation Name="makedown">
+          <uap:FileTypeAssociation Name="markdown">
             <uap:DisplayName>Markdown File</uap:DisplayName>
             <uap:SupportedFileTypes>
               <uap:FileType>.md</uap:FileType>

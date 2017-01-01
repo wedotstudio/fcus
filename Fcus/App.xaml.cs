@@ -39,44 +39,7 @@ namespace Fcus
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
-            Frame rootFrame = Window.Current.Content as Frame;
-
-            // Do not repeat app initialization when the Window already has content,
-            // just ensure that the window is active
-            if (rootFrame == null)
-            {
-                // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
-
-                rootFrame.NavigationFailed += OnNavigationFailed;
-
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-                {
-                    //TODO: Load state from previously suspended application
-                }
-
-                // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
-            }
-
-            if (e.PrelaunchActivated == false)
-            {
-                if (rootFrame.Content == null)
-                {
-                    // When the navigation stack isn't restored navigate to the first page,
-                    // configuring the new page by passing required information as a navigation
-                    // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
-                }
-                // Ensure the current window is active
-                Window.Current.Activate();
-            }
+            OnActivated(e);
         }
 
         /// <summary>
@@ -101,6 +64,98 @@ namespace Fcus
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+        protected async override void OnActivated(IActivatedEventArgs args)
+        {
+#if DEBUG
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                this.DebugSettings.EnableFrameRateCounter = true;
+            }
+#endif
+
+
+            var prelaunchActivated = false;
+
+
+            var launcharg = args as LaunchActivatedEventArgs;
+            if (launcharg != null)
+            {
+                prelaunchActivated = launcharg.PrelaunchActivated;
+            }
+
+            var vspro = args as IViewSwitcherProvider;
+            if (vspro.ViewSwitcher == null)
+            {
+                Windows.UI.ViewManagement.ApplicationViewSwitcher.DisableSystemViewActivationPolicy();
+
+                // Initialize rootFrame normally.
+                CreateRootFrame(args, prelaunchActivated);
+
+            }
+            else
+            {
+                // Create new view, use launcharg.ViewSwitcher.ShowAsStandaloneAsync(int) to display.
+                var view = Windows.ApplicationModel.Core.CoreApplication.CreateNewView();
+                await view.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+                {
+                    CreateRootFrame(args, prelaunchActivated);
+                    var id = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().Id;
+                    await vspro.ViewSwitcher.ShowAsStandaloneAsync(id);
+                });
+
+                return;
+            }
+
+        }
+        private void CreateRootFrame(IActivatedEventArgs args, bool prelaunchActivated)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (rootFrame == null)
+            {
+                // Create a Frame to act as the navigation context and navigate to the first page
+                rootFrame = new Frame();
+
+                rootFrame.NavigationFailed += OnNavigationFailed;
+
+                if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                {
+                    //TODO: Load state from previously suspended application
+                }
+
+                // Place the frame in the current Window
+                Window.Current.Content = rootFrame;
+            }
+
+
+            var currentView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            currentView.Consolidated += CurrentView_Consolidated;
+            if (!prelaunchActivated)
+            {
+                // When the navigation stack isn't restored navigate to the first page,
+                // configuring the new page by passing required information as a navigation
+                var filearg = args as FileActivatedEventArgs;
+
+                if (filearg == null && rootFrame.Content == null)
+                    rootFrame.Navigate(typeof(MainPage));
+                else
+                    rootFrame.Navigate(typeof(MainPage), filearg.Files[0] as Windows.Storage.IStorageFile);
+                // Ensure the current window is active
+                Window.Current.Activate();
+            }
+        }
+
+        private void CurrentView_Consolidated(Windows.UI.ViewManagement.ApplicationView sender, Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs args)
+        {
+            Window.Current.Content = null;
+        }
+
+        protected override void OnFileActivated(FileActivatedEventArgs args)
+        {
+            OnActivated(args);
         }
     }
 }

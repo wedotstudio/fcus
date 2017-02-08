@@ -69,9 +69,6 @@ namespace Fcus
         {
             NewWindowSetter();
 
-
-
-            //加载通过资源管理器打开的Markdown文件
             if (actfile!=null)
             {
                 await openfileasync(actfile);
@@ -150,6 +147,11 @@ namespace Fcus
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 
+        private void FullScreen()
+        {
+            ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+        }
+
         private async void SaveFile()
         {
             if (documentFile == null)
@@ -164,7 +166,7 @@ namespace Fcus
                     SaveDoc2File(file);
                     documentFile = file;
                     settitle();
-                    documentTitle = file.Name;
+                    documentTitle = file.Name + ".md";
                 }
             }
             else
@@ -193,6 +195,11 @@ namespace Fcus
         private void New_Click(object sender, RoutedEventArgs e)
         {
             NewFile();
+        }
+
+        private void FullScreen_Click(object sender, RoutedEventArgs e)
+        {
+            FullScreen();
         }
     }
 }

@@ -37,6 +37,11 @@
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="LightGray"/>
                 </Button.Content>
             </Button>
+            <Button Background="Transparent" Width="40" Height="30" Click="FullScreen_Click" BorderThickness="0">
+                <Button.Content>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="LightGray"/>
+                </Button.Content>
+            </Button>
         </StackPanel>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="2"/>
         

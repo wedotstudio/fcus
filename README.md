@@ -1,5 +1,7 @@
 # Fcus
 
+<a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
+
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
 
 ### Contribute:

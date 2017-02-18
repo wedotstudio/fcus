@@ -3,7 +3,7 @@
 <head>
   <title>Markdown Editor</title>
   <script charset="UTF-8" src="scripts/markdown-it.js"></script>
-  <script charset="UTF-8" src="scripts/markdown-it-footnote.js"></script>
+ <script charset="UTF-8" src="scripts/markdown-it-footnote.js"></script>
   <script charset="UTF-8" src="scripts/highlight.pack.js"></script>
   <script charset="UTF-8" src="scripts/emojify.js"></script>
   <script charset="UTF-8" src="codemirror/lib/codemirror.js"></script>
@@ -25,18 +25,6 @@
       line-height: 16px;
     }
 
-    #in{
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 50%;
-      height: auto;
-      overflow: auto;
-      font-size: 12px;
-      box-shadow: -10px 2px 6px 10px rgba(0,0,0,0.4);
-    }
-
     .CodeMirror {
       position: absolute;
       top: 0;
@@ -48,24 +36,9 @@
     }
 
     .CodeMirror-scroll {
-      padding: 30px;
+      padding: 0px;
       box-sizing: border-box;
     }
-
-      #out {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 50%;
-          bottom: 0;
-          overflow: auto;
-          padding: 10px;
-          padding-left: 20px;
-          color: #444;
-          font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-          font-size: 16px;
-          line-height: 1.5em;
-      }
 
     .emoji {
       width: 1em;
@@ -73,81 +46,15 @@
       vertical-align: baseline;
     }
 
-    @media screen and (max-width: 1024px) {
-      #in {
-        display: normal;
-        width:100%;
-      }
-      #out {
-        display:none;
-      }
-    }
-
-    .cm-header-1 { font-size: 2em; }
-    .cm-header-2 { font-size: 1.75em; }
-    .cm-header-3 { font-size: 1.5em; }
-    .cm-header-4 { font-size: 1.3em; }
-    .cm-header-5 { font-size: 1.2em; }
-    .cm-header-6 { font-size: 1.15em; }
-
     .cm-quote { color: #90a959; font-style: italic; }
 
-    .view #in {
+    .view {
       display: none;
     }
-    .view #out {
-      left: 0;
-      padding-left: 10px;
-    }
-
-    a{ color: #0645ad; text-decoration:none;}
-    a:visited{ color: #0b0080; }
-    a:hover{ color: #06e; }
-    a:active{ color:#faa700; }
-    a:focus{ outline: thin dotted; }
-    a:hover, a:active{ outline: 0; }
-
-    p{margin:1em 0;}
-
-    img{max-width:100%;}
-
-    h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;}
-    h4,h5,h6{ font-weight: bold; }
-    h1{ font-size:2.5em; }
-    h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
-    h3{ font-size:1.5em; }
-    h4{ font-size:1.2em; }
-    h5{ font-size:1em; }
-    h6{ font-size:0.9em; }
-
-    blockquote{color:#666666;margin:0;padding-left: 3em;border-left: 0.5em #EEE solid;}
-    hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
-
-    pre, code{
-      color: #000;
-      font-family:Consolas, "Liberation Mono", Menlo, Courier, monospace;
-      font-size: 0.94em; /* 0.94 = 0.88 + (1.00 - 0.88) / 2 */
-      border-radius:3px;
-      background-color: #F8F8F8;
-      border: 1px solid #CCC;
-    }
-    pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
-    pre code { border: 0px !important; background: transparent !important; line-height: 1.3em; }
-    code { padding: 0 3px 0 3px; }
-    sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-    sup { top: -0.5em; }
-    sub { bottom: -0.25em; }
-    ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
-    li p:last-child { margin:0 }
-    dd { margin: 0 0 0 2em; }
-    img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-    table { border-collapse: collapse; border-spacing: 0; }
-    td, th { vertical-align: top; padding: 4px 10px; border: 1px solid #bbb; }
-    tr:nth-child(even) td, tr:nth-child(even) th { background: #eee; }
   </style>
 </head>
 <body>
-  <div id="in"><form><textarea id="code">
+<form><textarea id="code">
 # Fcus
 
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
@@ -165,8 +72,7 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
 + [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
 + [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
 + [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
-</textarea></form></div>
-  <div id="out"></div>
+</textarea></form>
 
   <script type="text/javascript">
     var languageOverrides = {
@@ -190,8 +96,8 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     })
       .use(markdownitFootnote);
 
-    function update(e){
-      setOutput(e.getValue());
+    /*function update(e){
+     setOutput(e.getValue());
     }
 
     function setOutput(val){
@@ -217,17 +123,17 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
         }
       }
     }
-
+    */
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-      mode: 'gfm',
-      lineNumbers: false,
-      matchBrackets: true,
+      mode: 'markdown',
+      lineNumbers: true,
+      matchBrackets: false,
       lineWrapping: true,
       theme: 'base16-light',
       extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
     });
 
-    editor.on('change', update);
+    //editor.on('change', update);
 
     document.addEventListener('drop', function(e){
       e.preventDefault();
@@ -252,7 +158,7 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     var gethtml = function saveAsHtml() {
         return document.getElementById('out').innerHTML;
     }
-      update(editor);
+      //update(editor);
       editor.focus();
   </script>
 </body>

@@ -28,6 +28,7 @@ namespace Fcus
             this.InitializeComponent();
             _initUI();
 
+
             content = "";
             documentTitle = "untitled";
             documentFile = null;

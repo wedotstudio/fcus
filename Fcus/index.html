@@ -4,8 +4,6 @@
   <title>Markdown Editor</title>
   <script charset="UTF-8" src="scripts/markdown-it.js"></script>
  <script charset="UTF-8" src="scripts/markdown-it-footnote.js"></script>
-  <script charset="UTF-8" src="scripts/highlight.pack.js"></script>
-  <script charset="UTF-8" src="scripts/emojify.js"></script>
   <script charset="UTF-8" src="codemirror/lib/codemirror.js"></script>
   <script charset="UTF-8" src="codemirror/overlay.js"></script>
   <script charset="UTF-8" src="codemirror/xml/xml.js"></script>
@@ -19,7 +17,9 @@
   <link rel="stylesheet" href="codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="css/default.css">
   <style>
-    body {margin: 0;}
+    body {
+        margin: 0;
+    }
 
     .CodeMirror pre{
       line-height: 16px;
@@ -31,25 +31,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: auto;
+      width: 100%;
       height: auto;
-    }
-
-    .CodeMirror-scroll {
-      padding: 0px;
-      box-sizing: border-box;
-    }
-
-    .emoji {
-      width: 1em;
-      height: 1em;
-      vertical-align: baseline;
-    }
-
-    .cm-quote { color: #90a959; font-style: italic; }
-
-    .view {
-      display: none;
     }
   </style>
 </head>
@@ -71,7 +54,6 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
 
 + [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
 + [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
-+ [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
 </textarea></form>
 
   <script type="text/javascript">
@@ -79,8 +61,6 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
       js: 'javascript',
       html: 'xml'
     };
-
-    emojify.setConfig({ img_dir: 'emoji' });
 
     var md = markdownit({
       html: true,

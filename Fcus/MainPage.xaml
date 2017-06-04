@@ -6,40 +6,42 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" >
-    <Grid Background="#f5f5f5">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
             
         </Grid.RowDefinitions>
+        <Grid x:Name="bgGrid" Grid.RowSpan="2"/>
+        <Grid Background="#f5f5f5" Opacity="0.5" Grid.RowSpan="2"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Image Source="Assets/Fcus-icon.png" Width="30" Margin="10"/>
-            <TextBlock x:Name="mdtitle" Text="Welcome to Fcus!" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="mdtitle" Text="Welcome to Fcus!" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Button Background="Transparent" Width="40" Click="New_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="LightGray"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="Black" ToolTipService.ToolTip="New"/>
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Click="Open_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE197;" Foreground="LightGray"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1A5;" Foreground="Black" ToolTipService.ToolTip="Open"/>
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Height="30" Click="Save_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="LightGray"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="Black" ToolTipService.ToolTip="Save"/>
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Height="30" Click="FullScreen_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="LightGray"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen"/>
                 </Button.Content>
             </Button>
         </StackPanel>

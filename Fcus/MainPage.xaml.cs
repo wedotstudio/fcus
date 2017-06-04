@@ -8,11 +8,14 @@ using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.System;
 using Windows.UI;
+using Windows.UI.Composition;
 using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Fcus
@@ -53,9 +56,11 @@ namespace Fcus
             var applicationView = ApplicationView.GetForCurrentView();
             var titleBar = applicationView.TitleBar;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-            titleBar.ButtonInactiveForegroundColor = Colors.Gray;
+            titleBar.ButtonInactiveForegroundColor = Colors.DarkGray;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
-            titleBar.ButtonForegroundColor = Colors.Gray;
+            titleBar.ButtonForegroundColor = Colors.Black;
+
+            initializeFrostedGlass(bgGrid);
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
@@ -65,7 +70,18 @@ namespace Fcus
                 await statusbar.HideAsync();
             }
         }
-
+        private void initializeFrostedGlass(UIElement glassHost)
+        {
+            Visual hostVisual = ElementCompositionPreview.GetElementVisual(glassHost);
+            Compositor compositor = hostVisual.Compositor;
+            var backdropBrush = compositor.CreateHostBackdropBrush();
+            var glassVisual = compositor.CreateSpriteVisual();
+            glassVisual.Brush = backdropBrush;
+            ElementCompositionPreview.SetElementChildVisual(glassHost, glassVisual);
+            var bindSizeAnimation = compositor.CreateExpressionAnimation("hostVisual.Size");
+            bindSizeAnimation.SetReferenceParameter("hostVisual", hostVisual);
+            glassVisual.StartAnimation("Size", bindSizeAnimation);
+        }
         private async void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
             NewWindowSetter();

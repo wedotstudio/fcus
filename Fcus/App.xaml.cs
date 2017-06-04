@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,6 +41,7 @@ namespace Fcus
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            MobileCenter.Start("3ceb4858-3b7c-45f4-8883-0d99578c9ad8", typeof(Analytics));
             OnActivated(e);
         }
 

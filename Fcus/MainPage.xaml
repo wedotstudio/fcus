@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" >
-    <Grid>
+    <Grid KeyDown="Grid_KeyDown" KeyUp="Grid_KeyUp">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -26,7 +26,7 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Button Background="Transparent" Width="40" Click="New_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="Black" ToolTipService.ToolTip="New"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="Black" ToolTipService.ToolTip="New" />
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Click="Open_Click" BorderThickness="0">
@@ -41,7 +41,7 @@
             </Button>
             <Button Background="Transparent" Width="40" Height="30" Click="FullScreen_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen"/>
+                    <FontIcon x:Name="fs_icon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen"/>
                 </Button.Content>
             </Button>
         </StackPanel>

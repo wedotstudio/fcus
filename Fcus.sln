@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fcus", "Fcus\Fcus.csproj", "{1285C431-2ABB-4371-A753-0ADDDA5C0E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fcus-Restart", "Fcus-Restart\Fcus-Restart.csproj", "{33C659C6-7239-4297-9301-0973EF303486}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,24 @@ Global
 		{1285C431-2ABB-4371-A753-0ADDDA5C0E9E}.Release|x86.ActiveCfg = Release|x86
 		{1285C431-2ABB-4371-A753-0ADDDA5C0E9E}.Release|x86.Build.0 = Release|x86
 		{1285C431-2ABB-4371-A753-0ADDDA5C0E9E}.Release|x86.Deploy.0 = Release|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|ARM.ActiveCfg = Debug|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|ARM.Build.0 = Debug|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|ARM.Deploy.0 = Debug|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x64.ActiveCfg = Debug|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x64.Build.0 = Debug|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x64.Deploy.0 = Debug|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x86.ActiveCfg = Debug|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x86.Build.0 = Debug|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Debug|x86.Deploy.0 = Debug|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|ARM.ActiveCfg = Release|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|ARM.Build.0 = Release|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|ARM.Deploy.0 = Release|ARM
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x64.ActiveCfg = Release|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x64.Build.0 = Release|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x64.Deploy.0 = Release|x64
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x86.ActiveCfg = Release|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x86.Build.0 = Release|x86
+		{33C659C6-7239-4297-9301-0973EF303486}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

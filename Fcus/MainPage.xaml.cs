@@ -20,17 +20,17 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Fcus
 {
-    public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
+    public sealed partial class MainPage : Page
     {
         public string content = "";
         public IStorageFile documentFile = null;
-        public string documentTitle = "Welcome to Fcus!";
+        public string documentTitle = "untitled";
+        public bool isCtrlKeyPressed;
 
         public MainPage()
         {
             this.InitializeComponent();
             _initUI();
-
 
             content = "";
             documentTitle = "untitled";
@@ -51,7 +51,7 @@ namespace Fcus
             }
         }
 
-        private async void _initUI()
+        private void _initUI()
         {
             var applicationView = ApplicationView.GetForCurrentView();
             var titleBar = applicationView.TitleBar;
@@ -63,12 +63,6 @@ namespace Fcus
             initializeFrostedGlass(bgGrid);
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-
-            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
-            {
-                var statusbar = StatusBar.GetForCurrentView();
-                await statusbar.HideAsync();
-            }
         }
         private void initializeFrostedGlass(UIElement glassHost)
         {
@@ -108,14 +102,25 @@ namespace Fcus
         }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "change") { OnCodeContentChanged(); NewWindowSetter(); }
+            if (e.Value == "changed") { OnCodeContentChanged(); NewWindowSetter(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
         private async void OnCodeContentChanged()
         {
+            if (!mdtitle.Text.EndsWith("*"))
+            {
+                mdtitle.Text += "*";
+            }
             content = await editor.InvokeScriptAsync("getmd", null);
-            
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "change",
+                Content = "changed",
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noWifiDialog.ShowAsync();
         }
         public async void NewFile()
         {
@@ -166,7 +171,16 @@ namespace Fcus
 
         private void FullScreen()
         {
-            ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+            var view = ApplicationView.GetForCurrentView();
+            if (view.IsFullScreenMode)
+            {
+                view.ExitFullScreenMode();
+                fs_icon.Glyph = ""; 
+            }
+            else {
+                view.TryEnterFullScreenMode();
+                fs_icon.Glyph = "";
+            }
         }
 
         private async void SaveFile()
@@ -217,6 +231,26 @@ namespace Fcus
         private void FullScreen_Click(object sender, RoutedEventArgs e)
         {
             FullScreen();
+        }
+
+        private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Control) isCtrlKeyPressed = false;
+        }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Control) isCtrlKeyPressed = true;
+            else if (isCtrlKeyPressed)
+            {
+                switch (e.Key)
+                {
+                    case VirtualKey.N: NewFile(); break;
+                    case VirtualKey.O: OpenFile(); break;
+                    case VirtualKey.S: SaveFile(); break;
+                    case VirtualKey.F: FullScreen();break ;
+                }
+            }
         }
     }
 }

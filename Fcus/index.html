@@ -76,11 +76,12 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     })
       .use(markdownitFootnote);
 
-    /*function update(e){
-     setOutput(e.getValue());
+      function update(e) {
+          window.external.notify("changed");
+     //setOutput(e.getValue());
     }
 
-    function setOutput(val){
+    /*function setOutput(val){
       val = val.replace(/<equation>((.*?\n)*?.*?)<\/equation>/ig, function(a, b){
         return '<img src="http://latex.codecogs.com/png.latex?' + encodeURIComponent(b) + '" />';
       });
@@ -102,8 +103,8 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
           return;
         }
       }
-    }
-    */
+    }*/
+
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
       mode: 'markdown',
       lineNumbers: true,
@@ -113,7 +114,9 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
       extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
     });
 
-    //editor.on('change', update);
+     editor.on("change", function () {
+            window.external.notify("changed");
+        })
 
     document.addEventListener('drop', function(e){
       e.preventDefault();

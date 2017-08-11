@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Fcus
+namespace Fcus_Restart
 {
     public sealed partial class MainPage : Page
     {
@@ -44,7 +44,7 @@ namespace Fcus
         {
             base.OnNavigatedTo(e);
             var file = e.Parameter as IStorageFile;
-            if(file!=null)
+            if (file != null)
             {
                 //await openfileasync(file);
                 actfile = file;
@@ -80,7 +80,7 @@ namespace Fcus
         {
             NewWindowSetter();
 
-            if (actfile!=null)
+            if (actfile != null)
             {
                 await openfileasync(actfile);
                 actfile = null;
@@ -175,9 +175,10 @@ namespace Fcus
             if (view.IsFullScreenMode)
             {
                 view.ExitFullScreenMode();
-                fs_icon.Glyph = ""; 
+                fs_icon.Glyph = "";
             }
-            else {
+            else
+            {
                 view.TryEnterFullScreenMode();
                 fs_icon.Glyph = "";
             }
@@ -248,7 +249,7 @@ namespace Fcus
                     case VirtualKey.N: NewFile(); break;
                     case VirtualKey.O: OpenFile(); break;
                     case VirtualKey.S: SaveFile(); break;
-                    case VirtualKey.F: FullScreen();break ;
+                    case VirtualKey.F: FullScreen(); break;
                 }
             }
         }

@@ -2,27 +2,41 @@
 <html>
 <head>
   <title>Markdown Editor</title>
-  <script charset="UTF-8" src="scripts/markdown-it.js"></script>
- <script charset="UTF-8" src="scripts/markdown-it-footnote.js"></script>
-  <script charset="UTF-8" src="codemirror/lib/codemirror.js"></script>
-  <script charset="UTF-8" src="codemirror/overlay.js"></script>
-  <script charset="UTF-8" src="codemirror/xml/xml.js"></script>
-  <script charset="UTF-8" src="codemirror/markdown/markdown.js"></script>
-  <script charset="UTF-8" src="codemirror/gfm/gfm.js"></script>
-  <script charset="UTF-8" src="codemirror/javascript/javascript.js"></script>
-  <script charset="UTF-8" src="codemirror/css/css.js"></script>
-  <script charset="UTF-8" src="codemirror/htmlmixed/htmlmixed.js"></script>
-  <script charset="UTF-8" src="codemirror/lib/util/continuelist.js"></script>
+  <script src="scripts/markdown-it.js"></script>
+  <script src="scripts/markdown-it-footnote.js"></script>
+  <script src="scripts/highlight.pack.js"></script>
+  <script src="scripts/emojify.js"></script>
+  <script src="scripts/codemirror/lib/codemirror.js"></script>
+  <script src="scripts/codemirror/overlay.js"></script>
+  <script src="scripts/codemirror/xml/xml.js"></script>
+  <script src="scripts/codemirror/markdown/markdown.js"></script>
+  <script src="scripts/codemirror/gfm/gfm.js"></script>
+  <script src="scripts/codemirror/javascript/javascript.js"></script>
+  <script src="scripts/codemirror/css/css.js"></script>
+  <script src="scripts/codemirror/htmlmixed/htmlmixed.js"></script>
+  <script src="scripts/codemirror/lib/util/continuelist.js"></script>
+  <script src="scripts/rawinflate.js"></script>
+  <script src="scripts/rawdeflate.js"></script>
   <link rel="stylesheet" href="css/base16-light.css">
-  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="scripts/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="css/default.css">
   <style>
-    body {
-        margin: 0;
-    }
+    body {margin: 0;}
 
     .CodeMirror pre{
       line-height: 16px;
+    }
+
+    #in{
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: auto;
+      overflow: auto;
+      font-size: 12px;
+      box-shadow: -10px 2px 6px 10px rgba(0,0,0,0.4);
     }
 
     .CodeMirror {
@@ -31,36 +45,126 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100%;
+      width: auto;
       height: auto;
     }
+
+    .CodeMirror-scroll {
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    #out{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 50%;
+      bottom: 0;
+      overflow: auto;
+      padding: 10px;
+      padding-left: 20px;
+      color: #444;
+      font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.5em
+    }
+
+    .emoji {
+      width: 1em;
+      height: 1em;
+      vertical-align: baseline;
+    }
+
+    @media screen and (max-width: 1024px) {
+      #in {
+        width:100%;
+      }
+      #out {
+          display: none;
+        left: 0;
+        padding-left: 10px;
+      }
+    }
+
+    .cm-header-1 { font-size: 2em; }
+    .cm-header-2 { font-size: 1.75em; }
+    .cm-header-3 { font-size: 1.5em; }
+    .cm-header-4 { font-size: 1.3em; }
+    .cm-header-5 { font-size: 1.2em; }
+    .cm-header-6 { font-size: 1.15em; }
+
+    .cm-quote { color: #90a959; font-style: italic; }
+
+    .view #in {
+      display: none;
+    }
+    .view #out {
+      left: 0;
+      padding-left: 10px;
+    }
+
+    a{ color: #0645ad; text-decoration:none;}
+    a:visited{ color: #0b0080; }
+    a:hover{ color: #06e; }
+    a:active{ color:#faa700; }
+    a:focus{ outline: thin dotted; }
+    a:hover, a:active{ outline: 0; }
+
+    p{margin:1em 0;}
+
+    img{max-width:100%;}
+
+    h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;}
+    h4,h5,h6{ font-weight: bold; }
+    h1{ font-size:2.5em; }
+    h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+    h3{ font-size:1.5em; }
+    h4{ font-size:1.2em; }
+    h5{ font-size:1em; }
+    h6{ font-size:0.9em; }
+
+    blockquote{color:#666666;margin:0;padding-left: 3em;border-left: 0.5em #EEE solid;}
+    hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+    pre, code{
+      color: #000;
+      font-family:Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 0.94em; /* 0.94 = 0.88 + (1.00 - 0.88) / 2 */
+      border-radius:3px;
+      background-color: #F8F8F8;
+      border: 1px solid #CCC;
+    }
+    pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+    pre code { border: 0px !important; background: transparent !important; line-height: 1.3em; }
+    code { padding: 0 3px 0 3px; }
+    sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+    sup { top: -0.5em; }
+    sub { bottom: -0.25em; }
+    ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+    li p:last-child { margin:0 }
+    dd { margin: 0 0 0 2em; }
+    img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+    table { border-collapse: collapse; border-spacing: 0; }
+    td, th { vertical-align: top; padding: 4px 10px; border: 1px solid #bbb; }
+    tr:nth-child(even) td, tr:nth-child(even) th { background: #eee; }
   </style>
 </head>
 <body>
-<form><textarea id="code">
-# Fcus
-
-This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from [Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
-
-### Contribute:
-
-[**Feel free to contribute in this project!**](https://github.com/patrick330602/Fcus) Make sure to leave issues if the app is not working properly.
-
-### License:
-
-This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blob/master/LICENSE). Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
-
-### Credit:
-
-+ [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
-+ [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
-</textarea></form>
-
+  <div id="in"><form><textarea id="code">
+</textarea></form></div>
+  <div id="out"></div>
   <script type="text/javascript">
+    var URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+    navigator.saveBlob = navigator.saveBlob || navigator.msSaveBlob || navigator.mozSaveBlob || navigator.webkitSaveBlob;
+    window.saveAs = window.saveAs || window.webkitSaveAs || window.mozSaveAs || window.msSaveAs;
+
+    // Because highlight.js is a bit awkward at times
     var languageOverrides = {
       js: 'javascript',
       html: 'xml'
     };
+
+    emojify.setConfig({ img_dir: 'emoji' });
 
     var md = markdownit({
       html: true,
@@ -76,12 +180,18 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
     })
       .use(markdownitFootnote);
 
+
+    var hashto;
+
       function update(e) {
           window.external.notify("changed");
-     //setOutput(e.getValue());
+      setOutput(e.getValue());
+
+      clearTimeout(hashto);
+      hashto = setTimeout(updateHash, 1000);
     }
 
-    /*function setOutput(val){
+    function setOutput(val){
       val = val.replace(/<equation>((.*?\n)*?.*?)<\/equation>/ig, function(a, b){
         return '<img src="http://latex.codecogs.com/png.latex?' + encodeURIComponent(b) + '" />';
       });
@@ -103,20 +213,18 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
           return;
         }
       }
-    }*/
+    }
 
     var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-      mode: 'markdown',
-      lineNumbers: true,
-      matchBrackets: false,
+      mode: 'gfm',
+      lineNumbers: false,
+      matchBrackets: true,
       lineWrapping: true,
       theme: 'base16-light',
       extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
     });
 
-     editor.on("change", function () {
-            window.external.notify("changed");
-        })
+    editor.on('change', update);
 
     document.addEventListener('drop', function(e){
       e.preventDefault();
@@ -130,19 +238,51 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
       reader.readAsText(e.dataTransfer.files[0]);
     }, false);
 
-    var setContent = function (content) {
-        editor.doc.setValue(content);
+
+
+      var setContent = function (content) {
+          editor.doc.setValue(content);
+      }
+
+      var getmd = function saveAsMarkdown() {
+          return editor.getValue();
+      }
+      var gethtml = function saveAsHtml() {
+          return document.getElementById('out').innerHTML;
+      }
+
+    function updateHash(){
+      window.location.hash = btoa( // base64 so url-safe
+        RawDeflate.deflate( // gzip
+          unescape(encodeURIComponent( // convert to utf8
+            editor.getValue()
+          ))
+        )
+      );
     }
 
-    var getmd = function saveAsMarkdown() {
-        return editor.getValue();
-    }
-
-    var gethtml = function saveAsHtml() {
-        return document.getElementById('out').innerHTML;
-    }
-      //update(editor);
+    if(window.location.hash){
+      var h = window.location.hash.replace(/^#/, '');
+      if(h.slice(0,5) == 'view:'){
+        setOutput(decodeURIComponent(escape(RawDeflate.inflate(atob(h.slice(5))))));
+        document.body.className = 'view';
+      }else{
+        editor.setValue(
+          decodeURIComponent(escape(
+            RawDeflate.inflate(
+              atob(
+                h
+              )
+            )
+          ))
+        );
+        update(editor);
+        editor.focus();
+      }
+    }else{
+      update(editor);
       editor.focus();
+    }
   </script>
 </body>
 </html>

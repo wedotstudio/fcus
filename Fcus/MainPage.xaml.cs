@@ -25,7 +25,7 @@ namespace Fcus_Restart
         public string content = "";
         public IStorageFile documentFile = null;
         public string documentTitle = "untitled";
-        public int filenewopend = 0;
+        public int filestate= 0;
         public bool isCtrlKeyPressed;
 
         public MainPage()
@@ -103,7 +103,7 @@ namespace Fcus_Restart
         }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "changed") { if( filenewopend == 2  ){ OnCodeContentChanged(); } filenewopend = 2; NewWindowSetter(); }
+            if (e.Value == "changed") { if( filestate == 2  ){ OnCodeContentChanged(); } filestate = 2; NewWindowSetter(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
@@ -118,6 +118,24 @@ namespace Fcus_Restart
         }
         public async void NewFile()
         {
+            if (filestate == 2)
+            {
+                var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
+                dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); NewDoc(); }));
+                dlg.Commands.Add(new UICommand("Discard", cmd => { NewDoc(); }));
+                dlg.Commands.Add(new UICommand("Cancel"));
+                await dlg.ShowAsync();
+            }
+            else
+            {
+                NewDoc();
+            }
+
+        }
+
+        private async void NewDoc()
+        {
+            filestate = 1;
             content = "";
             documentTitle = "untitled";
             settitle();
@@ -126,13 +144,27 @@ namespace Fcus_Restart
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 
-        private void settitle()
+            private void settitle()
         {
             ApplicationView.GetForCurrentView().Title = documentTitle + " - Fcus";
         }
 
         private async void OpenFile()
         {
+            if (filestate == 2)
+            {
+                var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
+                dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); OpenDoc(); }));
+                dlg.Commands.Add(new UICommand("Discard", cmd => { OpenDoc(); }));
+                dlg.Commands.Add(new UICommand("Cancel"));
+                await dlg.ShowAsync();
+            }
+            else {
+                OpenDoc();
+            }
+           
+        }
+        private async void OpenDoc() {
             // Open a text file.
             FileOpenPicker open =
                 new FileOpenPicker();
@@ -146,8 +178,8 @@ namespace Fcus_Restart
             open.FileTypeFilter.Add(".mdown");
 
             await openfileasync(await open.PickSingleFileAsync());
+            filestate = 1;
         }
-
 
         private async System.Threading.Tasks.Task openfileasync(IStorageFile file)
         {
@@ -193,11 +225,14 @@ namespace Fcus_Restart
                     documentFile = file;
                     settitle();
                     documentTitle = file.Name + ".md";
+                    filestate = 1;
                 }
             }
             else
             {
                 SaveDoc2File(documentFile);
+                mdtitle.Text = documentTitle;
+                filestate = 1;
             }
         }
 

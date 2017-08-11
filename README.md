@@ -28,8 +28,22 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
 
 + js-deflate
 
-+ UWP Community Toolkit
+  [GitHub](https://github.com/dankogai/js-deflate) | License(GPL-2)
+
+
++ UWP Community Toolkit 1.5.1
+
+  [GitHub](https://github.com/Microsoft/UWPCommunityToolkit) | [Website](http://docs.uwpcommunitytoolkit.com/) 
+
++ UDE.CSharp.UWP 1.0.1
+
+  [GitHub](https://github.com/linquize/ude) | [License(MPL)](https://raw.githubusercontent.com/linquize/ude/master/license/MPL-1.1.txt)
 
 ## Credits
 
-[Markdown Editor](https://github.com/jbt/markdown-editor) and [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
+use [Markdown Editor](https://github.com/jbt/markdown-editor) under WTFPL as the editor system.
+
+Referenced a small part of the code from [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
+
+Thank [@yinyue200](https://github.com/yinyue200) for multiple instance and file association.
+

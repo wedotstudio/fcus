@@ -2,7 +2,9 @@
 
 <a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
 
-This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspired from 
+**Fcus Writing; Mark Done.**
+
+This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
 
 ## Contribute
 
@@ -10,7 +12,7 @@ This is a minimal Markdown UWP editor made based on HTML5 and Javascript, inspir
 
 ## License
 
-This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blob/master/LICENSE). Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+Please be reminded that the license haas changed to [MIT](https://github.com/patrick330602/Fcus/blob/master/LICENSE)
 
 ## Libraries
 
@@ -41,9 +43,7 @@ This Project is under [the Unlincense](https://github.com/patrick330602/Fcus/blo
 
 ## Credits
 
-use [Markdown Editor](https://github.com/jbt/markdown-editor) under WTFPL as the editor system.
-
-Referenced a small part of the code from [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP).
+Referenced code from [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP) and [Markdown Editor](https://github.com/jbt/markdown-editor).
 
 Thank [@yinyue200](https://github.com/yinyue200) for multiple instance and file association.
 

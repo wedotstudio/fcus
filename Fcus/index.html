@@ -251,6 +251,17 @@
           return document.getElementById('out').innerHTML;
       }
 
+      function KeyPress(e) {
+          var evtobj = window.event ? event : e
+
+          if (evtobj.keyCode == 78 && evtobj.ctrlKey) window.external.notify("newfile");
+          if (evtobj.keyCode == 79 && evtobj.ctrlKey) window.external.notify("openfile");
+          if (evtobj.keyCode == 83 && evtobj.ctrlKey) window.external.notify("savefile");
+          if ((evtobj.keyCode == 70 && evtobj.ctrlKey) || evtobj.keyCode == 122) window.external.notify("full");
+          if (evtobj.keyCode == 84 && evtobj.ctrlKey) window.external.notify("toggle");
+      }
+
+      document.onkeydown = KeyPress;
     function updateHash(){
       window.location.hash = btoa( // base64 so url-safe
         RawDeflate.deflate( // gzip

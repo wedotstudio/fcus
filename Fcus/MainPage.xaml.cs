@@ -40,6 +40,8 @@ namespace Fcus_Restart
 
             editor.NavigationCompleted += Editor_NavigationCompleted;
         }
+
+
         IStorageFile actfile;
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -105,6 +107,11 @@ namespace Fcus_Restart
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
             if (e.Value == "changed") { if (filestate == 2) { OnCodeContentChanged(); } filestate = 2; NewWindowSetter(); }
+            else if (e.Value == "newfile") { NewFile(); }
+            else if (e.Value == "openfile") { OpenFile(); }
+            else if (e.Value == "savefile") { SaveFile(); }
+            else if (e.Value == "full") { FullScreen(); }
+            else if (e.Value == "toggle") { TogglePreview(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
@@ -252,6 +259,12 @@ namespace Fcus_Restart
             await FileIO.WriteBytesAsync(file, bytes);
         }
 
+        private void TogglePreview()
+        {
+            
+        }
+
+
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFile();
@@ -270,26 +283,6 @@ namespace Fcus_Restart
         private void FullScreen_Click(object sender, RoutedEventArgs e)
         {
             FullScreen();
-        }
-
-        private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Control) isCtrlKeyPressed = false;
-        }
-
-        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Control) isCtrlKeyPressed = true;
-            else if (isCtrlKeyPressed)
-            {
-                switch (e.Key)
-                {
-                    case VirtualKey.N: NewFile(); break;
-                    case VirtualKey.O: OpenFile(); break;
-                    case VirtualKey.S: SaveFile(); break;
-                    case VirtualKey.F: FullScreen(); break;
-                }
-            }
         }
     }
 }

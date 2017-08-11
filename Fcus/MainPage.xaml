@@ -13,7 +13,6 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
-
         </Grid.RowDefinitions>
         <Grid x:Name="bgGrid" Grid.RowSpan="2"/>
         <Grid Background="#f5f5f5" Opacity="0.5" Grid.RowSpan="2"/>
@@ -28,33 +27,43 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Button Background="Transparent" Width="40" Click="New_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="Black" ToolTipService.ToolTip="New" />
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE132;" Foreground="Black" ToolTipService.ToolTip="New(N)" />
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Click="Open_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1A5;" Foreground="Black" ToolTipService.ToolTip="Open"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1A5;" Foreground="Black" ToolTipService.ToolTip="Open(O)"/>
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Height="30" Click="Save_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="Black" ToolTipService.ToolTip="Save"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="Black" ToolTipService.ToolTip="Save(S)"/>
                 </Button.Content>
             </Button>
             <Button Background="Transparent" Width="40" Height="30" Click="FullScreen_Click" BorderThickness="0">
                 <Button.Content>
-                    <FontIcon x:Name="fs_icon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen"/>
+                    <FontIcon x:Name="fs_icon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen(F11)"/>
+                </Button.Content>
+            </Button>
+            <Button Background="Transparent" Width="40" Height="30" Click="About_Click" BorderThickness="0">
+                <Button.Content>
+                    <FontIcon x:Name="ab_icon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE11B;" Foreground="Black" ToolTipService.ToolTip="About"/>
                 </Button.Content>
             </Button>
         </StackPanel>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="2" ScriptNotify="ScriptNotify" />
-        <Grid>
-            <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="12" BorderBrush="{ThemeResource AppBarBorderThemeBrush}" BorderThickness="2">
-                <controls:MarkdownTextBlock x:Name="ui_markdownText" 
+        <Grid x:Name="aboutPanel" Grid.RowSpan="3"  Margin="12,80" MaxWidth="400" MaxHeight="800" Background="#ddd" BorderThickness="0"  Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Foreground="Black" Text="About" HorizontalAlignment="Left" Margin="10,10,10,0"/>
+            <Button HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE106;" Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Margin="10,10,10,0"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Background="Transparent" BorderThickness="0">
+                <controls:MarkdownTextBlock x:Name="aboutText" 
                                         Margin="6" 
                                         Foreground="Black" 
-                                        LinkForeground="BlueViolet"
-                                        OnLinkClicked="MarkdownText_OnLinkClicked"/>
+                                        LinkForeground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
             </ScrollViewer>
         </Grid>
     </Grid>

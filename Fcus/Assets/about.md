@@ -24,7 +24,7 @@ Please be reminded that the license has changed to [MIT](https://github.com/patr
 
 - highlight.js 9.12.0
 
-  [GitHub]() | [Website](http://softwaremaniacs.org/soft/highlight/en/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
+  [GitHub](https://github.com/isagalaev/highlight.js) | [Website](https://highlightjs.org/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
 
 - js-deflate
 
@@ -43,4 +43,4 @@ Please be reminded that the license has changed to [MIT](https://github.com/patr
 
 Referenced code from [Markdown.UWP](https://github.com/chenguanzhou/MarkDown.UWP) and [Markdown Editor](https://github.com/jbt/markdown-editor).
 
-A big thanks to [@yinyue200](https://github.com/yinyue200) for multiple instance and file association.
+A big thanks to [@yinyue200](https://github.com/yinyue200) for implementing features of multiple instance and file association.

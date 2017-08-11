@@ -1,8 +1,8 @@
-<div style="text-align:center"><h1>Fcus</h1>
+<p align="center"><h1>Fcus</h1></p>
 
-<a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
+<p align="center"><a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a></p>
 
-**Focus Writing; Mark Done.**</div>
+<p align="center">**Focus Writing; Mark Done.**</p>
 
 This is a minimal Markdown UWP editor made based on HTML5 and JavaScript.
 
@@ -26,7 +26,7 @@ Please be reminded that the license has changed to [MIT](https://github.com/patr
 
 + highlight.js 9.12.0
 
-  [GitHub]() | [Website](http://softwaremaniacs.org/soft/highlight/en/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
+  [GitHub](https://github.com/isagalaev/highlight.js) | [Website](https://highlightjs.org/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
 
 + js-deflate
 

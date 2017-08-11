@@ -17,7 +17,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>Fcus-Restart_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Fcus_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>775033F9BBFC2EA2EBF42961DAC90967D58E8C5B</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -107,6 +108,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\Fcus-Icon-file.png" />
     <Content Include="Assets\Fcus-Icon.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -151,6 +157,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="css\base16-light.css" />
     <Content Include="css\tomorrow-night-blue.css" />
+    <None Include="Fcus_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="scripts\codemirror\css\css.js" />
     <Content Include="scripts\codemirror\gfm\gfm.js" />
     <Content Include="scripts\codemirror\gfm\index.html" />
@@ -1093,6 +1101,11 @@
     <PackageReference Include="UDE.CSharp.UWP">
       <Version>1.0.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\about.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

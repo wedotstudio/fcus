@@ -33,7 +33,7 @@ namespace Fcus_Restart
         {
             this.InitializeComponent();
             _initUI();
-
+            Loaded += MainPage_Loaded;
             content = "";
             documentTitle = "untitled";
             documentFile = null;
@@ -41,6 +41,11 @@ namespace Fcus_Restart
             editor.NavigationCompleted += Editor_NavigationCompleted;
         }
 
+        private async void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/about.md"));
+            aboutText.Text = await FileIO.ReadTextAsync(file);
+        }
 
         IStorageFile actfile;
 
@@ -67,6 +72,8 @@ namespace Fcus_Restart
             initializeFrostedGlass(bgGrid);
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+
+           
         }
         private void initializeFrostedGlass(UIElement glassHost)
         {
@@ -283,6 +290,16 @@ namespace Fcus_Restart
         private void FullScreen_Click(object sender, RoutedEventArgs e)
         {
             FullScreen();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            aboutPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            aboutPanel.Visibility = Visibility.Visible;
         }
     }
 }

@@ -1062,6 +1062,7 @@
     <Content Include="emoji\zzz.png" />
     <Content Include="scripts\highlight.pack.js" />
     <Content Include="index.html" />
+    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\markdown-it-footnote.js" />
     <Content Include="scripts\markdown-it.js" />
     <Content Include="Properties\Default.rd.xml" />

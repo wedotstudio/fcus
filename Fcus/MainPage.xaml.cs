@@ -25,6 +25,7 @@ namespace Fcus_Restart
         public string content = "";
         public IStorageFile documentFile = null;
         public string documentTitle = "untitled";
+        public int filenewopend = 0;
         public bool isCtrlKeyPressed;
 
         public MainPage()
@@ -102,25 +103,18 @@ namespace Fcus_Restart
         }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "changed") { OnCodeContentChanged(); NewWindowSetter(); }
+            if (e.Value == "changed") { if( filenewopend == 2  ){ OnCodeContentChanged(); } filenewopend = 2; NewWindowSetter(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
         private async void OnCodeContentChanged()
         {
+            
             if (!mdtitle.Text.EndsWith("*"))
             {
                 mdtitle.Text += "*";
             }
             content = await editor.InvokeScriptAsync("getmd", null);
-            ContentDialog noWifiDialog = new ContentDialog
-            {
-                Title = "change",
-                Content = "changed",
-                CloseButtonText = "Ok"
-            };
-
-            ContentDialogResult result = await noWifiDialog.ShowAsync();
         }
         public async void NewFile()
         {

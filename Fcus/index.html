@@ -16,7 +16,8 @@
   <script src="scripts/codemirror/htmlmixed/htmlmixed.js"></script>
   <script src="scripts/codemirror/lib/util/continuelist.js"></script>
   <script src="scripts/rawinflate.js"></script>
-  <script src="scripts/rawdeflate.js"></script>
+    <script src="scripts/rawdeflate.js"></script>
+    <script src="scripts/jquery.min.js"></script>
   <link rel="stylesheet" href="css/base16-light.css">
   <link rel="stylesheet" href="scripts/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="css/default.css">
@@ -54,20 +55,22 @@
       box-sizing: border-box;
     }
 
-    #out{
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 50%;
-      bottom: 0;
-      overflow: auto;
-      padding: 10px;
-      padding-left: 20px;
-      color: #444;
-      font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-      font-size: 16px;
-      line-height: 1.5em
-    }
+      #out {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 50%;
+          bottom: 0;
+          overflow: auto;
+          padding: 10px;
+          padding-left: 20px;
+          color: #24292e;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-size: 16px;
+          line-height: 1.5;
+          word-wrap: break-word;
+          line-height: 1.5em
+      }
 
     .emoji {
       width: 1em;
@@ -184,14 +187,13 @@
     var hashto;
 
       function update(e) {
-          window.external.notify("changed");
       setOutput(e.getValue());
-
+      window.external.notify("changed");
       clearTimeout(hashto);
       hashto = setTimeout(updateHash, 1000);
     }
 
-    function setOutput(val){
+      function setOutput(val) {
       val = val.replace(/<equation>((.*?\n)*?.*?)<\/equation>/ig, function(a, b){
         return '<img src="http://latex.codecogs.com/png.latex?' + encodeURIComponent(b) + '" />';
       });
@@ -237,8 +239,6 @@
 
       reader.readAsText(e.dataTransfer.files[0]);
     }, false);
-
-
 
       var setContent = function (content) {
           editor.doc.setValue(content);

@@ -36,7 +36,7 @@
         </uap:Extension>
       </Extensions>
       <uap:ApplicationContentUriRules>
-        <uap:Rule Match="ms-appx-web:///*" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="ms-appx-web:///index.html" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
     </Application>
   </Applications>

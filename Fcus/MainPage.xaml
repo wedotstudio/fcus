@@ -46,6 +46,6 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="2" />
+        <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="2" ScriptNotify="ScriptNotify" />
     </Grid>
 </Page>

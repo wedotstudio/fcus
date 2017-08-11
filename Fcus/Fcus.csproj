@@ -1087,6 +1087,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.3.4</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>1.5.1</Version>
+    </PackageReference>
     <PackageReference Include="UDE.CSharp.UWP">
       <Version>1.0.1</Version>
     </PackageReference>

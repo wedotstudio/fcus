@@ -150,6 +150,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="css\base16-light.css" />
+    <Content Include="css\tomorrow-night-blue.css" />
     <Content Include="scripts\codemirror\css\css.js" />
     <Content Include="scripts\codemirror\gfm\gfm.js" />
     <Content Include="scripts\codemirror\gfm\index.html" />
@@ -1060,8 +1061,8 @@
     <Content Include="emoji\zap.png" />
     <Content Include="emoji\zero.png" />
     <Content Include="emoji\zzz.png" />
-    <Content Include="scripts\highlight.pack.js" />
     <Content Include="index.html" />
+    <Content Include="scripts\highlight.pack.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\markdown-it-footnote.js" />
     <Content Include="scripts\markdown-it.js" />

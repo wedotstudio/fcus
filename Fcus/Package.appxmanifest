@@ -24,7 +24,7 @@
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap:FileTypeAssociation Name="markdown">
             <uap:DisplayName>Markdown File</uap:DisplayName>
-            <uap:Logo>Fcus-Icon-file.png</uap:Logo>
+            <uap:Logo>Assets\Fcus-Icon-file.png</uap:Logo>
             <uap:SupportedFileTypes>
               <uap:FileType>.md</uap:FileType>
               <uap:FileType>.markdown</uap:FileType>

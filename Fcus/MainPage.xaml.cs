@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Fcus_Restart
         public string content = "";
         public IStorageFile documentFile = null;
         public string documentTitle = "untitled";
-        public int filestate= 0;
+        public int filestate = 0;
         public bool isCtrlKeyPressed;
 
         public MainPage()
@@ -103,13 +104,13 @@ namespace Fcus_Restart
         }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "changed") { if( filestate == 2  ){ OnCodeContentChanged(); } filestate = 2; NewWindowSetter(); }
+            if (e.Value == "changed") { if (filestate == 2) { OnCodeContentChanged(); } filestate = 2; NewWindowSetter(); }
             else await new MessageDialog(e.Value).ShowAsync();
         }
 
         private async void OnCodeContentChanged()
         {
-            
+
             if (!mdtitle.Text.EndsWith("*"))
             {
                 mdtitle.Text += "*";
@@ -135,7 +136,7 @@ namespace Fcus_Restart
 
         private async void NewDoc()
         {
-            filestate = 1;
+            filestate = 0;
             content = "";
             documentTitle = "untitled";
             settitle();
@@ -144,7 +145,7 @@ namespace Fcus_Restart
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
 
-            private void settitle()
+        private void settitle()
         {
             ApplicationView.GetForCurrentView().Title = documentTitle + " - Fcus";
         }
@@ -159,13 +160,16 @@ namespace Fcus_Restart
                 dlg.Commands.Add(new UICommand("Cancel"));
                 await dlg.ShowAsync();
             }
-            else {
+            else
+            {
                 OpenDoc();
             }
-           
+
         }
-        private async void OpenDoc() {
+        private async void OpenDoc()
+        {
             // Open a text file.
+
             FileOpenPicker open =
                 new FileOpenPicker();
             open.SuggestedStartLocation =
@@ -178,21 +182,24 @@ namespace Fcus_Restart
             open.FileTypeFilter.Add(".mdown");
 
             await openfileasync(await open.PickSingleFileAsync());
-            filestate = 1;
         }
 
         private async System.Threading.Tasks.Task openfileasync(IStorageFile file)
         {
-            var buffer = await FileIO.ReadBufferAsync(file);
-            Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
-            var reader = new StreamReader(buffer.AsStream(), FileEncoding);
+            if (file != null)
+            {
+                filestate = 1;
+                var buffer = await FileIO.ReadBufferAsync(file);
+                Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
+                var reader = new StreamReader(buffer.AsStream(), FileEncoding);
 
-            content = reader.ReadToEnd().Replace("\r\n", "\n");
-            documentFile = file;
-            documentTitle = file.Name;
-            settitle();
-            mdtitle.Text = documentTitle;
-            await editor.InvokeScriptAsync("setContent", new string[] { content });
+                content = reader.ReadToEnd().Replace("\r\n", "\n");
+                documentFile = file;
+                documentTitle = file.Name;
+                settitle();
+                mdtitle.Text = documentTitle;
+                await editor.InvokeScriptAsync("setContent", new string[] { content });
+            }
         }
 
         private void FullScreen()
@@ -201,13 +208,15 @@ namespace Fcus_Restart
             if (view.IsFullScreenMode)
             {
                 view.ExitFullScreenMode();
-                fs_icon.Glyph = "";
+                fs_icon.Glyph = "";
             }
             else
             {
                 view.TryEnterFullScreenMode();
-                fs_icon.Glyph = "";
+                fs_icon.Glyph = "";
             }
+            
+           
         }
 
         private async void SaveFile()

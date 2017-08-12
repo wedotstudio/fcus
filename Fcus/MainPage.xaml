@@ -38,8 +38,15 @@
             <Button Background="Transparent" Width="40" Height="30" Click="Save_Click" BorderThickness="0">
                 <Button.Content>
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;" Foreground="Black" ToolTipService.ToolTip="Save(S)"/>
+                    
                 </Button.Content>
             </Button>
+            <Button Background="Transparent" Width="40" Height="30" Click="Preview_Click" BorderThickness="0">
+                <Button.Content>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="" Foreground="Black" ToolTipService.ToolTip="Preview(P)"/>
+                </Button.Content>
+            </Button>
+            
             <Button Background="Transparent" Width="40" Height="30" Click="FullScreen_Click" BorderThickness="0">
                 <Button.Content>
                     <FontIcon x:Name="fs_icon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE740;" Foreground="Black" ToolTipService.ToolTip="FullScreen(F11)"/>

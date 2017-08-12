@@ -266,9 +266,9 @@ namespace Fcus_Restart
             await FileIO.WriteBytesAsync(file, bytes);
         }
 
-        private void TogglePreview()
+        private async void TogglePreview()
         {
-            
+            await editor.InvokeScriptAsync("toggle", null);
         }
 
 
@@ -300,6 +300,11 @@ namespace Fcus_Restart
         private void About_Click(object sender, RoutedEventArgs e)
         {
             aboutPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Preview_Click(object sender, RoutedEventArgs e)
+        {
+            TogglePreview();
         }
     }
 }

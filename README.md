@@ -1,8 +1,8 @@
-<p align="center"><h1>Fcus</h1></p>
+# Fcus
 
-<p align="center"><a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a></p>
+<a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
 
-<p align="center">**Focus Writing; Mark Done.**</p>
+**Focus Writing; Mark Done.**
 
 This is a minimal Markdown UWP editor made based on HTML5 and JavaScript.
 
@@ -17,29 +17,12 @@ Please be reminded that the license has changed to [MIT](https://github.com/patr
 ## Libraries
 
 + markdown-it 4.1.1
-
-  [GitHub](https://github.com/markdown-it/markdown-it) | [Website](https://markdown-it.github.io/) | [License(MIT)](https://github.com/markdown-it/markdown-it/blob/master/LICENSE)
-
 + CodeMirror 5.1.1
-
-  [GitHub](https://github.com/codemirror/codemirror) | [Website](http://codemirror.net/) | [License(MIT)](http://codemirror.net/LICENSE)
-
-+ highlight.js 9.12.0
-
-  [GitHub](https://github.com/isagalaev/highlight.js) | [Website](https://highlightjs.org/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
-
++ highlight.js 9.12.0 
++ jQuery 3.2.1
 + js-deflate
-
-  [GitHub](https://github.com/dankogai/js-deflate) | License(GPL-2)
-
-
 + UWP Community Toolkit 1.5.1
-
-  [GitHub](https://github.com/Microsoft/UWPCommunityToolkit) | [Website](http://docs.uwpcommunitytoolkit.com/) 
-
 + UDE.CSharp.UWP 1.0.1
-
-  [GitHub](https://github.com/linquize/ude) | [License(MPL)](https://raw.githubusercontent.com/linquize/ude/master/license/MPL-1.1.txt)
 
 ## Credits
 

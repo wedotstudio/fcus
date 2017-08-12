@@ -1,9 +1,12 @@
-# Fcus
-
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
 
+## Shortcuts
 
-
+- **Ctrl-N** Create a new file
+- **Ctrl-O** Open a file
+- **Ctrl-S** Save a file
+- **Ctrl-F/F11** Toggle Fullscreen
+- **Ctrl-P** Toggle Preview Panel
 ## Contribute
 
 **Feel free to contribute to this project on [GitHub](https://github.com/patrick330602/Fcus-UWP)!** Make sure to leave issues if the app is not working properly.
@@ -30,6 +33,9 @@ Please be reminded that the license has changed to [MIT](https://github.com/patr
 
   [GitHub](https://github.com/dankogai/js-deflate) | License(GPL-2)
 
+- jQuery 3.2.1
+
+  [GitHub](https://github.com/jquery/jquery) | [Website](https://jquery.com/) | [License](https://jquery.org/license/)
 
 - UWP Community Toolkit 1.5.1
 

@@ -304,5 +304,11 @@ namespace Fcus_Restart
         private void About_Click(object sender, RoutedEventArgs e) {aboutPanel.Visibility = Visibility.Visible; }
         private void Preview_Click(object sender, RoutedEventArgs e) {TogglePreview(); }
         private async void About_Link_Click(object sender, Microsoft.Toolkit.Uwp.UI.Controls.LinkClickedEventArgs e) { await Launcher.LaunchUriAsync(new Uri(e.Link)); }
+        private async void Recover_Click(object sender, RoutedEventArgs e) { if (localSettings.Values["backup_data"] != null) {
+                content = Convert.ToString(localSettings.Values["backup_data"]);
+                localSettings.Values["filestate"] = 2;
+                documentTitle = Convert.ToString(localSettings.Values["backup_title"]);
+                await editor.InvokeScriptAsync("setContent", new string[] { content });
+            } }
     }
 }

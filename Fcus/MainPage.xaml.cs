@@ -36,27 +36,12 @@ namespace Fcus_Restart
             _initUI();
             _initVar();
             
-            Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
             Loaded += MainPage_Loaded;
             editor.NavigationCompleted += Editor_NavigationCompleted;
         }
 
-        private async void App_Suspending(object sender, SuspendingEventArgs e)
-        {
-            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
-            if (localSettings.Values["filestate"] != null)
-            {
-                var dlg = new MessageDialog("Current file is not saved but app is about to suspended/closed. Do you want to save?", "Fcus");
-                dlg.Commands.Add(new UICommand("Cancel"));
-                await dlg.ShowAsync();
-            }
-        }
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if (localSettings.Values["recoveredfile"] != null)
-            {
-
-            }
                 StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/about.md"));
             aboutText.Text = await FileIO.ReadTextAsync(file);
         }
@@ -97,6 +82,7 @@ namespace Fcus_Restart
                 statusBar.ForegroundColor = Colors.Black;
                 fs.Visibility = Visibility.Collapsed;
                 cf.Opacity = 1;
+                ip.Opacity = 1;
                 }
             else {
                 initializeFrostedGlass(bgGrid);
@@ -185,7 +171,7 @@ namespace Fcus_Restart
 
         public async void NewFile()
         {
-            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2)
+            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2 && content != "")
             {
                 var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
                 dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); NewDoc(); }));
@@ -197,7 +183,6 @@ namespace Fcus_Restart
             {
                 NewDoc();
             }
-
         }
         private async void NewDoc()
         {
@@ -209,7 +194,7 @@ namespace Fcus_Restart
         
         private async void OpenFile()
         {
-            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2)
+            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2 && content != "")
             {
                 var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
                 dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); OpenDoc(); }));
@@ -221,16 +206,13 @@ namespace Fcus_Restart
             {
                 OpenDoc();
             }
-
         }
         private async void OpenDoc()
         {
             // Open a text file.
 
-            FileOpenPicker open =
-                new FileOpenPicker();
-            open.SuggestedStartLocation =
-                PickerLocationId.DocumentsLibrary;
+            FileOpenPicker open = new FileOpenPicker();
+            open.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
             open.FileTypeFilter.Add(".md");
             open.FileTypeFilter.Add(".markdown");
             open.FileTypeFilter.Add(".text");

@@ -1,6 +1,8 @@
 # Fcus
 
-[![Build status](https://build.mobile.azure.com/v0.1/apps/5d68872c-7239-48ed-a06e-add6551141a3/branches/master/badge)](https://mobile.azure.com)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE)![GitHub (pre-)release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
+[![Build status](https://build.mobile.azure.com/v0.1/apps/5d68872c-7239-48ed-a06e-add6551141a3/branches/master/badge)](https://mobile.azure.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE) ![GitHub Release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
+
+![Screenshot](screenshot.png)
 
 **Focus Writing; Mark Done.**
 

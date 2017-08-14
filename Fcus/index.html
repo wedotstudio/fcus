@@ -66,7 +66,6 @@
             bottom: 0;
             overflow: auto;
             padding: 10px;
-            padding-left: 20px;
             color: #24292e;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             font-size: 16px;
@@ -89,7 +88,6 @@
             #out {
                 display: none;
                 left: 0;
-                padding-left: 10px;
             }
         }
 
@@ -414,11 +412,11 @@
 
         window.addEventListener("resize", function (event) {
             if ($(window).width() > 1024) {
-                $('#out').css({ "display": "block", "left": "50%", "padding-left": "20px" });
+                $('#out').css({ "display": "block", "left": "50%" });
                 $('#in').css({ "display": "block", "width":"50%"});
             }
             else {
-                $('#out').css({ "display": "none", "left": "0", "padding-left": "10px"});
+                $('#out').css({ "display": "none", "left": "0"});
                 $('#in').css({ "display": "block", "width": "100%" });
             }
         })

@@ -15,7 +15,7 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="bgGrid" Grid.RowSpan="2"/>
+        <Grid x:Name="bgGrid" Grid.RowSpan="4"/>
         <Grid x:Name="cf" Background="#f5f5f5" Opacity="0.5" Grid.RowSpan="2"/>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -44,7 +44,7 @@
             </Button>
         </StackPanel>
         <WebView x:Name="editor" Source="ms-appx-web:///index.html" Grid.Row="2" ScriptNotify="ScriptNotify" />
-        <Grid Grid.Row="3" Background="#f5f5f5" Opacity="0.8">
+        <Grid x:Name="ip" Grid.Row="3" Background="#f5f5f5" Opacity="0.8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
@@ -53,7 +53,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="InfoPanel" Text="Ready." VerticalAlignment="Center"  Margin="10,0" Foreground="#555"  />
-            <Button Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="" Foreground="#555" Click="Recover_Click" Grid.Column="1"/>
+            <!--<Button Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="" Foreground="#555" Click="Recover_Click" Grid.Column="1"/>-->
             <Button Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="" Foreground="#555" Click="Preview_Click" Grid.Column="2"/>
             <Button x:Name="fs" Background="Transparent"  FontFamily="Segoe MDL2 Assets" Content="" Foreground="#555" Click="FullScreen_Click" Grid.Column="3"/>
             <Button Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="" Foreground="#555" Click="About_Click" Grid.Column="4"/>

@@ -6,6 +6,11 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
+using Windows.Storage;
+using Windows.ApplicationModel.ExtendedExecution;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Fcus_Restart
 {
@@ -35,6 +40,7 @@ namespace Fcus_Restart
             OnActivated(e);
         }
 
+
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>
@@ -54,10 +60,15 @@ namespace Fcus_Restart
         /// <param name="e">Details about the suspend request.</param>
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
+           
             var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
+            //TODO: Save application state and stop any background activit
+
             deferral.Complete();
         }
+
+
+
         protected async override void OnActivated(IActivatedEventArgs args)
         {
 #if DEBUG
@@ -143,6 +154,7 @@ namespace Fcus_Restart
 
         private void CurrentView_Consolidated(Windows.UI.ViewManagement.ApplicationView sender, Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs args)
         {
+           
             Window.Current.Content = null;
         }
 

@@ -7,13 +7,14 @@ This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
 - **Ctrl-S** Save a file
 - **Ctrl-F/F11** Toggle Fullscreen
 - **Ctrl-P** Toggle Preview Panel
+
 ## Contribute
 
 **Feel free to contribute to this project on [GitHub](https://github.com/patrick330602/Fcus-UWP)!** Make sure to leave issues if the app is not working properly.
 
 ## License
 
-Please be reminded that the license has changed to [MIT](https://github.com/patrick330602/Fcus/blob/master/LICENSE).
+[MIT](https://github.com/patrick330602/Fcus/blob/master/LICENSE)
 
 ## Libraries
 

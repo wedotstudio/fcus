@@ -24,11 +24,10 @@
     <style>
         body {
             margin: 0;
+            -ms-content-zooming: none;
+            
         }
 
-        .CodeMirror pre {
-            line-height: 16px;
-        }
 
         #in {
             position: fixed;
@@ -38,7 +37,7 @@
             width: 50%;
             height: auto;
             overflow: auto;
-            font-size: 12px;
+            font-size: 14px;
             box-shadow: -10px 2px 6px 10px rgba(0,0,0,0.4);
         }
 
@@ -53,6 +52,8 @@
         }
 
         .CodeMirror-scroll {
+            overflow-x: hidden !important;
+            overflow-y: scroll !important;
             padding: 30px;
             box-sizing: border-box;
         }
@@ -410,8 +411,8 @@
                 }
             }
         }
+
         window.addEventListener("resize", function (event) {
-            alert($(window).width());
             if ($(window).width() > 1024) {
                 $('#out').css({ "display": "block", "left": "50%", "padding-left": "20px" });
                 $('#in').css({ "display": "block", "width":"50%"});
@@ -421,9 +422,12 @@
                 $('#in').css({ "display": "block", "width": "100%" });
             }
         })
-        $(window).resize(function () {
-            
-        });
+
+        var mobtweak = function MobTweak() {
+            $('body').css("-ms-text-size-adjust", "300%");
+            $('#in').css("font-size", "300%");
+            $('.CodeMirror > pre').css("line-height", "");
+        }
 
         var getmd = function saveAsMarkdown() {
             return editor.getValue();

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
-using Windows.Foundation.Metadata;
+using System.Threading.Tasks;
+using Windows.ApplicationModel;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.System;
+using Windows.System.Profile;
 using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Popups;
@@ -15,40 +16,60 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Fcus_Restart
 {
     public sealed partial class MainPage : Page
     {
-        public string content = "";
-        public IStorageFile documentFile = null;
-        public string documentTitle = "untitled";
-        public int filestate = 0;
-        public bool isCtrlKeyPressed;
+        public string content;
+        public IStorageFile documentFile;
+        public IStorageFile actfile;
+        public string documentTitle;
+        public ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        public bool ismobile = false;
 
         public MainPage()
         {
             this.InitializeComponent();
+           
             _initUI();
+            _initVar();
+            
+            Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
             Loaded += MainPage_Loaded;
-            content = "";
-            documentTitle = "untitled";
-            documentFile = null;
-
             editor.NavigationCompleted += Editor_NavigationCompleted;
         }
 
+        private async void App_Suspending(object sender, SuspendingEventArgs e)
+        {
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            if (localSettings.Values["filestate"] != null)
+            {
+                var dlg = new MessageDialog("Current file is not saved but app is about to suspended/closed. Do you want to save?", "Fcus");
+                dlg.Commands.Add(new UICommand("Cancel"));
+                await dlg.ShowAsync();
+            }
+        }
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/about.md"));
+            if (localSettings.Values["recoveredfile"] != null)
+            {
+
+            }
+                StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/about.md"));
             aboutText.Text = await FileIO.ReadTextAsync(file);
         }
-
-        IStorageFile actfile;
-
+        private async void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            NewWindowSetter();
+            if(ismobile) await editor.InvokeScriptAsync("mobtweak", null);
+            if (actfile != null)
+            {
+                await OpenFileTask(actfile);
+                actfile = null;
+            }
+        }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -68,12 +89,29 @@ namespace Fcus_Restart
             titleBar.ButtonInactiveForegroundColor = Colors.DarkGray;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonForegroundColor = Colors.Black;
-
-            initializeFrostedGlass(bgGrid);
+            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile") {
+                ismobile = true; 
+                var statusBar = StatusBar.GetForCurrentView();
+                statusBar.BackgroundOpacity = 1;
+                statusBar.BackgroundColor = Color.FromArgb(255, 243,243,243);
+                statusBar.ForegroundColor = Colors.Black;
+                fs.Visibility = Visibility.Collapsed;
+                cf.Opacity = 1;
+                }
+            else {
+                initializeFrostedGlass(bgGrid);
+            }
 
             Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
            
+        }
+        private void _initVar()
+        {
+            content = "";
+            localSettings.Values["filestate"] = 0;
+            documentTitle = "untitled";
+            documentFile = null;
         }
         private void initializeFrostedGlass(UIElement glassHost)
         {
@@ -87,16 +125,7 @@ namespace Fcus_Restart
             bindSizeAnimation.SetReferenceParameter("hostVisual", hostVisual);
             glassVisual.StartAnimation("Size", bindSizeAnimation);
         }
-        private async void Editor_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
-        {
-            NewWindowSetter();
 
-            if (actfile != null)
-            {
-                await openfileasync(actfile);
-                actfile = null;
-            }
-        }
         private async void NewWindowSetter()
         {
             await editor.InvokeScriptAsync("eval", new[]
@@ -113,7 +142,7 @@ namespace Fcus_Restart
         }
         private async void ScriptNotify(object sender, NotifyEventArgs e)
         {
-            if (e.Value == "changed") { if (filestate == 2) { OnCodeContentChanged(); } filestate = 2; NewWindowSetter(); }
+            if (e.Value == "changed") { if (Convert.ToInt32(localSettings.Values["filestate"]) == 2) { OnCodeContentChanged(); } localSettings.Values["filestate"] = 2; NewWindowSetter(); }
             else if (e.Value == "newfile") { NewFile(); }
             else if (e.Value == "openfile") { OpenFile(); }
             else if (e.Value == "savefile") { SaveFile(); }
@@ -131,14 +160,37 @@ namespace Fcus_Restart
             }
             content = await editor.InvokeScriptAsync("getmd", null);
         }
+
+        private void SetTitle()
+        {
+            ApplicationView.GetForCurrentView().Title = documentTitle + " - Fcus";
+        }
+        private async Task OpenFileTask(IStorageFile file)
+        {
+            if (file != null)
+            {
+                localSettings.Values["filestate"] = 1;
+                var buffer = await FileIO.ReadBufferAsync(file);
+                Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
+                var reader = new StreamReader(buffer.AsStream(), FileEncoding);
+
+                content = reader.ReadToEnd().Replace("\r\n", "\n");
+                documentFile = file;
+                documentTitle = file.Name;
+                SetTitle();
+                mdtitle.Text = documentTitle;
+                await editor.InvokeScriptAsync("setContent", new string[] { content });
+            }
+        }
+
         public async void NewFile()
         {
-            if (filestate == 2)
+            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2)
             {
                 var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
                 dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); NewDoc(); }));
                 dlg.Commands.Add(new UICommand("Discard", cmd => { NewDoc(); }));
-                dlg.Commands.Add(new UICommand("Cancel"));
+                if(!ismobile) dlg.Commands.Add(new UICommand("Cancel"));
                 await dlg.ShowAsync();
             }
             else
@@ -147,31 +199,22 @@ namespace Fcus_Restart
             }
 
         }
-
         private async void NewDoc()
         {
-            filestate = 0;
-            content = "";
-            documentTitle = "untitled";
-            settitle();
-            documentFile = null;
+            _initVar();
+            SetTitle();
             mdtitle.Text = documentTitle;
             await editor.InvokeScriptAsync("setContent", new string[] { content });
         }
-
-        private void settitle()
-        {
-            ApplicationView.GetForCurrentView().Title = documentTitle + " - Fcus";
-        }
-
+        
         private async void OpenFile()
         {
-            if (filestate == 2)
+            if (Convert.ToInt32(localSettings.Values["filestate"]) == 2)
             {
                 var dlg = new MessageDialog("Current file is not saved. Do you want to save?", documentTitle);
                 dlg.Commands.Add(new UICommand("Save", cmd => { SaveFile(); OpenDoc(); }));
                 dlg.Commands.Add(new UICommand("Discard", cmd => { OpenDoc(); }));
-                dlg.Commands.Add(new UICommand("Cancel"));
+                if (!ismobile) dlg.Commands.Add(new UICommand("Cancel"));
                 await dlg.ShowAsync();
             }
             else
@@ -195,45 +238,10 @@ namespace Fcus_Restart
             open.FileTypeFilter.Add(".mmd");
             open.FileTypeFilter.Add(".mdown");
 
-            await openfileasync(await open.PickSingleFileAsync());
+            await OpenFileTask(await open.PickSingleFileAsync());
         }
-
-        private async System.Threading.Tasks.Task openfileasync(IStorageFile file)
-        {
-            if (file != null)
-            {
-                filestate = 1;
-                var buffer = await FileIO.ReadBufferAsync(file);
-                Encoding FileEncoding = SimpleHelpers.FileEncoding.DetectFileEncoding(buffer.AsStream(), Encoding.UTF8);
-                var reader = new StreamReader(buffer.AsStream(), FileEncoding);
-
-                content = reader.ReadToEnd().Replace("\r\n", "\n");
-                documentFile = file;
-                documentTitle = file.Name;
-                settitle();
-                mdtitle.Text = documentTitle;
-                await editor.InvokeScriptAsync("setContent", new string[] { content });
-            }
-        }
-
-        private void FullScreen()
-        {
-            var view = ApplicationView.GetForCurrentView();
-            if (view.IsFullScreenMode)
-            {
-                view.ExitFullScreenMode();
-                fs_icon.Glyph = "";
-            }
-            else
-            {
-                view.TryEnterFullScreenMode();
-                fs_icon.Glyph = "";
-            }
-            
-           
-        }
-
-        private async void SaveFile()
+   
+        public async void SaveFile()
         {
             if (documentFile == null)
             {
@@ -246,19 +254,18 @@ namespace Fcus_Restart
                 {
                     SaveDoc2File(file);
                     documentFile = file;
-                    settitle();
+                    SetTitle();
                     documentTitle = file.Name + ".md";
-                    filestate = 1;
+                    localSettings.Values["filestate"] = 1;
                 }
             }
             else
             {
                 SaveDoc2File(documentFile);
                 mdtitle.Text = documentTitle;
-                filestate = 1;
+                localSettings.Values["filestate"] = 1;
             }
         }
-
         private async void SaveDoc2File(IStorageFile file)
         {
             content = await editor.InvokeScriptAsync("getmd", null);
@@ -266,45 +273,36 @@ namespace Fcus_Restart
             await FileIO.WriteBytesAsync(file, bytes);
         }
 
+        private void FullScreen()
+        {
+            var view = ApplicationView.GetForCurrentView();
+            if (view.IsFullScreenMode)
+            {
+                view.ExitFullScreenMode();
+                fs.Content = "";
+                InfoPanel.Text = "Fullscreen Mode Exited.";
+            }
+            else
+            {
+                view.TryEnterFullScreenMode();
+                fs.Content = "";
+                InfoPanel.Text = "Entered Fullscreen Mode. Press the button again or F11/Ctrl-F to exit.";
+            }
+
+
+        }
         private async void TogglePreview()
         {
             await editor.InvokeScriptAsync("toggle", null);
         }
 
-
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            SaveFile();
-        }
-
-        private void Open_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFile();
-        }
-
-        private void New_Click(object sender, RoutedEventArgs e)
-        {
-            NewFile();
-        }
-
-        private void FullScreen_Click(object sender, RoutedEventArgs e)
-        {
-            FullScreen();
-        }
-
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            aboutPanel.Visibility = Visibility.Collapsed;
-        }
-
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-            aboutPanel.Visibility = Visibility.Visible;
-        }
-
-        private void Preview_Click(object sender, RoutedEventArgs e)
-        {
-            TogglePreview();
-        }
+        private void Save_Click(object sender, RoutedEventArgs e) {SaveFile(); }
+        private void Open_Click(object sender, RoutedEventArgs e) {OpenFile(); }
+        private void New_Click(object sender, RoutedEventArgs e) {NewFile(); }
+        private void FullScreen_Click(object sender, RoutedEventArgs e) {FullScreen(); }
+        private void Close_Click(object sender, RoutedEventArgs e) {aboutPanel.Visibility = Visibility.Collapsed; }
+        private void About_Click(object sender, RoutedEventArgs e) {aboutPanel.Visibility = Visibility.Visible; }
+        private void Preview_Click(object sender, RoutedEventArgs e) {TogglePreview(); }
+        private async void About_Link_Click(object sender, Microsoft.Toolkit.Uwp.UI.Controls.LinkClickedEventArgs e) { await Launcher.LaunchUriAsync(new Uri(e.Link)); }
     }
 }

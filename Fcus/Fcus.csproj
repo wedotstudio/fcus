@@ -19,6 +19,9 @@
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>Fcus_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>775033F9BBFC2EA2EBF42961DAC90967D58E8C5B</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -157,7 +160,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="css\base16-light.css" />
     <Content Include="css\tomorrow-night-blue.css" />
-    <None Include="Fcus_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="scripts\codemirror\css\css.js" />
     <Content Include="scripts\codemirror\gfm\gfm.js" />
@@ -1106,6 +1108,11 @@
     <Content Include="Assets\about.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

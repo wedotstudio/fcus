@@ -1,10 +1,11 @@
 # Fcus
 
-<a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
+[![Build status](https://build.mobile.azure.com/v0.1/apps/5d68872c-7239-48ed-a06e-add6551141a3/branches/master/badge)](https://mobile.azure.com)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE)![GitHub (pre-)release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
 
 **Focus Writing; Mark Done.**
 
 This is a minimal Markdown UWP editor made based on HTML5 and JavaScript.
+<a href="https://www.microsoft.com/store/apps/9nblggh4trr4?ocid=badge"><img height="65" width="180" alt="Get it on Windows 10" src="https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png"/></a>
 
 ## Contribute
 

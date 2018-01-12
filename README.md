@@ -1,6 +1,6 @@
 # Fcus
 
-[![Build status](https://build.mobile.azure.com/v0.1/apps/5d68872c-7239-48ed-a06e-add6551141a3/branches/master/badge)](https://mobile.azure.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE) ![GitHub Release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
+[![AppVeyor](https://img.shields.io/appveyor/ci/patrick330602/fcus-uwp.svg?style=flat-square)]() [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE) ![GitHub Release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
 
 ![Screenshot](screenshot.png)
 
@@ -16,7 +16,7 @@ This is a minimal Markdown UWP editor made based on HTML5 and JavaScript.
 
 ## License
 
-Please be reminded that the license has changed to [MIT](https://github.com/patrick330602/Fcus/blob/master/LICENSE).
+[MIT](https://github.com/patrick330602/Fcus/blob/master/LICENSE)
 
 ## Libraries
 

@@ -66,11 +66,7 @@
             <TextBlock Foreground="Black" Text="About" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,10,10,0"/>
             <Button HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE106;" Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Margin="10,10,10,0"/>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Background="Transparent" BorderThickness="0">
-                <controls:MarkdownTextBlock x:Name="aboutText" 
-                                        Margin="6" 
-                                        Foreground="Black" 
-                                            LinkClicked="About_Link_Click"
-                                        LinkForeground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
+                <controls:MarkdownTextBlock x:Name="aboutText" Margin="6" Foreground="Black" LinkClicked="About_Link_Click" LinkForeground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
             </ScrollViewer>
         </Grid>
     </Grid>

@@ -30,6 +30,10 @@ This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
 
   [GitHub](https://github.com/isagalaev/highlight.js) | [Website](https://highlightjs.org/) | [License(BSD-3-Clause)](https://github.com/isagalaev/highlight.js/blob/master/LICENSE)
 
+- emojify.js 1.1
+
+   [GitHub](https://github.com/emojione/emojify.js) | [License(MIT)](https://github.com/emojione/emojify.js/blob/master/LICENSE.md)
+
 - js-deflate
 
   [GitHub](https://github.com/dankogai/js-deflate) | License(GPL-2)

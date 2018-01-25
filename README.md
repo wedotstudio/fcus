@@ -23,6 +23,7 @@ This is a minimal Markdown UWP editor made based on HTML5 and JavaScript.
 + markdown-it 4.1.1
 + CodeMirror 5.1.1
 + highlight.js 9.12.0 
++ emojify.js 1.1
 + jQuery 3.2.1
 + js-deflate
 + UWP Community Toolkit 1.5.1

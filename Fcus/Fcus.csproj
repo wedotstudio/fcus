@@ -158,928 +158,2766 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="css\base16-light.css" />
-    <Content Include="css\tomorrow-night-blue.css" />
+    <Content Include="css\base16-light.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\tomorrow-night-blue.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Fcus_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
-    <Content Include="scripts\codemirror\css\css.js" />
-    <Content Include="scripts\codemirror\gfm\gfm.js" />
-    <Content Include="scripts\codemirror\gfm\index.html" />
-    <Content Include="scripts\codemirror\htmlmixed\htmlmixed.js" />
-    <Content Include="scripts\codemirror\javascript\index.html" />
-    <Content Include="scripts\codemirror\javascript\javascript.js" />
-    <Content Include="scripts\codemirror\lib\codemirror.css" />
-    <Content Include="scripts\codemirror\lib\codemirror.js" />
-    <Content Include="scripts\codemirror\lib\util\closetag.js" />
-    <Content Include="scripts\codemirror\lib\util\continuelist.js" />
-    <Content Include="scripts\codemirror\lib\util\dialog.css" />
-    <Content Include="scripts\codemirror\lib\util\dialog.js" />
-    <Content Include="scripts\codemirror\lib\util\foldcode.js" />
-    <Content Include="scripts\codemirror\lib\util\formatting.js" />
-    <Content Include="scripts\codemirror\lib\util\javascript-hint.js" />
-    <Content Include="scripts\codemirror\lib\util\loadmode.js" />
-    <Content Include="scripts\codemirror\lib\util\match-highlighter.js" />
-    <Content Include="scripts\codemirror\lib\util\multiplex.js" />
-    <Content Include="scripts\codemirror\lib\util\overlay.js" />
-    <Content Include="scripts\codemirror\lib\util\pig-hint.js" />
-    <Content Include="scripts\codemirror\lib\util\runmode-standalone.js" />
-    <Content Include="scripts\codemirror\lib\util\runmode.js" />
-    <Content Include="scripts\codemirror\lib\util\search.js" />
-    <Content Include="scripts\codemirror\lib\util\searchcursor.js" />
-    <Content Include="scripts\codemirror\lib\util\simple-hint.css" />
-    <Content Include="scripts\codemirror\lib\util\simple-hint.js" />
-    <Content Include="scripts\codemirror\lib\util\xml-hint.js" />
-    <Content Include="scripts\codemirror\markdown\index.html" />
-    <Content Include="scripts\codemirror\markdown\markdown.js" />
-    <Content Include="scripts\codemirror\markdown\test.js" />
-    <Content Include="scripts\codemirror\overlay.js" />
-    <Content Include="scripts\codemirror\xml\index.html" />
-    <Content Include="scripts\codemirror\xml\xml.js" />
-    <Content Include="css\default.css" />
-    <Content Include="scripts\emojify.js" />
-    <Content Include="emoji\+1.png" />
-    <Content Include="emoji\-1.png" />
-    <Content Include="emoji\100.png" />
-    <Content Include="emoji\109.png" />
-    <Content Include="emoji\1234.png" />
-    <Content Include="emoji\8ball.png" />
-    <Content Include="emoji\a.png" />
-    <Content Include="emoji\ab.png" />
-    <Content Include="emoji\abc.png" />
-    <Content Include="emoji\abcd.png" />
-    <Content Include="emoji\accept.png" />
-    <Content Include="emoji\aerial_tramway.png" />
-    <Content Include="emoji\airplane.png" />
-    <Content Include="emoji\alarm_clock.png" />
-    <Content Include="emoji\alien.png" />
-    <Content Include="emoji\ambulance.png" />
-    <Content Include="emoji\anchor.png" />
-    <Content Include="emoji\angel.png" />
-    <Content Include="emoji\anger.png" />
-    <Content Include="emoji\angry.png" />
-    <Content Include="emoji\anguished.png" />
-    <Content Include="emoji\ant.png" />
-    <Content Include="emoji\apple.png" />
-    <Content Include="emoji\aquarius.png" />
-    <Content Include="emoji\aries.png" />
-    <Content Include="emoji\arrows_clockwise.png" />
-    <Content Include="emoji\arrows_counterclockwise.png" />
-    <Content Include="emoji\arrow_backward.png" />
-    <Content Include="emoji\arrow_double_down.png" />
-    <Content Include="emoji\arrow_double_up.png" />
-    <Content Include="emoji\arrow_down.png" />
-    <Content Include="emoji\arrow_down_small.png" />
-    <Content Include="emoji\arrow_forward.png" />
-    <Content Include="emoji\arrow_heading_down.png" />
-    <Content Include="emoji\arrow_heading_up.png" />
-    <Content Include="emoji\arrow_left.png" />
-    <Content Include="emoji\arrow_lower_left.png" />
-    <Content Include="emoji\arrow_lower_right.png" />
-    <Content Include="emoji\arrow_right.png" />
-    <Content Include="emoji\arrow_right_hook.png" />
-    <Content Include="emoji\arrow_up.png" />
-    <Content Include="emoji\arrow_upper_left.png" />
-    <Content Include="emoji\arrow_upper_right.png" />
-    <Content Include="emoji\arrow_up_down.png" />
-    <Content Include="emoji\arrow_up_small.png" />
-    <Content Include="emoji\art.png" />
-    <Content Include="emoji\articulated_lorry.png" />
-    <Content Include="emoji\astonished.png" />
-    <Content Include="emoji\atm.png" />
-    <Content Include="emoji\b.png" />
-    <Content Include="emoji\baby.png" />
-    <Content Include="emoji\baby_bottle.png" />
-    <Content Include="emoji\baby_chick.png" />
-    <Content Include="emoji\baby_symbol.png" />
-    <Content Include="emoji\baggage_claim.png" />
-    <Content Include="emoji\balloon.png" />
-    <Content Include="emoji\ballot_box_with_check.png" />
-    <Content Include="emoji\bamboo.png" />
-    <Content Include="emoji\banana.png" />
-    <Content Include="emoji\bangbang.png" />
-    <Content Include="emoji\bank.png" />
-    <Content Include="emoji\barber.png" />
-    <Content Include="emoji\bar_chart.png" />
-    <Content Include="emoji\baseball.png" />
-    <Content Include="emoji\basketball.png" />
-    <Content Include="emoji\bath.png" />
-    <Content Include="emoji\bathtub.png" />
-    <Content Include="emoji\battery.png" />
-    <Content Include="emoji\bear.png" />
-    <Content Include="emoji\bee.png" />
-    <Content Include="emoji\beer.png" />
-    <Content Include="emoji\beers.png" />
-    <Content Include="emoji\beetle.png" />
-    <Content Include="emoji\beginner.png" />
-    <Content Include="emoji\bell.png" />
-    <Content Include="emoji\bento.png" />
-    <Content Include="emoji\bicyclist.png" />
-    <Content Include="emoji\bike.png" />
-    <Content Include="emoji\bikini.png" />
-    <Content Include="emoji\bird.png" />
-    <Content Include="emoji\birthday.png" />
-    <Content Include="emoji\black_circle.png" />
-    <Content Include="emoji\black_joker.png" />
-    <Content Include="emoji\black_nib.png" />
-    <Content Include="emoji\black_square.png" />
-    <Content Include="emoji\black_square_button.png" />
-    <Content Include="emoji\blossom.png" />
-    <Content Include="emoji\blowfish.png" />
-    <Content Include="emoji\blue_book.png" />
-    <Content Include="emoji\blue_car.png" />
-    <Content Include="emoji\blue_heart.png" />
-    <Content Include="emoji\blush.png" />
-    <Content Include="emoji\boar.png" />
-    <Content Include="emoji\boat.png" />
-    <Content Include="emoji\bomb.png" />
-    <Content Include="emoji\book.png" />
-    <Content Include="emoji\bookmark.png" />
-    <Content Include="emoji\bookmark_tabs.png" />
-    <Content Include="emoji\books.png" />
-    <Content Include="emoji\boom.png" />
-    <Content Include="emoji\boot.png" />
-    <Content Include="emoji\bouquet.png" />
-    <Content Include="emoji\bow.png" />
-    <Content Include="emoji\bowling.png" />
-    <Content Include="emoji\bowtie.png" />
-    <Content Include="emoji\boy.png" />
-    <Content Include="emoji\bread.png" />
-    <Content Include="emoji\bride_with_veil.png" />
-    <Content Include="emoji\bridge_at_night.png" />
-    <Content Include="emoji\briefcase.png" />
-    <Content Include="emoji\broken_heart.png" />
-    <Content Include="emoji\bug.png" />
-    <Content Include="emoji\bulb.png" />
-    <Content Include="emoji\bullettrain_front.png" />
-    <Content Include="emoji\bullettrain_side.png" />
-    <Content Include="emoji\bus.png" />
-    <Content Include="emoji\busstop.png" />
-    <Content Include="emoji\busts_in_silhouette.png" />
-    <Content Include="emoji\bust_in_silhouette.png" />
-    <Content Include="emoji\cactus.png" />
-    <Content Include="emoji\cake.png" />
-    <Content Include="emoji\calendar.png" />
-    <Content Include="emoji\calling.png" />
-    <Content Include="emoji\camel.png" />
-    <Content Include="emoji\camera.png" />
-    <Content Include="emoji\cancer.png" />
-    <Content Include="emoji\candy.png" />
-    <Content Include="emoji\capital_abcd.png" />
-    <Content Include="emoji\capricorn.png" />
-    <Content Include="emoji\car.png" />
-    <Content Include="emoji\card_index.png" />
-    <Content Include="emoji\carousel_horse.png" />
-    <Content Include="emoji\cat.png" />
-    <Content Include="emoji\cat2.png" />
-    <Content Include="emoji\cd.png" />
-    <Content Include="emoji\chart.png" />
-    <Content Include="emoji\chart_with_downwards_trend.png" />
-    <Content Include="emoji\chart_with_upwards_trend.png" />
-    <Content Include="emoji\checkered_flag.png" />
-    <Content Include="emoji\cherries.png" />
-    <Content Include="emoji\cherry_blossom.png" />
-    <Content Include="emoji\chestnut.png" />
-    <Content Include="emoji\chicken.png" />
-    <Content Include="emoji\children_crossing.png" />
-    <Content Include="emoji\chocolate_bar.png" />
-    <Content Include="emoji\christmas_tree.png" />
-    <Content Include="emoji\church.png" />
-    <Content Include="emoji\cinema.png" />
-    <Content Include="emoji\circus_tent.png" />
-    <Content Include="emoji\city_sunrise.png" />
-    <Content Include="emoji\city_sunset.png" />
-    <Content Include="emoji\cl.png" />
-    <Content Include="emoji\clap.png" />
-    <Content Include="emoji\clapper.png" />
-    <Content Include="emoji\clipboard.png" />
-    <Content Include="emoji\clock1.png" />
-    <Content Include="emoji\clock10.png" />
-    <Content Include="emoji\clock1030.png" />
-    <Content Include="emoji\clock11.png" />
-    <Content Include="emoji\clock1130.png" />
-    <Content Include="emoji\clock12.png" />
-    <Content Include="emoji\clock1230.png" />
-    <Content Include="emoji\clock130.png" />
-    <Content Include="emoji\clock2.png" />
-    <Content Include="emoji\clock230.png" />
-    <Content Include="emoji\clock3.png" />
-    <Content Include="emoji\clock330.png" />
-    <Content Include="emoji\clock4.png" />
-    <Content Include="emoji\clock430.png" />
-    <Content Include="emoji\clock5.png" />
-    <Content Include="emoji\clock530.png" />
-    <Content Include="emoji\clock6.png" />
-    <Content Include="emoji\clock630.png" />
-    <Content Include="emoji\clock7.png" />
-    <Content Include="emoji\clock730.png" />
-    <Content Include="emoji\clock8.png" />
-    <Content Include="emoji\clock830.png" />
-    <Content Include="emoji\clock9.png" />
-    <Content Include="emoji\clock930.png" />
-    <Content Include="emoji\closed_book.png" />
-    <Content Include="emoji\closed_lock_with_key.png" />
-    <Content Include="emoji\closed_umbrella.png" />
-    <Content Include="emoji\cloud.png" />
-    <Content Include="emoji\clubs.png" />
-    <Content Include="emoji\cn.png" />
-    <Content Include="emoji\cocktail.png" />
-    <Content Include="emoji\coffee.png" />
-    <Content Include="emoji\cold_sweat.png" />
-    <Content Include="emoji\collision.png" />
-    <Content Include="emoji\computer.png" />
-    <Content Include="emoji\confetti_ball.png" />
-    <Content Include="emoji\confounded.png" />
-    <Content Include="emoji\confused.png" />
-    <Content Include="emoji\congratulations.png" />
-    <Content Include="emoji\construction.png" />
-    <Content Include="emoji\construction_worker.png" />
-    <Content Include="emoji\convenience_store.png" />
-    <Content Include="emoji\cookie.png" />
-    <Content Include="emoji\cool.png" />
-    <Content Include="emoji\cop.png" />
-    <Content Include="emoji\copyright.png" />
-    <Content Include="emoji\corn.png" />
-    <Content Include="emoji\couple.png" />
-    <Content Include="emoji\couplekiss.png" />
-    <Content Include="emoji\couple_with_heart.png" />
-    <Content Include="emoji\cow.png" />
-    <Content Include="emoji\cow2.png" />
-    <Content Include="emoji\credit_card.png" />
-    <Content Include="emoji\crocodile.png" />
-    <Content Include="emoji\crossed_flags.png" />
-    <Content Include="emoji\crown.png" />
-    <Content Include="emoji\cry.png" />
-    <Content Include="emoji\crying_cat_face.png" />
-    <Content Include="emoji\crystal_ball.png" />
-    <Content Include="emoji\cupid.png" />
-    <Content Include="emoji\curly_loop.png" />
-    <Content Include="emoji\currency_exchange.png" />
-    <Content Include="emoji\curry.png" />
-    <Content Include="emoji\custard.png" />
-    <Content Include="emoji\customs.png" />
-    <Content Include="emoji\cyclone.png" />
-    <Content Include="emoji\dancer.png" />
-    <Content Include="emoji\dancers.png" />
-    <Content Include="emoji\dango.png" />
-    <Content Include="emoji\dart.png" />
-    <Content Include="emoji\dash.png" />
-    <Content Include="emoji\date.png" />
-    <Content Include="emoji\de.png" />
-    <Content Include="emoji\deciduous_tree.png" />
-    <Content Include="emoji\department_store.png" />
-    <Content Include="emoji\diamonds.png" />
-    <Content Include="emoji\diamond_shape_with_a_dot_inside.png" />
-    <Content Include="emoji\disappointed.png" />
-    <Content Include="emoji\disappointed_relieved.png" />
-    <Content Include="emoji\dizzy.png" />
-    <Content Include="emoji\dizzy_face.png" />
-    <Content Include="emoji\dog.png" />
-    <Content Include="emoji\dog2.png" />
-    <Content Include="emoji\dollar.png" />
-    <Content Include="emoji\dolls.png" />
-    <Content Include="emoji\dolphin.png" />
-    <Content Include="emoji\donut.png" />
-    <Content Include="emoji\door.png" />
-    <Content Include="emoji\doughnut.png" />
-    <Content Include="emoji\do_not_litter.png" />
-    <Content Include="emoji\dragon.png" />
-    <Content Include="emoji\dragon_face.png" />
-    <Content Include="emoji\dress.png" />
-    <Content Include="emoji\dromedary_camel.png" />
-    <Content Include="emoji\droplet.png" />
-    <Content Include="emoji\dvd.png" />
-    <Content Include="emoji\e-mail.png" />
-    <Content Include="emoji\ear.png" />
-    <Content Include="emoji\earth_africa.png" />
-    <Content Include="emoji\earth_americas.png" />
-    <Content Include="emoji\earth_asia.png" />
-    <Content Include="emoji\ear_of_rice.png" />
-    <Content Include="emoji\egg.png" />
-    <Content Include="emoji\eggplant.png" />
-    <Content Include="emoji\eight.png" />
-    <Content Include="emoji\eight_pointed_black_star.png" />
-    <Content Include="emoji\eight_spoked_asterisk.png" />
-    <Content Include="emoji\electric_plug.png" />
-    <Content Include="emoji\elephant.png" />
-    <Content Include="emoji\email.png" />
-    <Content Include="emoji\emojify.css" />
-    <Content Include="emoji\end.png" />
-    <Content Include="emoji\envelope.png" />
-    <Content Include="emoji\es.png" />
-    <Content Include="emoji\euro.png" />
-    <Content Include="emoji\european_castle.png" />
-    <Content Include="emoji\european_post_office.png" />
-    <Content Include="emoji\evergreen_tree.png" />
-    <Content Include="emoji\exclamation.png" />
-    <Content Include="emoji\expressionless.png" />
-    <Content Include="emoji\eyeglasses.png" />
-    <Content Include="emoji\eyes.png" />
-    <Content Include="emoji\facepunch.png" />
-    <Content Include="emoji\factory.png" />
-    <Content Include="emoji\fallen_leaf.png" />
-    <Content Include="emoji\family.png" />
-    <Content Include="emoji\fast_forward.png" />
-    <Content Include="emoji\fax.png" />
-    <Content Include="emoji\fearful.png" />
-    <Content Include="emoji\feelsgood.png" />
-    <Content Include="emoji\feet.png" />
-    <Content Include="emoji\ferris_wheel.png" />
-    <Content Include="emoji\file_folder.png" />
-    <Content Include="emoji\finnadie.png" />
-    <Content Include="emoji\fire.png" />
-    <Content Include="emoji\fireworks.png" />
-    <Content Include="emoji\fire_engine.png" />
-    <Content Include="emoji\first_quarter_moon.png" />
-    <Content Include="emoji\first_quarter_moon_with_face.png" />
-    <Content Include="emoji\fish.png" />
-    <Content Include="emoji\fishing_pole_and_fish.png" />
-    <Content Include="emoji\fish_cake.png" />
-    <Content Include="emoji\fist.png" />
-    <Content Include="emoji\five.png" />
-    <Content Include="emoji\flags.png" />
-    <Content Include="emoji\flashlight.png" />
-    <Content Include="emoji\floppy_disk.png" />
-    <Content Include="emoji\flower_playing_cards.png" />
-    <Content Include="emoji\flushed.png" />
-    <Content Include="emoji\foggy.png" />
-    <Content Include="emoji\football.png" />
-    <Content Include="emoji\fork_and_knife.png" />
-    <Content Include="emoji\fountain.png" />
-    <Content Include="emoji\four.png" />
-    <Content Include="emoji\four_leaf_clover.png" />
-    <Content Include="emoji\fr.png" />
-    <Content Include="emoji\free.png" />
-    <Content Include="emoji\fried_shrimp.png" />
-    <Content Include="emoji\fries.png" />
-    <Content Include="emoji\frog.png" />
-    <Content Include="emoji\frowning.png" />
-    <Content Include="emoji\fu.png" />
-    <Content Include="emoji\fuelpump.png" />
-    <Content Include="emoji\full_moon.png" />
-    <Content Include="emoji\full_moon_with_face.png" />
-    <Content Include="emoji\game_die.png" />
-    <Content Include="emoji\gb.png" />
-    <Content Include="emoji\gem.png" />
-    <Content Include="emoji\gemini.png" />
-    <Content Include="emoji\ghost.png" />
-    <Content Include="emoji\gift.png" />
-    <Content Include="emoji\gift_heart.png" />
-    <Content Include="emoji\girl.png" />
-    <Content Include="emoji\globe_with_meridians.png" />
-    <Content Include="emoji\goat.png" />
-    <Content Include="emoji\goberserk.png" />
-    <Content Include="emoji\godmode.png" />
-    <Content Include="emoji\golf.png" />
-    <Content Include="emoji\grapes.png" />
-    <Content Include="emoji\green_apple.png" />
-    <Content Include="emoji\green_book.png" />
-    <Content Include="emoji\green_heart.png" />
-    <Content Include="emoji\grey_exclamation.png" />
-    <Content Include="emoji\grey_question.png" />
-    <Content Include="emoji\grimacing.png" />
-    <Content Include="emoji\grin.png" />
-    <Content Include="emoji\grinning.png" />
-    <Content Include="emoji\guardsman.png" />
-    <Content Include="emoji\guitar.png" />
-    <Content Include="emoji\gun.png" />
-    <Content Include="emoji\haircut.png" />
-    <Content Include="emoji\hamburger.png" />
-    <Content Include="emoji\hammer.png" />
-    <Content Include="emoji\hamster.png" />
-    <Content Include="emoji\hand.png" />
-    <Content Include="emoji\handbag.png" />
-    <Content Include="emoji\hankey.png" />
-    <Content Include="emoji\hash.png" />
-    <Content Include="emoji\hatched_chick.png" />
-    <Content Include="emoji\hatching_chick.png" />
-    <Content Include="emoji\headphones.png" />
-    <Content Include="emoji\heart.png" />
-    <Content Include="emoji\heartbeat.png" />
-    <Content Include="emoji\heartpulse.png" />
-    <Content Include="emoji\hearts.png" />
-    <Content Include="emoji\heart_decoration.png" />
-    <Content Include="emoji\heart_eyes.png" />
-    <Content Include="emoji\heart_eyes_cat.png" />
-    <Content Include="emoji\hear_no_evil.png" />
-    <Content Include="emoji\heavy_check_mark.png" />
-    <Content Include="emoji\heavy_division_sign.png" />
-    <Content Include="emoji\heavy_dollar_sign.png" />
-    <Content Include="emoji\heavy_exclamation_mark.png" />
-    <Content Include="emoji\heavy_minus_sign.png" />
-    <Content Include="emoji\heavy_multiplication_x.png" />
-    <Content Include="emoji\heavy_plus_sign.png" />
-    <Content Include="emoji\helicopter.png" />
-    <Content Include="emoji\herb.png" />
-    <Content Include="emoji\hibiscus.png" />
-    <Content Include="emoji\high_brightness.png" />
-    <Content Include="emoji\high_heel.png" />
-    <Content Include="emoji\hocho.png" />
-    <Content Include="emoji\honeybee.png" />
-    <Content Include="emoji\honey_pot.png" />
-    <Content Include="emoji\horse.png" />
-    <Content Include="emoji\horse_racing.png" />
-    <Content Include="emoji\hospital.png" />
-    <Content Include="emoji\hotel.png" />
-    <Content Include="emoji\hotsprings.png" />
-    <Content Include="emoji\hourglass.png" />
-    <Content Include="emoji\hourglass_flowing_sand.png" />
-    <Content Include="emoji\house.png" />
-    <Content Include="emoji\house_with_garden.png" />
-    <Content Include="emoji\hurtrealbad.png" />
-    <Content Include="emoji\hushed.png" />
-    <Content Include="emoji\icecream.png" />
-    <Content Include="emoji\ice_cream.png" />
-    <Content Include="emoji\id.png" />
-    <Content Include="emoji\ideograph_advantage.png" />
-    <Content Include="emoji\imp.png" />
-    <Content Include="emoji\inbox_tray.png" />
-    <Content Include="emoji\incoming_envelope.png" />
-    <Content Include="emoji\information_desk_person.png" />
-    <Content Include="emoji\information_source.png" />
-    <Content Include="emoji\innocent.png" />
-    <Content Include="emoji\interrobang.png" />
-    <Content Include="emoji\iphone.png" />
-    <Content Include="emoji\it.png" />
-    <Content Include="emoji\izakaya_lantern.png" />
-    <Content Include="emoji\jack_o_lantern.png" />
-    <Content Include="emoji\japan.png" />
-    <Content Include="emoji\japanese_castle.png" />
-    <Content Include="emoji\japanese_goblin.png" />
-    <Content Include="emoji\japanese_ogre.png" />
-    <Content Include="emoji\jeans.png" />
-    <Content Include="emoji\joy.png" />
-    <Content Include="emoji\joy_cat.png" />
-    <Content Include="emoji\jp.png" />
-    <Content Include="emoji\key.png" />
-    <Content Include="emoji\keycap_ten.png" />
-    <Content Include="emoji\kimono.png" />
-    <Content Include="emoji\kiss.png" />
-    <Content Include="emoji\kissing.png" />
-    <Content Include="emoji\kissing_cat.png" />
-    <Content Include="emoji\kissing_closed_eyes.png" />
-    <Content Include="emoji\kissing_face.png" />
-    <Content Include="emoji\kissing_heart.png" />
-    <Content Include="emoji\kissing_smiling_eyes.png" />
-    <Content Include="emoji\koala.png" />
-    <Content Include="emoji\koko.png" />
-    <Content Include="emoji\kr.png" />
-    <Content Include="emoji\large_blue_circle.png" />
-    <Content Include="emoji\large_blue_diamond.png" />
-    <Content Include="emoji\large_orange_diamond.png" />
-    <Content Include="emoji\last_quarter_moon.png" />
-    <Content Include="emoji\last_quarter_moon_with_face.png" />
-    <Content Include="emoji\laughing.png" />
-    <Content Include="emoji\leaves.png" />
-    <Content Include="emoji\ledger.png" />
-    <Content Include="emoji\leftwards_arrow_with_hook.png" />
-    <Content Include="emoji\left_luggage.png" />
-    <Content Include="emoji\left_right_arrow.png" />
-    <Content Include="emoji\lemon.png" />
-    <Content Include="emoji\leo.png" />
-    <Content Include="emoji\leopard.png" />
-    <Content Include="emoji\libra.png" />
-    <Content Include="emoji\light_rail.png" />
-    <Content Include="emoji\link.png" />
-    <Content Include="emoji\lips.png" />
-    <Content Include="emoji\lipstick.png" />
-    <Content Include="emoji\lock.png" />
-    <Content Include="emoji\lock_with_ink_pen.png" />
-    <Content Include="emoji\lollipop.png" />
-    <Content Include="emoji\loop.png" />
-    <Content Include="emoji\loudspeaker.png" />
-    <Content Include="emoji\love_hotel.png" />
-    <Content Include="emoji\love_letter.png" />
-    <Content Include="emoji\low_brightness.png" />
-    <Content Include="emoji\m.png" />
-    <Content Include="emoji\mag.png" />
-    <Content Include="emoji\mag_right.png" />
-    <Content Include="emoji\mahjong.png" />
-    <Content Include="emoji\mailbox.png" />
-    <Content Include="emoji\mailbox_closed.png" />
-    <Content Include="emoji\mailbox_with_mail.png" />
-    <Content Include="emoji\mailbox_with_no_mail.png" />
-    <Content Include="emoji\man.png" />
-    <Content Include="emoji\mans_shoe.png" />
-    <Content Include="emoji\man_with_gua_pi_mao.png" />
-    <Content Include="emoji\man_with_turban.png" />
-    <Content Include="emoji\maple_leaf.png" />
-    <Content Include="emoji\mask.png" />
-    <Content Include="emoji\massage.png" />
-    <Content Include="emoji\meat_on_bone.png" />
-    <Content Include="emoji\mega.png" />
-    <Content Include="emoji\melon.png" />
-    <Content Include="emoji\memo.png" />
-    <Content Include="emoji\mens.png" />
-    <Content Include="emoji\metal.png" />
-    <Content Include="emoji\metro.png" />
-    <Content Include="emoji\microphone.png" />
-    <Content Include="emoji\microscope.png" />
-    <Content Include="emoji\milky_way.png" />
-    <Content Include="emoji\minibus.png" />
-    <Content Include="emoji\minidisc.png" />
-    <Content Include="emoji\mobile_phone_off.png" />
-    <Content Include="emoji\moneybag.png" />
-    <Content Include="emoji\money_with_wings.png" />
-    <Content Include="emoji\monkey.png" />
-    <Content Include="emoji\monkey_face.png" />
-    <Content Include="emoji\monorail.png" />
-    <Content Include="emoji\moon.png" />
-    <Content Include="emoji\mortar_board.png" />
-    <Content Include="emoji\mountain_bicyclist.png" />
-    <Content Include="emoji\mountain_cableway.png" />
-    <Content Include="emoji\mountain_railway.png" />
-    <Content Include="emoji\mount_fuji.png" />
-    <Content Include="emoji\mouse.png" />
-    <Content Include="emoji\mouse2.png" />
-    <Content Include="emoji\movie_camera.png" />
-    <Content Include="emoji\moyai.png" />
-    <Content Include="emoji\muscle.png" />
-    <Content Include="emoji\mushroom.png" />
-    <Content Include="emoji\musical_keyboard.png" />
-    <Content Include="emoji\musical_note.png" />
-    <Content Include="emoji\musical_score.png" />
-    <Content Include="emoji\mute.png" />
-    <Content Include="emoji\nail_care.png" />
-    <Content Include="emoji\name_badge.png" />
-    <Content Include="emoji\neckbeard.png" />
-    <Content Include="emoji\necktie.png" />
-    <Content Include="emoji\negative_squared_cross_mark.png" />
-    <Content Include="emoji\neutral_face.png" />
-    <Content Include="emoji\new.png" />
-    <Content Include="emoji\newspaper.png" />
-    <Content Include="emoji\new_moon.png" />
-    <Content Include="emoji\new_moon_with_face.png" />
-    <Content Include="emoji\ng.png" />
-    <Content Include="emoji\nine.png" />
-    <Content Include="emoji\non-potable_water.png" />
-    <Content Include="emoji\nose.png" />
-    <Content Include="emoji\notebook.png" />
-    <Content Include="emoji\notebook_with_decorative_cover.png" />
-    <Content Include="emoji\notes.png" />
-    <Content Include="emoji\no_bell.png" />
-    <Content Include="emoji\no_bicycles.png" />
-    <Content Include="emoji\no_entry.png" />
-    <Content Include="emoji\no_entry_sign.png" />
-    <Content Include="emoji\no_good.png" />
-    <Content Include="emoji\no_mobile_phones.png" />
-    <Content Include="emoji\no_mouth.png" />
-    <Content Include="emoji\no_pedestrians.png" />
-    <Content Include="emoji\no_smoking.png" />
-    <Content Include="emoji\nut_and_bolt.png" />
-    <Content Include="emoji\o.png" />
-    <Content Include="emoji\o2.png" />
-    <Content Include="emoji\ocean.png" />
-    <Content Include="emoji\octocat.png" />
-    <Content Include="emoji\octopus.png" />
-    <Content Include="emoji\oden.png" />
-    <Content Include="emoji\office.png" />
-    <Content Include="emoji\ok.png" />
-    <Content Include="emoji\ok_hand.png" />
-    <Content Include="emoji\ok_woman.png" />
-    <Content Include="emoji\older_man.png" />
-    <Content Include="emoji\older_woman.png" />
-    <Content Include="emoji\on.png" />
-    <Content Include="emoji\oncoming_automobile.png" />
-    <Content Include="emoji\oncoming_bus.png" />
-    <Content Include="emoji\oncoming_police_car.png" />
-    <Content Include="emoji\oncoming_taxi.png" />
-    <Content Include="emoji\one.png" />
-    <Content Include="emoji\open_file_folder.png" />
-    <Content Include="emoji\open_hands.png" />
-    <Content Include="emoji\open_mouth.png" />
-    <Content Include="emoji\ophiuchus.png" />
-    <Content Include="emoji\orange_book.png" />
-    <Content Include="emoji\outbox_tray.png" />
-    <Content Include="emoji\ox.png" />
-    <Content Include="emoji\pager.png" />
-    <Content Include="emoji\page_facing_up.png" />
-    <Content Include="emoji\page_with_curl.png" />
-    <Content Include="emoji\palm_tree.png" />
-    <Content Include="emoji\panda_face.png" />
-    <Content Include="emoji\paperclip.png" />
-    <Content Include="emoji\parking.png" />
-    <Content Include="emoji\partly_sunny.png" />
-    <Content Include="emoji\part_alternation_mark.png" />
-    <Content Include="emoji\passport_control.png" />
-    <Content Include="emoji\paw_prints.png" />
-    <Content Include="emoji\peach.png" />
-    <Content Include="emoji\pear.png" />
-    <Content Include="emoji\pencil.png" />
-    <Content Include="emoji\pencil2.png" />
-    <Content Include="emoji\penguin.png" />
-    <Content Include="emoji\pensive.png" />
-    <Content Include="emoji\performing_arts.png" />
-    <Content Include="emoji\persevere.png" />
-    <Content Include="emoji\person_frowning.png" />
-    <Content Include="emoji\person_with_blond_hair.png" />
-    <Content Include="emoji\person_with_pouting_face.png" />
-    <Content Include="emoji\phone.png" />
-    <Content Include="emoji\pig.png" />
-    <Content Include="emoji\pig2.png" />
-    <Content Include="emoji\pig_nose.png" />
-    <Content Include="emoji\pill.png" />
-    <Content Include="emoji\pineapple.png" />
-    <Content Include="emoji\pisces.png" />
-    <Content Include="emoji\pizza.png" />
-    <Content Include="emoji\plus1.png" />
-    <Content Include="emoji\point_down.png" />
-    <Content Include="emoji\point_left.png" />
-    <Content Include="emoji\point_right.png" />
-    <Content Include="emoji\point_up.png" />
-    <Content Include="emoji\point_up_2.png" />
-    <Content Include="emoji\police_car.png" />
-    <Content Include="emoji\poodle.png" />
-    <Content Include="emoji\poop.png" />
-    <Content Include="emoji\postal_horn.png" />
-    <Content Include="emoji\postbox.png" />
-    <Content Include="emoji\post_office.png" />
-    <Content Include="emoji\potable_water.png" />
-    <Content Include="emoji\pouch.png" />
-    <Content Include="emoji\poultry_leg.png" />
-    <Content Include="emoji\pound.png" />
-    <Content Include="emoji\pouting_cat.png" />
-    <Content Include="emoji\pray.png" />
-    <Content Include="emoji\princess.png" />
-    <Content Include="emoji\punch.png" />
-    <Content Include="emoji\purple_heart.png" />
-    <Content Include="emoji\purse.png" />
-    <Content Include="emoji\pushpin.png" />
-    <Content Include="emoji\put_litter_in_its_place.png" />
-    <Content Include="emoji\question.png" />
-    <Content Include="emoji\rabbit.png" />
-    <Content Include="emoji\rabbit2.png" />
-    <Content Include="emoji\racehorse.png" />
-    <Content Include="emoji\radio.png" />
-    <Content Include="emoji\radio_button.png" />
-    <Content Include="emoji\rage.png" />
-    <Content Include="emoji\rage1.png" />
-    <Content Include="emoji\rage2.png" />
-    <Content Include="emoji\rage3.png" />
-    <Content Include="emoji\rage4.png" />
-    <Content Include="emoji\railway_car.png" />
-    <Content Include="emoji\rainbow.png" />
-    <Content Include="emoji\raised_hand.png" />
-    <Content Include="emoji\raised_hands.png" />
-    <Content Include="emoji\raising_hand.png" />
-    <Content Include="emoji\ram.png" />
-    <Content Include="emoji\ramen.png" />
-    <Content Include="emoji\rat.png" />
-    <Content Include="emoji\recycle.png" />
-    <Content Include="emoji\red_car.png" />
-    <Content Include="emoji\red_circle.png" />
-    <Content Include="emoji\registered.png" />
-    <Content Include="emoji\relaxed.png" />
-    <Content Include="emoji\relieved.png" />
-    <Content Include="emoji\repeat.png" />
-    <Content Include="emoji\repeat_one.png" />
-    <Content Include="emoji\restroom.png" />
-    <Content Include="emoji\revolving_hearts.png" />
-    <Content Include="emoji\rewind.png" />
-    <Content Include="emoji\ribbon.png" />
-    <Content Include="emoji\rice.png" />
-    <Content Include="emoji\rice_ball.png" />
-    <Content Include="emoji\rice_cracker.png" />
-    <Content Include="emoji\rice_scene.png" />
-    <Content Include="emoji\ring.png" />
-    <Content Include="emoji\rocket.png" />
-    <Content Include="emoji\roller_coaster.png" />
-    <Content Include="emoji\rooster.png" />
-    <Content Include="emoji\rose.png" />
-    <Content Include="emoji\rotating_light.png" />
-    <Content Include="emoji\round_pushpin.png" />
-    <Content Include="emoji\rowboat.png" />
-    <Content Include="emoji\ru.png" />
-    <Content Include="emoji\rugby_football.png" />
-    <Content Include="emoji\runner.png" />
-    <Content Include="emoji\running.png" />
-    <Content Include="emoji\running_shirt_with_sash.png" />
-    <Content Include="emoji\sa.png" />
-    <Content Include="emoji\sagittarius.png" />
-    <Content Include="emoji\sailboat.png" />
-    <Content Include="emoji\sake.png" />
-    <Content Include="emoji\sandal.png" />
-    <Content Include="emoji\santa.png" />
-    <Content Include="emoji\satellite.png" />
-    <Content Include="emoji\satisfied.png" />
-    <Content Include="emoji\saxophone.png" />
-    <Content Include="emoji\school.png" />
-    <Content Include="emoji\school_satchel.png" />
-    <Content Include="emoji\scissors.png" />
-    <Content Include="emoji\scorpius.png" />
-    <Content Include="emoji\scream.png" />
-    <Content Include="emoji\scream_cat.png" />
-    <Content Include="emoji\scroll.png" />
-    <Content Include="emoji\seat.png" />
-    <Content Include="emoji\secret.png" />
-    <Content Include="emoji\seedling.png" />
-    <Content Include="emoji\see_no_evil.png" />
-    <Content Include="emoji\seven.png" />
-    <Content Include="emoji\shaved_ice.png" />
-    <Content Include="emoji\sheep.png" />
-    <Content Include="emoji\shell.png" />
-    <Content Include="emoji\ship.png" />
-    <Content Include="emoji\shipit.png" />
-    <Content Include="emoji\shirt.png" />
-    <Content Include="emoji\shit.png" />
-    <Content Include="emoji\shoe.png" />
-    <Content Include="emoji\shower.png" />
-    <Content Include="emoji\signal_strength.png" />
-    <Content Include="emoji\six.png" />
-    <Content Include="emoji\six_pointed_star.png" />
-    <Content Include="emoji\ski.png" />
-    <Content Include="emoji\skull.png" />
-    <Content Include="emoji\sleeping.png" />
-    <Content Include="emoji\sleepy.png" />
-    <Content Include="emoji\slot_machine.png" />
-    <Content Include="emoji\small_blue_diamond.png" />
-    <Content Include="emoji\small_orange_diamond.png" />
-    <Content Include="emoji\small_red_triangle.png" />
-    <Content Include="emoji\small_red_triangle_down.png" />
-    <Content Include="emoji\smile.png" />
-    <Content Include="emoji\smiley.png" />
-    <Content Include="emoji\smiley_cat.png" />
-    <Content Include="emoji\smile_cat.png" />
-    <Content Include="emoji\smiling_imp.png" />
-    <Content Include="emoji\smirk.png" />
-    <Content Include="emoji\smirk_cat.png" />
-    <Content Include="emoji\smoking.png" />
-    <Content Include="emoji\snail.png" />
-    <Content Include="emoji\snake.png" />
-    <Content Include="emoji\snowboarder.png" />
-    <Content Include="emoji\snowflake.png" />
-    <Content Include="emoji\snowman.png" />
-    <Content Include="emoji\sob.png" />
-    <Content Include="emoji\soccer.png" />
-    <Content Include="emoji\soon.png" />
-    <Content Include="emoji\sos.png" />
-    <Content Include="emoji\sound.png" />
-    <Content Include="emoji\space_invader.png" />
-    <Content Include="emoji\spades.png" />
-    <Content Include="emoji\spaghetti.png" />
-    <Content Include="emoji\sparkler.png" />
-    <Content Include="emoji\sparkles.png" />
-    <Content Include="emoji\sparkling_heart.png" />
-    <Content Include="emoji\speaker.png" />
-    <Content Include="emoji\speak_no_evil.png" />
-    <Content Include="emoji\speech_balloon.png" />
-    <Content Include="emoji\speedboat.png" />
-    <Content Include="emoji\squirrel.png" />
-    <Content Include="emoji\star.png" />
-    <Content Include="emoji\star2.png" />
-    <Content Include="emoji\stars.png" />
-    <Content Include="emoji\station.png" />
-    <Content Include="emoji\statue_of_liberty.png" />
-    <Content Include="emoji\steam_locomotive.png" />
-    <Content Include="emoji\stew.png" />
-    <Content Include="emoji\straight_ruler.png" />
-    <Content Include="emoji\strawberry.png" />
-    <Content Include="emoji\stuck_out_tongue.png" />
-    <Content Include="emoji\stuck_out_tongue_closed_eyes.png" />
-    <Content Include="emoji\stuck_out_tongue_winking_eye.png" />
-    <Content Include="emoji\sunflower.png" />
-    <Content Include="emoji\sunglasses.png" />
-    <Content Include="emoji\sunny.png" />
-    <Content Include="emoji\sunrise.png" />
-    <Content Include="emoji\sunrise_over_mountains.png" />
-    <Content Include="emoji\sun_with_face.png" />
-    <Content Include="emoji\surfer.png" />
-    <Content Include="emoji\sushi.png" />
-    <Content Include="emoji\suspect.png" />
-    <Content Include="emoji\suspension_railway.png" />
-    <Content Include="emoji\sweat.png" />
-    <Content Include="emoji\sweat_drops.png" />
-    <Content Include="emoji\sweat_smile.png" />
-    <Content Include="emoji\sweet_potato.png" />
-    <Content Include="emoji\swimmer.png" />
-    <Content Include="emoji\symbols.png" />
-    <Content Include="emoji\syringe.png" />
-    <Content Include="emoji\tada.png" />
-    <Content Include="emoji\tanabata_tree.png" />
-    <Content Include="emoji\tangerine.png" />
-    <Content Include="emoji\taurus.png" />
-    <Content Include="emoji\taxi.png" />
-    <Content Include="emoji\tea.png" />
-    <Content Include="emoji\telephone.png" />
-    <Content Include="emoji\telephone_receiver.png" />
-    <Content Include="emoji\telescope.png" />
-    <Content Include="emoji\tennis.png" />
-    <Content Include="emoji\tent.png" />
-    <Content Include="emoji\thought_balloon.png" />
-    <Content Include="emoji\three.png" />
-    <Content Include="emoji\thumbsdown.png" />
-    <Content Include="emoji\thumbsup.png" />
-    <Content Include="emoji\ticket.png" />
-    <Content Include="emoji\tiger.png" />
-    <Content Include="emoji\tiger2.png" />
-    <Content Include="emoji\tired_face.png" />
-    <Content Include="emoji\tm.png" />
-    <Content Include="emoji\toilet.png" />
-    <Content Include="emoji\tokyo_tower.png" />
-    <Content Include="emoji\tomato.png" />
-    <Content Include="emoji\tongue.png" />
-    <Content Include="emoji\top.png" />
-    <Content Include="emoji\tophat.png" />
-    <Content Include="emoji\tractor.png" />
-    <Content Include="emoji\traffic_light.png" />
-    <Content Include="emoji\train.png" />
-    <Content Include="emoji\train2.png" />
-    <Content Include="emoji\tram.png" />
-    <Content Include="emoji\triangular_flag_on_post.png" />
-    <Content Include="emoji\triangular_ruler.png" />
-    <Content Include="emoji\trident.png" />
-    <Content Include="emoji\triumph.png" />
-    <Content Include="emoji\trolleybus.png" />
-    <Content Include="emoji\trollface.png" />
-    <Content Include="emoji\trophy.png" />
-    <Content Include="emoji\tropical_drink.png" />
-    <Content Include="emoji\tropical_fish.png" />
-    <Content Include="emoji\truck.png" />
-    <Content Include="emoji\trumpet.png" />
-    <Content Include="emoji\tshirt.png" />
-    <Content Include="emoji\tulip.png" />
-    <Content Include="emoji\turtle.png" />
-    <Content Include="emoji\tv.png" />
-    <Content Include="emoji\twisted_rightwards_arrows.png" />
-    <Content Include="emoji\two.png" />
-    <Content Include="emoji\two_hearts.png" />
-    <Content Include="emoji\two_men_holding_hands.png" />
-    <Content Include="emoji\two_women_holding_hands.png" />
-    <Content Include="emoji\u5272.png" />
-    <Content Include="emoji\u5408.png" />
-    <Content Include="emoji\u55b6.png" />
-    <Content Include="emoji\u6307.png" />
-    <Content Include="emoji\u6708.png" />
-    <Content Include="emoji\u6709.png" />
-    <Content Include="emoji\u6e80.png" />
-    <Content Include="emoji\u7121.png" />
-    <Content Include="emoji\u7533.png" />
-    <Content Include="emoji\u7981.png" />
-    <Content Include="emoji\u7a7a.png" />
-    <Content Include="emoji\uk.png" />
-    <Content Include="emoji\umbrella.png" />
-    <Content Include="emoji\unamused.png" />
-    <Content Include="emoji\underage.png" />
-    <Content Include="emoji\unlock.png" />
-    <Content Include="emoji\up.png" />
-    <Content Include="emoji\us.png" />
-    <Content Include="emoji\v.png" />
-    <Content Include="emoji\vertical_traffic_light.png" />
-    <Content Include="emoji\vhs.png" />
-    <Content Include="emoji\vibration_mode.png" />
-    <Content Include="emoji\video_camera.png" />
-    <Content Include="emoji\video_game.png" />
-    <Content Include="emoji\violin.png" />
-    <Content Include="emoji\virgo.png" />
-    <Content Include="emoji\volcano.png" />
-    <Content Include="emoji\vs.png" />
-    <Content Include="emoji\walking.png" />
-    <Content Include="emoji\waning_crescent_moon.png" />
-    <Content Include="emoji\waning_gibbous_moon.png" />
-    <Content Include="emoji\warning.png" />
-    <Content Include="emoji\watch.png" />
-    <Content Include="emoji\watermelon.png" />
-    <Content Include="emoji\water_buffalo.png" />
-    <Content Include="emoji\wave.png" />
-    <Content Include="emoji\wavy_dash.png" />
-    <Content Include="emoji\waxing_crescent_moon.png" />
-    <Content Include="emoji\waxing_gibbous_moon.png" />
-    <Content Include="emoji\wc.png" />
-    <Content Include="emoji\weary.png" />
-    <Content Include="emoji\wedding.png" />
-    <Content Include="emoji\whale.png" />
-    <Content Include="emoji\whale2.png" />
-    <Content Include="emoji\wheelchair.png" />
-    <Content Include="emoji\white_check_mark.png" />
-    <Content Include="emoji\white_circle.png" />
-    <Content Include="emoji\white_flower.png" />
-    <Content Include="emoji\white_square.png" />
-    <Content Include="emoji\white_square_button.png" />
-    <Content Include="emoji\wind_chime.png" />
-    <Content Include="emoji\wine_glass.png" />
-    <Content Include="emoji\wink.png" />
-    <Content Include="emoji\wink2.png" />
-    <Content Include="emoji\wolf.png" />
-    <Content Include="emoji\woman.png" />
-    <Content Include="emoji\womans_clothes.png" />
-    <Content Include="emoji\womans_hat.png" />
-    <Content Include="emoji\womens.png" />
-    <Content Include="emoji\worried.png" />
-    <Content Include="emoji\wrench.png" />
-    <Content Include="emoji\x.png" />
-    <Content Include="emoji\yellow_heart.png" />
-    <Content Include="emoji\yen.png" />
-    <Content Include="emoji\yum.png" />
-    <Content Include="emoji\zap.png" />
-    <Content Include="emoji\zero.png" />
-    <Content Include="emoji\zzz.png" />
-    <Content Include="index.html" />
-    <Content Include="scripts\highlight.pack.js" />
-    <Content Include="scripts\jquery.min.js" />
-    <Content Include="scripts\markdown-it-footnote.js" />
-    <Content Include="scripts\markdown-it.js" />
+    <Content Include="scripts\codemirror\css\css.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\gfm\gfm.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\gfm\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\htmlmixed\htmlmixed.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\javascript\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\javascript\javascript.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\codemirror.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\codemirror.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\closetag.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\continuelist.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\dialog.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\dialog.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\foldcode.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\formatting.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\javascript-hint.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\loadmode.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\match-highlighter.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\multiplex.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\overlay.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\pig-hint.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\runmode-standalone.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\runmode.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\search.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\searchcursor.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\simple-hint.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\simple-hint.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\lib\util\xml-hint.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\markdown\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\markdown\markdown.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\markdown\test.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\overlay.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\xml\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\codemirror\xml\xml.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\default.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\emojify.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\+1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\109.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\1234.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\8ball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\a.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ab.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\abc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\abcd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\accept.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\aerial_tramway.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\airplane.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\alarm_clock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\alien.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ambulance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\anchor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\angel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\anger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\angry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\anguished.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\apple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\aquarius.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\aries.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrows_clockwise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrows_counterclockwise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_backward.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_double_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_double_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_down_small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_forward.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_heading_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_heading_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_lower_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_lower_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_right_hook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_upper_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_upper_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_up_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\arrow_up_small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\art.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\articulated_lorry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\astonished.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\atm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baby.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baby_bottle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baby_chick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baby_symbol.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baggage_claim.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\balloon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ballot_box_with_check.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bamboo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\banana.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bangbang.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bank.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\barber.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bar_chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\baseball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\basketball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bath.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bathtub.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\battery.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\beer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\beers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\beetle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\beginner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bento.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bicyclist.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bike.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bikini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bird.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\birthday.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\black_circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\black_joker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\black_nib.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\black_square.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\black_square_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blossom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blowfish.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blue_book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blue_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blue_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\blush.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\boar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\boat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bomb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bookmark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bookmark_tabs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\books.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\boom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\boot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bouquet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bowling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bowtie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\boy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bread.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bride_with_veil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bridge_at_night.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\briefcase.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\broken_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bulb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bullettrain_front.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bullettrain_side.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\busstop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\busts_in_silhouette.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\bust_in_silhouette.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cactus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cake.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\calendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\calling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\camel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cancer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\candy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\capital_abcd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\capricorn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\card_index.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\carousel_horse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cat2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chart_with_downwards_trend.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chart_with_upwards_trend.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\checkered_flag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cherries.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cherry_blossom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chestnut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chicken.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\children_crossing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\chocolate_bar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\christmas_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\church.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cinema.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\circus_tent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\city_sunrise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\city_sunset.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clap.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clapper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clipboard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock1030.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock1130.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock1230.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock130.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock230.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock330.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock430.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock530.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock630.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock730.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock830.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clock930.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\closed_book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\closed_lock_with_key.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\closed_umbrella.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cloud.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\clubs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cocktail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\coffee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cold_sweat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\collision.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\computer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\confetti_ball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\confounded.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\confused.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\congratulations.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\construction.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\construction_worker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\convenience_store.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cookie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cool.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\copyright.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\corn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\couple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\couplekiss.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\couple_with_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cow2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\credit_card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\crocodile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\crossed_flags.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\crown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\crying_cat_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\crystal_ball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cupid.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\curly_loop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\currency_exchange.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\curry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\custard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\customs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\cyclone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dancer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dancers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dango.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\date.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\de.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\deciduous_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\department_store.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\diamonds.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\diamond_shape_with_a_dot_inside.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\disappointed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\disappointed_relieved.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dizzy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dizzy_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dog.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dog2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dollar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dolls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dolphin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\donut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\door.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\doughnut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\do_not_litter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dragon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dragon_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dress.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dromedary_camel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\droplet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\dvd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\e-mail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\earth_africa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\earth_americas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\earth_asia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ear_of_rice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\egg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eggplant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eight_pointed_black_star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eight_spoked_asterisk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\electric_plug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\elephant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\email.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\emojify.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\end.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\envelope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\es.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\euro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\european_castle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\european_post_office.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\evergreen_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\exclamation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\expressionless.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eyeglasses.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\eyes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\facepunch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\factory.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fallen_leaf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\family.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fast_forward.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fax.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fearful.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\feelsgood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\feet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ferris_wheel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\file_folder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\finnadie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fireworks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fire_engine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\first_quarter_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\first_quarter_moon_with_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fish.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fishing_pole_and_fish.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fish_cake.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fist.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\five.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\flags.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\flashlight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\floppy_disk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\flower_playing_cards.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\flushed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\foggy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\football.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fork_and_knife.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fountain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\four.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\four_leaf_clover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\free.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fried_shrimp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fries.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\frog.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\frowning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\fuelpump.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\full_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\full_moon_with_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\game_die.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gemini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ghost.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gift.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gift_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\girl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\globe_with_meridians.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\goat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\goberserk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\godmode.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\golf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grapes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\green_apple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\green_book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\green_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grey_exclamation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grey_question.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grimacing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\grinning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\guardsman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\guitar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\gun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\haircut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hamburger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hammer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hamster.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\handbag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hankey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hatched_chick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hatching_chick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\headphones.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heartbeat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heartpulse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hearts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heart_decoration.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heart_eyes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heart_eyes_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hear_no_evil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_check_mark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_division_sign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_dollar_sign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_exclamation_mark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_minus_sign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_multiplication_x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\heavy_plus_sign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\helicopter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\herb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hibiscus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\high_brightness.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\high_heel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hocho.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\honeybee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\honey_pot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\horse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\horse_racing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hospital.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hotel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hotsprings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hourglass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hourglass_flowing_sand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\house.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\house_with_garden.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hurtrealbad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\hushed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\icecream.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ice_cream.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\id.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ideograph_advantage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\imp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\inbox_tray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\incoming_envelope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\information_desk_person.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\information_source.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\innocent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\interrobang.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\iphone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\it.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\izakaya_lantern.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\jack_o_lantern.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\japan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\japanese_castle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\japanese_goblin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\japanese_ogre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\jeans.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\joy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\joy_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\jp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\key.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\keycap_ten.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kimono.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kiss.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing_closed_eyes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kissing_smiling_eyes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\koala.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\koko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\kr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\large_blue_circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\large_blue_diamond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\large_orange_diamond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\last_quarter_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\last_quarter_moon_with_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\laughing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\leaves.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ledger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\leftwards_arrow_with_hook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\left_luggage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\left_right_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lemon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\leo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\leopard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\libra.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\light_rail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\link.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lips.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lipstick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lock_with_ink_pen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\lollipop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\loop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\loudspeaker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\love_hotel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\love_letter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\low_brightness.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\m.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mag_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mahjong.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mailbox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mailbox_closed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mailbox_with_mail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mailbox_with_no_mail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\man.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mans_shoe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\man_with_gua_pi_mao.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\man_with_turban.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\maple_leaf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mask.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\massage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\meat_on_bone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mega.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\melon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\memo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mens.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\metal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\metro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\microphone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\microscope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\milky_way.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\minibus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\minidisc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mobile_phone_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\moneybag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\money_with_wings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\monkey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\monkey_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\monorail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mortar_board.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mountain_bicyclist.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mountain_cableway.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mountain_railway.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mount_fuji.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mouse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mouse2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\movie_camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\moyai.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\muscle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mushroom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\musical_keyboard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\musical_note.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\musical_score.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\mute.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\nail_care.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\name_badge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\neckbeard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\necktie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\negative_squared_cross_mark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\neutral_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\newspaper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\new_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\new_moon_with_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ng.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\nine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\non-potable_water.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\nose.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\notebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\notebook_with_decorative_cover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\notes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_bell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_bicycles.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_entry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_entry_sign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_good.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_mobile_phones.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_mouth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_pedestrians.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\no_smoking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\nut_and_bolt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\o.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\o2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ocean.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\octocat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\octopus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\oden.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\office.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ok_hand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ok_woman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\older_man.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\older_woman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\oncoming_automobile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\oncoming_bus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\oncoming_police_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\oncoming_taxi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\one.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\open_file_folder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\open_hands.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\open_mouth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ophiuchus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\orange_book.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\outbox_tray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pager.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\page_facing_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\page_with_curl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\palm_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\panda_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\paperclip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\parking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\partly_sunny.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\part_alternation_mark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\passport_control.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\paw_prints.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\peach.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pencil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pencil2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\penguin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pensive.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\performing_arts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\persevere.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\person_frowning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\person_with_blond_hair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\person_with_pouting_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\phone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pig2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pig_nose.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pill.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pineapple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pisces.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pizza.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\plus1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\point_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\point_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\point_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\point_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\point_up_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\police_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\poodle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\poop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\postal_horn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\postbox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\post_office.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\potable_water.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pouch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\poultry_leg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pouting_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\princess.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\punch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\purple_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\purse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\pushpin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\put_litter_in_its_place.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\question.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rabbit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rabbit2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\racehorse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\radio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\radio_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rage1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rage2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rage3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rage4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\railway_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rainbow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\raised_hand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\raised_hands.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\raising_hand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ram.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ramen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\recycle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\red_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\red_circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\registered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\relaxed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\relieved.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\repeat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\repeat_one.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\restroom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\revolving_hearts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rewind.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ribbon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rice_ball.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rice_cracker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rice_scene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ring.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rocket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\roller_coaster.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rooster.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rose.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rotating_light.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\round_pushpin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rowboat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ru.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\rugby_football.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\runner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\running.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\running_shirt_with_sash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sagittarius.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sailboat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sake.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sandal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\santa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\satellite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\satisfied.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\saxophone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\school.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\school_satchel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\scissors.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\scorpius.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\scream.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\scream_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\scroll.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\seat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\secret.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\seedling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\see_no_evil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\seven.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shaved_ice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sheep.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ship.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shipit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shirt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shoe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\shower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\signal_strength.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\six.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\six_pointed_star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ski.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\skull.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sleeping.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sleepy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\slot_machine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\small_blue_diamond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\small_orange_diamond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\small_red_triangle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\small_red_triangle_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smiley.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smiley_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smile_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smiling_imp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smirk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smirk_cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\smoking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\snail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\snake.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\snowboarder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\snowflake.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\snowman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sob.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\soccer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\soon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\space_invader.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\spades.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\spaghetti.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sparkler.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sparkles.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sparkling_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\speaker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\speak_no_evil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\speech_balloon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\speedboat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\squirrel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\star2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\stars.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\station.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\statue_of_liberty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\steam_locomotive.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\stew.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\straight_ruler.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\strawberry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\stuck_out_tongue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\stuck_out_tongue_closed_eyes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\stuck_out_tongue_winking_eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sunflower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sunglasses.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sunny.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sunrise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sunrise_over_mountains.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sun_with_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\surfer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sushi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\suspect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\suspension_railway.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sweat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sweat_drops.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sweat_smile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\sweet_potato.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\swimmer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\symbols.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\syringe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tanabata_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tangerine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\taurus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\taxi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tea.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\telephone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\telephone_receiver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\telescope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tennis.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\thought_balloon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\three.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\thumbsdown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\thumbsup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\ticket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tiger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tiger2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tired_face.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\toilet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tokyo_tower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tomato.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tongue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tophat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tractor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\traffic_light.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\train.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\train2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tram.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\triangular_flag_on_post.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\triangular_ruler.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\trident.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\triumph.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\trolleybus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\trollface.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\trophy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tropical_drink.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tropical_fish.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\truck.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\trumpet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tshirt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tulip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\turtle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\tv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\twisted_rightwards_arrows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\two.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\two_hearts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\two_men_holding_hands.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\two_women_holding_hands.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u5272.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u5408.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u55b6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u6307.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u6708.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u6709.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u6e80.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u7121.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u7533.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u7981.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\u7a7a.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\uk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\umbrella.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\unamused.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\underage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\unlock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\us.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\v.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\vertical_traffic_light.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\vhs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\vibration_mode.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\video_camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\video_game.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\violin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\virgo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\volcano.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\vs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\walking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\waning_crescent_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\waning_gibbous_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\warning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\watch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\watermelon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\water_buffalo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wave.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wavy_dash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\waxing_crescent_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\waxing_gibbous_moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\weary.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wedding.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\whale.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\whale2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wheelchair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\white_check_mark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\white_circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\white_flower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\white_square.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\white_square_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wind_chime.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wine_glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wink.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wink2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wolf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\woman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\womans_clothes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\womans_hat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\womens.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\worried.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\wrench.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\yellow_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\yen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\yum.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\zap.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\zero.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emoji\zzz.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\highlight.pack.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\jquery.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\markdown-it-footnote.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\markdown-it.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="scripts\rawdeflate.js" />
-    <Content Include="scripts\rawinflate.js" />
+    <Content Include="scripts\rawdeflate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\rawinflate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

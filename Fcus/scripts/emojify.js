@@ -35,9 +35,9 @@
      /* :-D  */ smiley: /[:;]-?d/gi,
      /* X-D  */ stuck_out_tongue_closed_eyes: /x-d/gi,
      /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
-     /* :-[  */ rage: /:-?[\[@]/g,
+     /* :-[  */ rage: /:-?[\[\@]/g,
      /* :-(  */ disappointed: /:-?\(/g,
-     /* :'-( */ sob: /:['’]-?\(|:&#x27;\(/g,
+     /* :'-( */ sob: /:\'-?\(|:\'\(/g,
      /* :-*  */ kissing_heart: /:-?\*/g,
      /* ;-)  */ wink: /;-?\)/g,
      /* :-/  */ pensive: /:-?\//g,
@@ -46,7 +46,7 @@
      /* :-$  */ relaxed: /:-?\$/g,
      /* :-x  */ mask: /:-x/gi,
      /* <3   */ heart: /<3|&lt;3/g,
-     /* </3  */ broken_heart: /<\/3|&lt;&#x2F;3/g,
+     /* </3  */ broken_heart: /<\/3|&lt;&\/3/g,
      /* :+1: */ thumbsup: /:\+1:/g,
      /* :-1: */ thumbsdown: /:\-1:/g
             };

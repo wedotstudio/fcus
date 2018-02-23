@@ -1,5 +1,7 @@
 This is a minimal Markdown UWP editor made based on HTML5 and Javascript.
 
+> This project is no longer maintained. Please move to other Markdown apps. 
+
 ## Shortcuts
 
 - **Ctrl-N** Create a new file

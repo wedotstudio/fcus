@@ -1,6 +1,6 @@
 # Fcus
 
-[![AppVeyor](https://img.shields.io/appveyor/ci/patrick330602/fcus-uwp.svg?style=flat-square)]() [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE) ![GitHub Release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square)
+[![AppVeyor](https://img.shields.io/appveyor/ci/patrick330602/fcus-uwp.svg?style=flat-square)]() [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/patrick330602/Fcus-UWP/master/LICENSE) ![GitHub Release](https://img.shields.io/github/release/patrick330602/Fcus-UWP/all.svg?style=flat-square) ![Maintenance](https://img.shields.io/maintenance/no/2018.svg?style=flat-square)
 
 ![Screenshot](screenshot.png)
 
